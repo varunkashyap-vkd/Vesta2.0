@@ -1,0 +1,74 @@
+#sideBar{
+	position: fixed;
+	top: 90px;
+	left: 0;
+	box-shadow: 3px 0 3px rgba(200, 200, 200, 0.8);
+	transition: 0.3s;
+}
+
+.navigationShown, .navigationHidden{
+	width: 200px;
+	overflow: auto;
+}
+
+#sideBar > li{
+	font-family: arial;
+	height: 45px;
+	line-height: 45px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	background-color: white;
+}
+
+#sideBar i{
+	color: red;
+	font-size: 18px;
+}
+
+#sideBar a{
+	display: block;
+	color: black;
+	text-decoration: none;
+	padding-left: 15px;
+}
+ 
+#sideBar > li:first-child{
+	display: none;
+}
+
+#sideBar > li:first-child > a{
+	padding: 0;
+}
+
+#sideBar > li:hover{
+	background-color: rgb(230, 230, 230);
+}
+
+@media screen and (max-width: 768px){
+	#sideBar{
+		top: 0;
+		left: 0;
+	}
+
+	#sideBar > li:first-child{
+		display: block;
+		text-align: center;
+	}
+
+	.navigationHidden{
+		width: 0;
+		overflow: hidden;
+	}
+
+	.navigationShown{
+		height: 100vh;
+		overflow: auto;
+	}
+}
+
+
+
+
+
+
