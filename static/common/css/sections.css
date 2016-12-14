@@ -1,0 +1,33 @@
+#mainSection{
+	display: flex;
+	margin-left: 200px;
+}
+
+#adSection{
+	flex: 1 0 20%;
+	height: 200px;
+	margin: 0;
+}
+
+@media screen and (max-width: 768px){
+	#mainSection{
+		margin: 0;
+	}
+
+	#adSection{
+		flex: 1 0 25%;
+		height: 200px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	#postSection{
+		flex: 1 0 100%;
+		padding: 10px 25px;
+		box-sizing: border-box;
+	}
+
+	#adSection{
+		display: none;
+	}	
+}

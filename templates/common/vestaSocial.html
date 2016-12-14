@@ -2,18 +2,21 @@
 {% load staticfiles %}
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/homepage.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/header.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/socialHeader.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/sections.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/medicalSection.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/socialSection.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/advertisement.css' %}">
 {% endblock %}
 
 {% block body %}
-{% include 'common/header.html' %}
+{% include 'common/socialHeader.html' %}
 {% include 'common/sideNavigation.html' %}
-{% include 'common/sections.html' %}
+{% include 'common/socialSection.html' %}
+<style type="text/css">
+	#sideBar{
+		top: 60px;
+	}
+</style>
 {% endblock %}
 
 {% block scripts %}

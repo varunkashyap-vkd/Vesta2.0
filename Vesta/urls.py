@@ -19,5 +19,7 @@ from dummy import views as dummyViews
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', dummyViews.homepage),
+    url(r'^$', dummyViews.homepage, name = 'home'),
+    url(r'^social$', dummyViews.social, name = "vestaSocial"),
+    url(r'^comment$', dummyViews.comment, name = "comment"),
 ]

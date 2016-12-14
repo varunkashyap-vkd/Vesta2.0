@@ -15,3 +15,9 @@ from django.template import Context, Template
 
 def homepage(request):
 	return HttpResponse(render(request, 'common/homepage.html'))
+
+def social(request):
+	return HttpResponse(render(request, 'common/vestaSocial.html'))
+
+def comment(request):
+	return HttpResponse(render(request, 'common/comment.html'))

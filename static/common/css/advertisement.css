@@ -1,0 +1,47 @@
+#adSection > ul{
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	list-style: none;
+}
+
+#adSection > ul > li{
+	flex: 0 0 200px;
+	border: 1px solid rgb(200, 200, 200);
+}
+
+#adSection > ul > li{
+	display: flex;
+	flex-direction: column;
+	lign-items: center;
+	justify-content: space-between;
+	font-family: arial;
+	margin-bottom: 10px;
+	border-radius: 3px;
+}
+
+#adSection > ul > li > div{
+	color: red;
+	height: 70px;
+	font-size: 13px;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+
+#adSection > ul > li > a{
+	display: block;
+	height: 50px;
+	color: white;
+	font-size: 14px;
+	padding: 15px 0 0 15px;
+	text-decoration: none;
+	border-radius: 0 0 3px 3px;
+	background-color: rgba(10, 10, 10, 0.8	);
+}
+
+@media screen and (max-width: 768px){
+	#adSection > ul{
+		padding: 15px 10px 15px 0;
+	}
+}

@@ -1,0 +1,117 @@
+#mainSection{
+	display: flex;
+	margin: 60px 0 0 200px;
+	font-family: arial;
+}
+
+#mainSection a{
+	text-decoration: none;
+}
+
+#postSection{
+	flex: 1 0 80%;
+	padding: 10px 12%;
+	box-sizing: border-box;
+}
+
+#postSection > section{
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 3px;
+	padding-top: 20px;
+}
+
+#adSection{
+	flex: 1 0 20%;
+	height: 200px;
+	margin: 0;
+}
+
+.header{
+	display: flex;
+	height: 50px;
+	align-items: center;
+	padding-left: 15px;
+}
+
+.header a{
+	color: blue;
+}
+
+.header > img{
+	width: 50px;
+	margin-right: 15px;
+}
+
+.header > div{
+	display: inline-block;
+}
+
+#postSection > section > p{
+	margin: 40px 0;
+	padding: 0 15px;
+	font-size: 15px;
+}
+
+.imageWrapper > img{
+	width: 100%;
+}
+
+.stats{
+	padding: 0 25px;
+	height: 35px;
+	line-height: 30px;
+}
+
+.stats > span{
+	margin-right: 50px;
+}
+
+.action{
+	width: 98%;
+	margin: 0 auto;
+	padding: 0 25px;
+	height: 40px;
+	border-top: 1px solid rgb(200, 200, 200);
+	line-height: 40px;
+}
+
+.action > span{
+	margin-right: 50px;
+}
+
+.action > span:nth-child(2) > a{
+	color: red;
+}
+
+.action > span:first-child > a{
+	color: black;
+}
+
+@media screen and (max-width: 768px){
+	#mainSection{
+		margin: 60px 0 0 0;
+	}
+
+	#postSection{
+		flex: 1 0 75%;
+		padding: 10px 25px;
+		box-sizing: border-box;
+	}
+
+	#adSection{
+		flex: 1 0 25%;
+		height: 200px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	#postSection{
+		flex: 1 0 100%;
+		padding: 10px 25px;
+		box-sizing: border-box;
+	}
+
+	#adSection{
+		display: none;
+	}	
+}

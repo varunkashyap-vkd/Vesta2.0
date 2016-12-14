@@ -1,0 +1,52 @@
+.midSection{
+	display: inline-block;
+	flex: 1 0 80%;
+	height: 100px;
+}
+
+.midSection > ul{
+	display: flex;
+	list-style: none;
+	padding: 0 20px;
+}
+
+.midSection > ul > li > a{
+	display: block;
+	color: black;
+	text-decoration: none;
+	font-family: arial;
+	padding-top: 20px;
+	box-sizing: border-box;
+}
+
+.midSection > ul > li{
+	flex: 1 0 33%;
+	height: 55px;
+	border-bottom: 1px solid rgb(200, 200, 200);
+	text-align: center;
+	font-size: 14px;
+}
+
+.bottomBorder{
+	border-bottom: 2px solid red;
+}
+
+@media screen and (max-width: 768px){
+	.midSection{
+		flex: 1 0 75%;
+	}
+
+	.midSection > ul span{
+		display: none;
+	}
+
+	.midSection a{
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.midSection{
+		flex: 1 0 100%;
+	}	
+}
