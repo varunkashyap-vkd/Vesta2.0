@@ -14,6 +14,11 @@
 	box-sizing: border-box;
 }
 
+#postSection > header{
+	width: 100%;
+	margin-bottom: 7px;
+}
+
 #postSection > section{
 	border: 1px solid rgb(200, 200, 200);
 	border-radius: 3px;
