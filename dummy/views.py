@@ -19,5 +19,11 @@ def homepage(request):
 def social(request):
 	return HttpResponse(render(request, 'common/vestaSocial.html'))
 
+def socialDoctor(request):
+	return HttpResponse(render(request, 'common/socialDoctor.html'))
+
+def socialPatient(request):
+	return HttpResponse(render(request, 'common/socialPatient.html'))
+
 def comment(request):
 	return HttpResponse(render(request, 'common/comment.html'))

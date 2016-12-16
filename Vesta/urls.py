@@ -20,6 +20,8 @@ from dummy import views as dummyViews
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', dummyViews.homepage, name = 'home'),
-    url(r'^social$', dummyViews.social, name = "vestaSocial"),
+    url(r'^social$', dummyViews.social, name = "newsFeed"),
+    url(r'^social/doctorDiscussion$', dummyViews.socialDoctor, name = "socialDoctor"),
+    url(r'^social/patientDiscussion$', dummyViews.socialPatient, name = "socialPatient"),
     url(r'^comment$', dummyViews.comment, name = "comment"),
 ]

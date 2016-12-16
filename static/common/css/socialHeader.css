@@ -12,6 +12,7 @@
 	background-color: red;
 	height: 60px;
 	box-shadow: 0 2px 2px grey;
+	z-index: 500;
 }
 
 #mainHeader a{

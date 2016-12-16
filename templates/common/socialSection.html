@@ -1,78 +1,22 @@
 {% load staticfiles %} 
 <section id = "mainSection">
 	<section id = "postSection">
-		<header>
-			<div class="mdl-grid" style="margin:0px;box-shadow: 0px 0px 2px grey;padding-top:0px;">
-				<div class="mdl-cell mdl-cell--2-col">
-					<img src="https://s3.ap-south-1.amazonaws.com/vesta-media/static/img/default-user.jpg" style="width:100%;margin-top:15px;border-radius:60px">
-				</div>
-				<div class="mdl-cell mdl-cell--10-col">
-					<form method='POST' action='' enctype="multipart/form-data" style="width: 100%"><input type='hidden' name='csrfmiddlewaretoken' value='O4ms1OQ6aXfeBpUwdOP4EZD3d1mSnszSVlrQ1jc0vnMlqHhcPhwlGYS65O9EjIrA' />
-						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
-						<textarea class="mdl-textfield__input" cols="40" id="id_content" name="content" rows="4" required></textarea>
-							<label class="mdl-textfield__label" for="id_content">Have a differential diagnostic</label>
-						</div>
-						<input id="id_media" name="media" type="file" />
-						<input type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect" style="float:right">
-					</form>
-				</div>
-			</div>
-		</header>
 
-		<section>
-			<div class = "header">
-				<img src="{% static 'common/images/user.jpg' %}">
-				<div>
-					<span> <a href="#"> Shubham jain </a> </span>
-					<br>
-					<span> 7 hours, 48 minutes ago </span>
-				</div>
-			</div>
+		<!--this will be common to all the three timelines-->
+		{% include 'common/vestaSocialNavigationBar.html' %}
+		<!-- end -->
 
-			<p>
-				This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. 
-			</p>
+		<!--add a condition so that option for new post is visible only if the news-feed tab is open, or a user is trying to access his corresponding discussion panel-->
+		{% include 'common/newPost.html' %}
+		<!-- end -->
 
-			<div class = "imageWrapper">
-				<img src="{% static 'common/images/testimage.jpg' %}">
-			</div>
 
-			<div class = "stats">
-				<span> 10 likes </span>
-				<span> 5 comments </span>
-			</div>
-
-			<div class = "action">
-				<span> <a href="#"> <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> LIKE </a></span>
-				<span> <a href="{% url 'comment' %}"> COMMENT </a></span>
-			</div>
-		</section>
+		<!--the display for posts on various sections will be same, so use this for all the three-->
+		<!-- this section can be put in a loop if there are multiple posts-->
+		{% include 'common/newsFeedSection.html' %}
+		<!-- end -->
+		
 	</section>
 
-	<section id = "adSection">
-		<ul>
-			<li>
-				<div>
-					Search Clinics<br>
-					around you
-				</div>
-				<a href="#">
-					Search Clinics
-				</a>
-			</li>
-
-			<li>
-				<div>
-					VESTA SOCIAL
-					<br>
-					Connecting the 
-					<br>
-					healthcare industry
-				</div>
-				<a href="#">
-					Vesta Social
-				</a>
-			</li>
-		</ul>
-	</section>
+	{% include 'common/adSection.html' %}
 </section>

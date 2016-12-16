@@ -1,6 +1,6 @@
 #mainSection{
 	display: flex;
-	margin: 60px 0 0 200px;
+	margin: 50px 0 0 200px;
 	font-family: arial;
 }
 
@@ -16,7 +16,7 @@
 
 #postSection > header{
 	width: 100%;
-	margin-bottom: 7px;
+	margin-bottom: 10px;
 }
 
 #postSection > section{
