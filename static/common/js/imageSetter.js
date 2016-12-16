@@ -11,7 +11,7 @@ var imageSetter = (function()
 			if(image.getAttribute('src') == '')
 				return;
 
-			console.log(wrapper[i].getBoundingClientRect());
+//			console.log(wrapper[i].getBoundingClientRect());
 			wrapper[i].style.height = wrapper[i].getBoundingClientRect().width + 'px';
 			var imageWidth = image.getBoundingClientRect().width;
 			var imageHeight = image.getBoundingClientRect().height;
