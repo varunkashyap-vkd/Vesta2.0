@@ -1,19 +1,24 @@
+{% load staticfiles %}
+
 <ul>
 	<li>
 		<a href="{% url 'socialDoctor' %}">
-			<span>DOCTOR-DOCTOR</span>
+			<img src="{% static 'common/images/differential.png' %}">
+			<span>&nbspDIFFERENTIAL</span>
 		</a>
 	</li>
 
 	<li>
 		<a href="{% url 'newsFeed' %}">
-			<span>NEWS FEED</span>
+			<img src="{% static 'common/images/myspace.png' %}">
+			<span>&nbsp&nbspMY SPACE</span>
 		</a>
 	</li>
 
 	<li>
 		<a href="{% url 'socialPatient' %}">
-			<span>PATIENT-PATIENT</span>
+			<img src="{% static 'common/images/insights.png' %}">
+			<span>&nbspINSIGHTS</span>
 		</a>
 	</li>
 </ul>
