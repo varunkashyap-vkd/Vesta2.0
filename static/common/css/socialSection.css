@@ -57,8 +57,13 @@
 	font-size: 15px;
 }
 
+.imageWrapper{
+	border: 1px solid black;
+}
+
 .imageWrapper > img{
 	width: 100%;
+	margin: 0 auto;
 }
 
 .stats{
