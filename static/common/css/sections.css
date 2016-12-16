@@ -3,7 +3,11 @@
 	margin-left: 200px;
 }
 
-#adSection{
+#postSection > header{
+	z-index: 0;
+}
+
+#rightFixedSection{
 	display: block;
 	flex: 1 0 20%;
 	height: 200px;
@@ -15,7 +19,7 @@
 		margin: 0;
 	}
 
-	#adSection{
+	#rightFixedSection{
 		display: block;
 		flex: 1 0 25%;
 		height: 200px;
@@ -29,7 +33,7 @@
 		box-sizing: border-box;
 	}
 
-	#adSection{
+	#rightFixedSection{
 		display: none;
 	}	
 }

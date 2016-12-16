@@ -17,6 +17,7 @@
 #postSection > header{
 	width: 100%;
 	margin-bottom: 10px;
+	z-index: -1;
 }
 
 #postSection > section{
@@ -25,7 +26,7 @@
 	padding-top: 20px;
 }
 
-#adSection{
+#rightFixedSection{
 	flex: 1 0 20%;
 	height: 200px;
 	margin: 0;
@@ -58,7 +59,7 @@
 }
 
 .imageWrapper{
-	border: 1px solid black;
+	order: 1px solid black;
 }
 
 .imageWrapper > img{
@@ -108,7 +109,7 @@
 		box-sizing: border-box;
 	}
 
-	#adSection{
+	#rightFixedSection{
 		flex: 1 0 25%;
 		height: 200px;
 	}
@@ -121,7 +122,7 @@
 		box-sizing: border-box;
 	}
 
-	#adSection{
+	#rightFixedSection{
 		display: none;
 	}	
 }

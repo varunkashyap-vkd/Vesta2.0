@@ -4,6 +4,7 @@
 	left: 0;
 	box-shadow: 3px 0 3px rgba(200, 200, 200, 0.8);
 	transition: 0.3s;
+	z-index: 100;
 }
 
 .navigationShown, .navigationHidden{

@@ -1,4 +1,4 @@
-#adSection > ul{
+#rightFixedSection > ul{
 	display: flex;
 	flex-direction: column;
 	padding: 15px;
@@ -6,12 +6,12 @@
 	list-style: none;
 }
 
-#adSection > ul > li{
+#rightFixedSection > ul > li{
 	flex: 0 0 200px;
 	border: 1px solid rgb(200, 200, 200);
 }
 
-#adSection > ul > li{
+#rightFixedSection > ul > li{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -20,7 +20,7 @@
 	border-radius: 3px;
 }
 
-#adSection > ul > li > div{
+#rightFixedSection > ul > li > div{
 	color: red;
 	height: 70px;
 	font-size: 13px;
@@ -29,7 +29,7 @@
 	padding-top: 10px;
 }
 
-#adSection > ul > li > a{
+#rightFixedSection > ul > li > a{
 	display: block;
 	height: 50px;
 	color: white;
@@ -41,7 +41,7 @@
 }
 
 @media screen and (max-width: 768px){
-	#adSection > ul{
+	#rightFixedSection > ul{
 		padding: 15px 10px 15px 0;
 	}
 }
