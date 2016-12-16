@@ -20,15 +20,6 @@
 	border-radius: 3px;
 }
 
-#rightFixedSection > ul > li > div{
-	color: red;
-	height: 70px;
-	font-size: 13px;
-	text-align: center;
-	box-sizing: border-box;
-	padding-top: 10px;
-}
-
 #rightFixedSection > ul > li > a{
 	display: block;
 	height: 50px;
@@ -38,6 +29,8 @@
 	text-decoration: none;
 	border-radius: 0 0 3px 3px;
 	background-color: rgba(10, 10, 10, 0.8	);
+	box-sizing: border-box;
+	margin-top: 150px;
 }
 
 @media screen and (max-width: 768px){
