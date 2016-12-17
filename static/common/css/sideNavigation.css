@@ -22,9 +22,8 @@
 	background-color: white;
 }
 
-#sideBar i{
-	color: red;
-	font-size: 18px;
+#sideBar > li img{
+	width: 15%;
 }
 
 #sideBar a{
@@ -34,14 +33,6 @@
 	padding-left: 15px;
 }
  
-#sideBar > li:first-child{
-	display: none;
-}
-
-#sideBar > li:first-child > a{
-	padding: 0;
-}
-
 #sideBar > li:hover{
 	background-color: rgb(230, 230, 230);
 }
@@ -52,19 +43,16 @@
 		left: 0;
 	}
 
-	#sideBar > li:first-child{
-		display: block;
-		text-align: center;
-	}
-
 	.navigationHidden{
 		width: 0;
 		overflow: hidden;
 	}
 
 	.navigationShown{
-		height: 100vh;
+		padding-bottom: 200px;
+		height: 90vh;
 		overflow: auto;
+		background-color: white;
 	}
 }
 

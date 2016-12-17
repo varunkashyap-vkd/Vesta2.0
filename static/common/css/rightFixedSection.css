@@ -1,14 +1,16 @@
 #rightFixedSection > ul{
 	display: flex;
+	width: 80%;
 	flex-direction: column;
 	padding: 15px;
-	margin-top: 20px;
 	list-style: none;
 }
 
 #rightFixedSection > ul > li{
 	flex: 0 0 200px;
 	border: 1px solid rgb(200, 200, 200);
+	width: 100%;
+	margin-bottom: 60px;
 }
 
 #rightFixedSection > ul > li{

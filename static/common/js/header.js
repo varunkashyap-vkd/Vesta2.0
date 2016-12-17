@@ -1,16 +1,22 @@
 var headerAndNavManager = (function()
 {
-	var navButton, navBar, leftArrow, search, inputField;
+	var navButton, navBar, search, inputField, requested;
 
-	function makeNavigationVisible(){
-		navBar.setAttribute('class', 'navigationShown');
+	function resize(){
+		if(window.innerWidth > 768)
+			navBar.setAttribute('class', 'navigationHidden');
 	}
 
-	function makeNavigationHidden(){
-		navBar.setAttribute('class', 'navigationHidden');
+	function toggleNavigationVisibility(event){
+		if(event.target == navButton)
+			navBar.setAttribute('class', 'navigationShown');
+
+		else
+			navBar.setAttribute('class', 'navigationHidden');
 	}
 
 	function makeInputVisible(){
+		requested = true;
 		inputField.setAttribute('class', 'inputShown');
 		inputField.focus();
 	}
@@ -22,16 +28,16 @@ var headerAndNavManager = (function()
 
 	function init(obj)
 	{
+		requested = false;
 		navButton = document.querySelector(obj.navButton);
 		navBar = document.getElementById(obj.navBar);
-		leftArrow = document.querySelector(obj.leftArrow);
 		search = document.querySelector(obj.search);
 		inputField = document.querySelector(obj.inputField);
 
-		navButton.addEventListener('click', makeNavigationVisible);
-		leftArrow.addEventListener('click', makeNavigationHidden);
+		document.addEventListener('click', toggleNavigationVisibility);
 		search.addEventListener('click', makeInputVisible);
 		inputField.addEventListener('blur', makeInputHidden);
+		window.addEventListener('resize', resize);
 	}
 
 	return {

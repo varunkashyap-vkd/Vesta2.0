@@ -20,7 +20,19 @@
 
 	{% block body %}	{% endblock %}
 	<script type="text/javascript" src = "{% static 'common/js/jquery.js' %}"></script>
+	<script type="text/javascript" src = "{% static 'common/js/xyz.js' %}"></script>
 	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#rightFixedSection").jCarouselLite({
+				'auto': 8000,
+				'speed' : 500,
+				'circular' : true,
+				'vertical' : true,
+				'visible' : 5,
+			});
+		});
+	</script>
 	{% block scripts %}	{% endblock %}
 </body>
 {% block internalStyles %}	{% endblock %}

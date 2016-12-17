@@ -14,6 +14,7 @@
 	display: block;
 	height: 100%;
 	color: black;
+	font-size: 14px;
 	text-decoration: none;
 	font-family: arial;
 	padding-top: 15px;
@@ -21,7 +22,7 @@
 }
 
 #postSection > ul > li img{
-	height: 80%;
+	height: 70%;
 }
 
 #postSection > ul > li{

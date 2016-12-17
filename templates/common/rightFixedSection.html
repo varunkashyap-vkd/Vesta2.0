@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<div id = "rightFixedSection">
+	<ul>
+		{% for i in "123456789" %}
+		<li style="background: url('{% static 'common/images/1.jpg' %}') center/cover; width: 100%; height : 200px;">
+			<a href="#">
+				Search Clinics
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
