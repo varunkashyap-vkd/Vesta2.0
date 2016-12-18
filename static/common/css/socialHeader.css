@@ -10,9 +10,13 @@
 	left: 0;
 	width: 100%;
 	background-color: red;
-	height: 60px;
+	eight: 120px;
 	box-shadow: 0 2px 2px grey;
 	z-index: 500;
+}
+
+#mainHeader > div > img{
+	width: 100px;
 }
 
 #mainHeader a{
@@ -24,11 +28,13 @@
 	position: relative;
 	padding-left: 30px;
 	line-height: 60px;
-	height: 60px;
+	height: 50px;
 	color: white;
 	font-size: 23px;
 	font-family: arial;
+	transition: 1s;
 	box-sizing: border-box;
+	order: 1px solid blue;
 }
 
 #mainHeader > div > i{
@@ -48,12 +54,18 @@
 	display: flex;
 	align-items: center;
 	list-style: none;
+	transition: 1s;
+}
+
+#mainHeader > div > ul img{
+	width: 22px;
 }
 
 #mainHeader > div > ul > li{
 	margin-left: 30px;
 	font-family: arial;
 	font-size: 18px;
+	cursor: pointer;
 	width: auto;
 }
 
@@ -80,7 +92,7 @@
 }
 
 @media screen and (max-width:768px){
-	#mainHeader > div > ul > li:nth-child(n+2){
+	#mainHeader > div > ul > li:first-child{
 		display: none;
 	}
 
@@ -90,7 +102,31 @@
 }
 
 @media screen and (max-width:480px){
-	#mainHeader > div > ul > li:nth-child(n+2){
+	#mainHeader > div > ul > li:first-child{
 		display: none;
+	}
+
+	#mainHeader > div > ul > li{
+		margin-left: 20px;
+	}
+
+	#mainHeader > div{
+		font-size: 20px;
+	}
+
+	#mainHeader > div > ul img{
+		width: 20px;
+	}
+
+	#mainHeader > div > ul{
+		right: 10px;
+	}
+
+	#mainHeader > div > span{
+		margin-left: 10px;
+	}
+
+	#mainHeader > div{
+		padding-left: 15px;
 	}
 }

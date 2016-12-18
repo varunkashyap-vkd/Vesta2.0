@@ -1,24 +1,19 @@
 #rightFixedSection > ul{
 	display: flex;
-	width: 80%;
+	width: 100%;
 	flex-direction: column;
-	padding: 15px;
+	padding: 5px;
 	list-style: none;
 }
 
 #rightFixedSection > ul > li{
-	flex: 0 0 200px;
+	flex: 0 0 230px;
 	border: 1px solid rgb(200, 200, 200);
 	width: 100%;
-	margin-bottom: 60px;
-}
-
-#rightFixedSection > ul > li{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	font-family: arial;
-	margin-bottom: 10px;
 	border-radius: 3px;
 }
 
@@ -32,7 +27,8 @@
 	border-radius: 0 0 3px 3px;
 	background-color: rgba(10, 10, 10, 0.8	);
 	box-sizing: border-box;
-	margin-top: 150px;
+	margin-top: 180px;
+	text-align: left;
 }
 
 @media screen and (max-width: 768px){

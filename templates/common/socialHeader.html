@@ -7,18 +7,29 @@
 
 		<ul>
 			<li>
-				<i class="fa fa-search" aria-hidden="true"></i>&nbsp&nbsp<input type = "text" class = "inputHidden">
+				<img src="{% static 'common/images/search.png' %}">&nbsp&nbsp<input type = "text" class = "inputHidden">
+			</li>
+
+			<li>
+				<a href="{% url 'newsFeed' %}">
+					<img src="{% static 'common/images/home.png' %}">
+				</a>
+			</li>
+
+			<li>
+				<img src="{% static 'common/images/userplus.png' %}">
 			</li>
 			<li>
-				<i class="fa fa-user-plus" aria-hidden="true"></i>
+				<a href="#">
+					<img src="{% static 'common/images/user.png' %}">
+				</a>
 			</li>
 			<li>
-				longclaw {{ username }}
-			</li>
-			<li>
-				logout
+				<img src="{% static 'common/images/logout.png' %}">
 			</li>
 		</ul>
 	</div>
+
+	{% include 'common/vestaSocialNavigationBar.html' %}
 </header>
 

@@ -1,6 +1,6 @@
 #mainSection{
 	display: flex;
-	margin: 50px 0 0 200px;
+	margin: 100px 0 0 200px;
 	font-family: arial;
 }
 
@@ -21,31 +21,109 @@
 }
 
 #postSection > section{
-	border: 1px solid rgb(200, 200, 200);
-	border-radius: 3px;
-	padding-top: 20px;
+	border-radius: 10px;
 	margin-bottom: 15px;
+	box-shadow: 3px 3px 3px rgb(200, 200, 200);
+	border-left: 1px solid rgb(220, 220, 200);
+	order-right: 1px solid rgb(220, 220, 200);
 }
 
 #rightFixedSection{
 	flex: 1 0 20%;
-	margin-top: 30px;
+	margin-top: 10px;
+	text-align: right;
 }
 
 .header{
+	font-family: lato;
+	position: relative;
 	display: flex;
-	height: 50px;
+	padding: 10px 0 10px 5px;
+	height: 60px;
+	background-color: rgb(60, 60, 60);
 	align-items: center;
-	padding-left: 15px;
+	border-radius: 0 10px 0 0;
+}
+
+.xyz{
+	position: absolute;
+	width: 98%;
+	height: 3px;
+	background-color: red;
+	top: 0;
+	left: 0;
+}	
+
+.leftExtra, .rightExtra{
+	position: absolute;
+	top: 0;
+	height: 60px;
+	background-color: rgba(59, 89, 152, 0.9);
+	background-color: rgb(153, 35, 35);
+	background-color: rgb(60, 60, 60);
+}
+
+.leftExtra{
+	left: -15px;
+	width: 15px;
+	border-radius: 10px 0 0 0;
+}
+
+.rightExtra{
+	left: 100%;
+	width: 15px;
+	border-radius: 0 10px 0 0;
+}
+
+.leftTriangle, .rightTriangle{
+	position: absolute;
+	top: 60px;	
+	width: 0px;
+	height: 0px;
+}
+
+.rightTriangle{
+	left: 100%;
+	border-top: 7.5px solid black;
+	border-left: 7.5px solid black;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+
+.leftTriangle{
+	left: -15px;
+	border-top: 7.5px solid black;
+	border-right: 7.5px solid black;
+	border-left: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+}
+
+.dots{
+	position: absolute;
+	top: 20px;
+	right: 10px;
+}
+
+.dots > img{
+	width: 20px;
 }
 
 .header a{
-	color: blue;
+	font-weight: bold;
+	color: white;
+	font-size: 15px;
+	letter-spacing: 0.5px;
+}
+
+.header > div > span:last-child{
+	color: white;
+	font-size: 13px;
 }
 
 .header > img{
-	width: 50px;
 	margin-right: 15px;
+	width: 40px;
+	border-radius: 30px;
 }
 
 .header > div{
@@ -53,9 +131,12 @@
 }
 
 #postSection > section > p{
-	margin: 40px 0;
-	padding: 0 15px;
-	font-size: 15px;
+	padding: 20px 15px;
+	font-family: lato;
+	font-size: 14px;
+	background-color: rgba(80, 0, 0, 0.1);
+	background-color: white;
+	box-sizing: border-box;
 }
 
 .imageWrapper{
@@ -68,7 +149,7 @@
 }
 
 .imageWrapper > img{
-	idth: 100%;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -89,6 +170,7 @@
 	height: 40px;
 	border-top: 1px solid rgb(200, 200, 200);
 	line-height: 40px;
+	border-radius: 0 0 10px 10px;
 }
 
 .action > span{

@@ -19,13 +19,27 @@ VESTA - My Space
 {% include 'common/socialSection.html' %}
 <style type="text/css">
 	#sideBar{
-		top: 60px;
+		top: 95px;
 	}
 
-	#postSection > ul > li:nth-child(2){
-		border-bottom: 2px solid red;
+	{% if type == 'differential' %}
+	#mainHeader > ul > li:first-child{
+		border-bottom: 2px solid white;
 	}
+	{% endif %}
 
+	{% if type == 'news' %}
+	#mainHeader > ul > li:nth-child(2){
+		border-bottom: 2px solid white;
+	}
+	{% endif %}
+
+
+	{% if type == 'insight' %}
+	#mainHeader > ul > li:last-child{
+		border-bottom: 2px solid white;
+	}
+	{% endif %}
 </style>
 {% endblock %}
 
@@ -37,13 +51,13 @@ VESTA - My Space
 		var target = {
 			'navButton' : '#mainHeader > div > i',
 			'navBar' : 'sideBar',
-			'search' : '#mainHeader > div > ul > li:first-child > i',
+			'search' : '#mainHeader > div > ul > li:first-child > img',
 			'inputField' : '#mainHeader > div > ul > li:first-child > input',
 		};
 		headerAndNavManager.init(target);
 
 		var x = {'wrapper' : 'imageWrapper'};
-		imageSetter.init(x);
+//		imageSetter.init(x);
 	};
 </script>
 {% endblock %}

@@ -1,33 +1,33 @@
-#postSection > ul{
+#mainHeader > ul{
 	display: flex;
 	list-style: none;
 }
 
-#postSection > ul{
-	order: 2px solid black;
-	border-bottom: 1px solid rgb(200, 200, 200);
-	margin-bottom: 30px;
-}
-
-#postSection > ul > li > a{
-	order: 1px solid black;
-	display: block;
-	height: 100%;
-	color: black;
+#mainHeader > ul > li > a{
+	display: flex;
+	align-items: center;
+	line-height: 45px;
+	color: white;
 	font-size: 14px;
 	text-decoration: none;
 	font-family: arial;
-	padding-top: 15px;
+	padding-left: 30%;
 	box-sizing: border-box;
 }
 
-#postSection > ul > li img{
-	height: 70%;
+#mainHeader > ul > li img{
+	width: 30px;
+	height: 30px;
 }
 
-#postSection > ul > li{
+#mainHeader > ul > li:nth-child(n + 2) img{
+	width: 35px;
+	height: 35px;	
+}
+
+#mainHeader > ul > li{
 	flex: 1 0 33%;
-	height: 55px;
+	height: 45px;
 	text-align: center;
 	font-size: 14px;
 }
@@ -37,12 +37,21 @@
 }
 
 @media screen and (max-width: 768px){
-	#postSection > ul span{
+	#mainHeader > ul span{
 		display: none;
 	}
 
-	#postSection a{
+	#mainHeader a{
 		font-size: 20px;
+	}
+
+	#mainHeader > ul > li img{
+		width: 25px;
+		height: 25px;
+	}
+
+	#mainHeader > ul > li > a{
+		padding-left: 45%;
 	}
 }
 

@@ -17,13 +17,13 @@ def homepage(request):
 	return HttpResponse(render(request, 'common/homepage.html'))
 
 def social(request):
-	return HttpResponse(render(request, 'common/vestaSocial.html'))
+	return HttpResponse(render(request, 'common/vestaSocial.html', {'type' : 'news'}))
 
 def socialDoctor(request):
-	return HttpResponse(render(request, 'common/socialDoctor.html'))
+	return HttpResponse(render(request, 'common/vestaSocial.html', {'type' : 'differential'}))
 
 def socialPatient(request):
-	return HttpResponse(render(request, 'common/socialPatient.html'))
+	return HttpResponse(render(request, 'common/vestaSocial.html', {'type' : 'insight'}))
 
 def comment(request):
 	return HttpResponse(render(request, 'common/comment.html'))

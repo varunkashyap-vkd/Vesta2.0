@@ -1,21 +1,21 @@
 #sideBar{
 	position: fixed;
-	top: 90px;
 	left: 0;
 	box-shadow: 3px 0 3px rgba(200, 200, 200, 0.8);
 	transition: 0.3s;
 	z-index: 100;
+	overflow: auto;
+	padding-bottom: 100px;
 }
 
 .navigationShown, .navigationHidden{
-	width: 200px;
+	width: 210px;
 	overflow: auto;
 }
 
 #sideBar > li{
 	font-family: arial;
 	height: 45px;
-	line-height: 45px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 	font-size: 12px;
 	letter-spacing: 0.5px;
@@ -23,11 +23,12 @@
 }
 
 #sideBar > li img{
-	width: 15%;
+	width: 13%;
 }
 
 #sideBar a{
 	display: block;
+	height: 100%;
 	color: black;
 	text-decoration: none;
 	padding-left: 15px;
@@ -49,15 +50,9 @@
 	}
 
 	.navigationShown{
-		padding-bottom: 200px;
+		padding-bottom: 0px;
 		height: 90vh;
 		overflow: auto;
 		background-color: white;
 	}
 }
-
-
-
-
-
-
