@@ -7,8 +7,11 @@
 
 <head>
 
+	<link rel="stylesheet" type="text/css" href="{% static 'common/plugins/slick/slick.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'common/plugins/slick/slick-theme.css' %}"/>
+
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.amber-blue.min.css">
 
 	<link rel="stylesheet" type="text/css" href="{% static 'common/plugins/font-awesome/css/font-awesome.css' %}">
 	{% block head %}	{% endblock %}
@@ -22,8 +25,10 @@
 
 	{% block body %}	{% endblock %}
 	<script type="text/javascript" src = "{% static 'common/js/jquery.js' %}"></script>
+	<script type="text/javascript" src = "{% static 'common/plugins/slick/slick.min.js' %}"></script>
 	<script type="text/javascript" src = "{% static 'common/js/xyz.js' %}"></script>
-	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>	
+	<script type="text/javascript" src = "{% static 'common/js/commentHandler.js' %}"></script>
 	<script type="text/javascript">
 		$(function() {
 			$("#rightFixedSection").jCarouselLite({
@@ -33,9 +38,109 @@
 				'vertical' : true,
 				'visible' : 3,
 			});
-		});
-	</script>	
-	{% block scripts %}	{% endblock %}
+		}); 
+
+		commentHandler.init({'comment' : 'comment'});
+
+	/*
+  $(document).ready(function(){
+    $('#rightFixedSection').slick({
+      autoplay: true,
+      autoplaySpeed: 1000,
+      vertical: true,
+      infinite: true,
+      slidesToShow: 1,
+      useCSS: false,
+      pauseOnHover: true,
+      dots: false,
+    });
+});*/
+
+
+</script>	
+
+
+<div id = "background">
+	<img src="{% static 'common/images/bg.jpg' %}">
+</div>
+
+<div id = "colorBackground"></div>
+
+
+<style type="text/css">
+
+	#id_media input{
+		color: green !important;
+	}
+
+	#id_media{
+		color: white;
+		font-size: 15px;
+	}
+
+	.mdl-textfield__input {
+		color: white !important;
+	}
+
+	#background{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		filter: blur(5px);
+		transform: translate3d(0, 0, 0);
+	}
+
+	#background > img{
+		idth: 100%;
+		height: 100%;
+	}
+
+	#colorBackground{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(40, 40, 40, 0.2);
+	}
+</style>
+
+<!--
+<div id = "colorBackground"></div>
+
+
+
+<style type="text/css">
+	body:before{
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-image: url("{% static 'common/images/bg.jpg' %}");
+		background-size: 100%;
+		ackground-attachment: fixed;
+		background-color: black;
+		filter: blur(7px);
+		z-index: 0;
+	}
+
+	body:after{
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(10, 10, 10, 0.5);
+		z-index: 0;
+	}
+</style>
+-->
+{% block scripts %}	{% endblock %}
 </body>
 {% block internalStyles %}	{% endblock %}
 </html>

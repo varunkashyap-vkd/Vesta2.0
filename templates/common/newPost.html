@@ -1,16 +1,22 @@
 <header>
 	<div class="mdl-grid" style="margin:0px;box-shadow: 0px 0px 2px grey;padding-top:0px;">
 		<div class="mdl-cell mdl-cell--2-col">
-			<img src="https://s3.ap-south-1.amazonaws.com/vesta-media/static/img/default-user.jpg" style="width:100%;margin-top:15px;border-radius:60px">
+			<img src="https://s3.ap-south-1.amazonaws.com/vesta-media/static/img/default-user.jpg" style="width:70px;margin-top:15px;border-radius:35px">
 		</div>
 		<div class="mdl-cell mdl-cell--10-col">
 			<form method='POST' action='' enctype="multipart/form-data" style="width: 100%"><input type='hidden' name='csrfmiddlewaretoken' value='O4ms1OQ6aXfeBpUwdOP4EZD3d1mSnszSVlrQ1jc0vnMlqHhcPhwlGYS65O9EjIrA' />
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
-					<textarea class="mdl-textfield__input" cols="40" id="id_content" name="content" rows="4" required></textarea>
-					<label class="mdl-textfield__label" for="id_content">Have a differential diagnostic</label>
+					<textarea style = "padding-top: 20px; box-sizing: border-box;" class="mdl-textfield__input" cols="40" id="id_content" name="content" rows="4" required></textarea>
+					<label class="mdl-textfield__label" for="id_content" style = "color: white; font-family: lato; font-size: 15px;">Have a differential diagnostic</label>
 				</div>
-				<input id="id_media" name="media" type="file" />
-				<input type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect" style="float:right">
+<!--				<a href="#" onClick = "document.getElementById('id_media').click(); console.log(document.getElementById('id_media')); return false;">
+					Choose a file
+				</a>
+				<span id = "temp">
+					no file selected
+				</span>-->
+				<input id="id_media" name="media" type="file">
+				<input type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect" style="float:right; color: white; font-family: lato;">
 			</form>
 		</div>
 	</div>

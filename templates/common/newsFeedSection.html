@@ -5,9 +5,9 @@
 		<div class = "dots">
 			<img src="{% static 'common/images/threedots.png' %}">
 		</div>
-		<div class = "leftExtra"></div>
+<!--		<div class = "leftExtra"></div>
 		<div class = "leftTriangle"></div>
-	<!--	<div class = "rightExtra"></div>
+		<div class = "rightExtra"></div>
 		<div class = "rightTriangle"></div> 
 -->
 		<img src="{% static 'common/images/user.jpg' %}">
@@ -27,13 +27,8 @@
 	</div>
 
 	<div class = "stats">
-		<span> 10 likes </span>
-		<span> 5 comments </span>
-	</div>
-
-	<div class = "action">
-		<span> <a href="#"> <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> LIKE </a></span>
-		<span> <a href="{% url 'comment' %}"> COMMENT </a></span>
+		<a href="#"> <img src="{% static 'common/images/like.png' %}"> </a>		<span> &nbsp&nbsp10 likes </span>
+		<a href="#" class = "comment"> <img src="{% static 'common/images/comment.png' %}"> </a>	<span> &nbsp&nbsp5 comments </span>
 	</div>
 </section>
 

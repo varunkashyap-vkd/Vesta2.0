@@ -1,6 +1,6 @@
 #rightFixedSection > ul{
 	display: flex;
-	width: 100%;
+	width: 97%;
 	flex-direction: column;
 	padding: 5px;
 	list-style: none;
@@ -8,13 +8,14 @@
 
 #rightFixedSection > ul > li{
 	flex: 0 0 230px;
-	border: 1px solid rgb(200, 200, 200);
+	order: 1px solid rgb(200, 200, 200);
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	font-family: arial;
-	border-radius: 3px;
+	order-radius: 5px;
+	margin-bottom: 5px;
 }
 
 #rightFixedSection > ul > li > a{
@@ -24,8 +25,8 @@
 	font-size: 14px;
 	padding: 15px 0 0 15px;
 	text-decoration: none;
-	border-radius: 0 0 3px 3px;
-	background-color: rgba(10, 10, 10, 0.8	);
+	order-radius: 0 0 3px 3px;
+	background-color: rgba(10, 10, 10, 0.8);
 	box-sizing: border-box;
 	margin-top: 180px;
 	text-align: left;

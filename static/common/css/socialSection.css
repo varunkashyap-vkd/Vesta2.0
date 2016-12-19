@@ -9,40 +9,45 @@
 }
 
 #postSection{
+	position: relative;
 	flex: 1 0 75%;
 	padding: 10px 10%;
 	box-sizing: border-box;
+	z-index: 100;
 }
 
 #postSection > header{
 	width: 100%;
 	margin-bottom: 25px;
-	z-index: -1;
+	background-color: rgba(30, 30, 30, 0.7);
+	z-index: 100;
 }
 
 #postSection > section{
 	border-radius: 10px;
 	margin-bottom: 15px;
-	box-shadow: 3px 3px 3px rgb(200, 200, 200);
-	border-left: 1px solid rgb(220, 220, 200);
-	order-right: 1px solid rgb(220, 220, 200);
+	ox-shadow: 3px 3px 3px rgb(200, 200, 200);
+	order-left: 1px solid rgb(220, 220, 200);
+	z-index: 100;
 }
 
 #rightFixedSection{
 	flex: 1 0 20%;
-	margin-top: 10px;
+	height: 400px;
 	text-align: right;
+	z-index: 999;
 }
 
 .header{
 	font-family: lato;
 	position: relative;
 	display: flex;
-	padding: 10px 0 10px 5px;
+	padding: 10px 0 10px 15px;
 	height: 60px;
-	background-color: rgb(60, 60, 60);
+	background-color: rgba(30, 30, 30, 0.7);
+
 	align-items: center;
-	border-radius: 0 10px 0 0;
+	order-radius: 10px 10px 0 0;
 }
 
 .xyz{
@@ -131,17 +136,22 @@
 }
 
 #postSection > section > p{
-	padding: 20px 15px;
+	padding: 0px 15px 10px 15px;
+	line-height: 25px;
 	font-family: lato;
 	font-size: 14px;
 	background-color: rgba(80, 0, 0, 0.1);
 	background-color: white;
+	background-color: rgba(30, 30, 30, 0.7);
+	color: white;
+	text-indent: 20px;
 	box-sizing: border-box;
+	margin: 0;
 }
 
 .imageWrapper{
-	border-top: 1px solid rgb(200, 200, 200);
-	border-bottom: 1px solid rgb(200, 200, 200);
+	order-top: 1px solid rgb(200, 200, 200);
+	order-bottom: 1px solid rgb(200, 200, 200);
 	text-align: center;
 
 	display: flex;
@@ -153,22 +163,34 @@
 	margin: 0 auto;
 }
 
+.stats, .action{
+	background-color: rgba(30, 30, 30, 0.7);
+}
+
 .stats{
+	display: flex;
+	align-items: center;
 	padding: 0 25px;
-	height: 35px;
-	line-height: 30px;
+	height: 40px;
+	line-height: 40px;
+	color: white;
+}
+
+.stats img{
+	width: 20px;
 }
 
 .stats > span{
 	margin-right: 50px;
 }
 
+
 .action{
-	width: 98%;
+	idth: 98%;
 	margin: 0 auto;
 	padding: 0 25px;
 	height: 40px;
-	border-top: 1px solid rgb(200, 200, 200);
+	order-top: 1px solid rgb(200, 200, 200);
 	line-height: 40px;
 	border-radius: 0 0 10px 10px;
 }
@@ -184,6 +206,14 @@
 .action > span:first-child > a{
 	color: black;
 }
+
+#commentClicked{
+	position: fixed;
+	top: 300px;
+	width: 50%;
+	z-index: 1000;
+}
+
 
 @media screen and (max-width: 768px){
 	#mainSection{

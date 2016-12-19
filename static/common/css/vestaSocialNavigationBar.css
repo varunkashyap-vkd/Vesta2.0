@@ -6,7 +6,6 @@
 #mainHeader > ul > li > a{
 	display: flex;
 	align-items: center;
-	line-height: 45px;
 	color: white;
 	font-size: 14px;
 	text-decoration: none;
@@ -53,10 +52,4 @@
 	#mainHeader > ul > li > a{
 		padding-left: 45%;
 	}
-}
-
-@media screen and (max-width: 480px){
-	.midSection{
-		flex: 1 0 100%;
-	}	
 }

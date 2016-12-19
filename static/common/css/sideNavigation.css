@@ -1,11 +1,14 @@
 #sideBar{
 	position: fixed;
 	left: 0;
-	box-shadow: 3px 0 3px rgba(200, 200, 200, 0.8);
+	ox-shadow: 3px 0 3px rgba(200, 200, 200, 0.8);
 	transition: 0.3s;
-	z-index: 100;
+	z-index: 800;
 	overflow: auto;
 	padding-bottom: 100px;
+	background-color: rgba(60, 60, 60, 0.5);
+
+	order-right: 1px solid white;
 }
 
 .navigationShown, .navigationHidden{
@@ -16,10 +19,12 @@
 #sideBar > li{
 	font-family: arial;
 	height: 45px;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	order-bottom: 1px solid rgba(0, 0, 0, 0.4);
 	font-size: 12px;
 	letter-spacing: 0.5px;
-	background-color: white;
+	ackground-color: white;
+
+	order-bottom: 1px solid rgba(200, 200, 200, 0.4);
 }
 
 #sideBar > li img{
@@ -30,12 +35,17 @@
 	display: block;
 	height: 100%;
 	color: black;
+
+	color: white;
+	line-height: 45px;
 	text-decoration: none;
 	padding-left: 15px;
 }
  
-#sideBar > li:hover{
+#sideBar a:hover{
 	background-color: rgb(230, 230, 230);
+	background-color: white;
+	color: black;
 }
 
 @media screen and (max-width: 768px){
@@ -53,6 +63,6 @@
 		padding-bottom: 0px;
 		height: 90vh;
 		overflow: auto;
-		background-color: white;
+		ackground-color: white;
 	}
 }

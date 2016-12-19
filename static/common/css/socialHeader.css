@@ -10,9 +10,8 @@
 	left: 0;
 	width: 100%;
 	background-color: red;
-	eight: 120px;
 	box-shadow: 0 2px 2px grey;
-	z-index: 500;
+	z-index: 940;
 }
 
 #mainHeader > div > img{
