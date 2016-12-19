@@ -2,10 +2,6 @@
 <section id = "mainSection">
 	<section id = "postSection">
 
-		<!--this will be common to all the three timelines-->
-<!--		{% include 'common/vestaSocialNavigationBar.html' %}	-->
-		<!-- end -->
-
 		<!--add a condition so that option for new post is visible only if the news-feed tab is open, or a user is trying to access his corresponding discussion panel-->
 		{% include 'common/newPost.html' %}			
 		<!-- end -->
@@ -13,7 +9,9 @@
 
 		<!--the display for posts on various sections will be same, so use this for all the three-->
 		<!-- this section can be put in a loop if there are multiple posts-->
+		{% for i in '123' %}
 		{% include 'common/newsFeedSection.html' %}
+		{% endfor %}
 		<!-- end -->
 		
 	</section>

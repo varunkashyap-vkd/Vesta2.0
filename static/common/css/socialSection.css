@@ -171,7 +171,7 @@
 	display: flex;
 	align-items: center;
 	padding: 0 25px;
-	height: 40px;
+	height: 45px;
 	line-height: 40px;
 	color: white;
 }
@@ -180,8 +180,14 @@
 	width: 20px;
 }
 
-.stats > span{
-	margin-right: 50px;
+.stats > a{
+	font-family: lato;
+	color: white;
+	margin-right: 5px;
+}
+
+.stats > a:nth-child(2){
+	margin-right: 30px;
 }
 
 
@@ -214,10 +220,97 @@
 	z-index: 1000;
 }
 
+#postSection > section > ul{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	font-family: lato;
+	color: white;
+	background-color: rgba(30, 30, 30, 0.7);
+	padding: 0;
+	margin: 0;
+	transition: 0.7s;
+}
+
+.commentListHidden{
+	height: 0px;
+	overflow: hidden;
+	border-top: 1px solid transparent;
+}
+
+.commentListShown{
+	height: 200px;
+	overflow: auto;
+	border-top: 1px solid rgba(200, 200, 200, 0.7);
+}
+
+.addComment{
+	display: flex;
+	height: 0px;
+	overflow: hidden;
+	transition: 0.7s;
+}
+
+.addCommentHidden{
+	height: 0px;
+	overflow: hidden;
+}
+
+.addCommentShown{
+	height: 30px;
+	overflow: auto;
+}
+
+.addComment > input{
+	flex: 1 0 1px;
+	border: none;
+	padding-left: 5px;
+	font-family: lato;
+}
+
+.addComment > button{
+	flex: 0 0 100px;
+	cursor: pointer;
+	border: none;
+	font-family: lato;
+}
+
+#postSection > section > ul > li{
+	padding-top: 5px;
+	border-bottom: 1px dotted rgba(200, 200, 200, 0.2);
+}
+
+#postSection > section > ul > li:last-child{
+	border-bottom: none;
+}
+
+#postSection > section > ul img{
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	margin-right: 10px;
+}
+
+#postSection > section > ul header{
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	font-size: 14px;
+	height: 40px;
+	padding-left: 15px;
+	line-height: 40px;
+	order: 1px solid black;
+}
+
+#postSection > section > ul p{
+	text-indent: 25px;
+	padding: 0 15px;
+	font-size: 13px;
+}
 
 @media screen and (max-width: 768px){
 	#mainSection{
-		margin: 60px 0 0 0;
+		margin: 100px 0 0 0;
 	}
 
 	#postSection{
@@ -235,7 +328,7 @@
 @media screen and (max-width: 480px){
 	#postSection{
 		flex: 1 0 100%;
-		padding: 10px 25px;
+		padding: 10px 15px;
 		box-sizing: border-box;
 	}
 

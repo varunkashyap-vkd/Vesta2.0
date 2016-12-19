@@ -46,18 +46,31 @@ VESTA - My Space
 {% block scripts %}
 <script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
 <script type="text/javascript" src = "{% static 'common/js/imageSetter.js' %}"></script>
+<script type="text/javascript" src = "{% static 'common/js/commentHandler.js' %}"></script>
 <script type="text/javascript">
-	window.onload = function(){
-		var target = {
-			'navButton' : '#mainHeader > div > i',
-			'navBar' : 'sideBar',
-			'search' : '#mainHeader > div > ul > li:first-child > img',
-			'inputField' : '#mainHeader > div > ul > li:first-child > input',
-		};
-		headerAndNavManager.init(target);
-
-		var x = {'wrapper' : 'imageWrapper'};
-//		imageSetter.init(x);
+	var target = {
+		'navButton' : '#mainHeader > div > i',
+		'navBar' : 'sideBar',
+		'search' : '#mainHeader > div > ul > li:first-child > img',
+		'inputField' : '#mainHeader > div > ul > li:first-child > input',
 	};
+	headerAndNavManager.init(target);
+
+	$(function() {
+		$("#rightFixedSection").jCarouselLite({
+			'auto': 8000,
+			'speed' : 500,
+			'circular' : true,
+			'vertical' : true,
+			'visible' : 3,
+		});
+	}); 
+
+	var obj = {
+		'commentButton' : '.stats > a:nth-child(4)',
+		'addCommentDiv' : 'addComment',
+		'commentList' : 'commentListHidden',
+	};
+	commentHandler.init(obj);
 </script>
 {% endblock %}

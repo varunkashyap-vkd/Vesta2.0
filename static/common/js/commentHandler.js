@@ -1,50 +1,47 @@
 var commentHandler = (function()
 {
-	var commentButton, bodyContent;
+	var button, addComment, commentList;
+	var commentListShown, commentListHidden;
+	var addCommentShown, addCommentHidden;
+	var addCommentClass;
 
-	function buttonClicked(button, event)
+	function commentButtonClicked(button, addComment, commentList, event)
 	{
-		var scripts = document.querySelectorAll('script');
-		var bodyContent = document.body.innerHTML;
+		event.preventDefault();
+		addComment.getElementsByTagName('input')[0].focus();
+		var current = button.getAttribute('open');
 
-		var parent = button.parentNode.parentNode;
-		var div = document.createElement('div');
-		div.style.position = 'fixed';
-		div.style.top = '0px';
-		div.style.left = '0px';
-		div.style.width = '100vw';
-		div.style.height = '100vh';
-		div.style.backgroundColor = 'red';
-		div.style.zIndex = '1000';
+		if(current == 0)
+		{
+			addComment.setAttribute('class', addCommentClass + ' ' + addCommentShown);
+			commentList.setAttribute('class', commentListShown);
+			button.setAttribute('open', '1');
+		}
 
-		var div2 = document.createElement('div');
-		div2.style.position = 'fixed';
-		div2.style.top = '0px';
-		div2.style.left = '0px';
-		div2.style.width = '30px';
-		div2.style.height = '30px';
-		div2.style.zIndex = '2000';
-		div2.style.backgroundColor = 'blue';
-
-		document.body.appendChild(div);
-		document.body.appendChild(div2);
-		parent.setAttribute('id', 'commentClicked');
-		parent.style.zIndex = '3000';
-		div.addEventListener('click', divClicked.bind(this, parent, div));
-	}
-
-	function divClicked(parent, div)
-	{
-		document.body.innerHTML = bodyContent;
-		parent.setAttribute('id', '');
+		else
+		{
+			addComment.setAttribute('class', addCommentClass + ' ' + addCommentHidden);
+			commentList.setAttribute('class', commentListHidden);
+			button.setAttribute('open', '0');
+		}
 	}
 
 	function init(obj)
 	{
-		commentButton = document.getElementsByClassName(obj.comment);
+		addCommentClass = 'addComment';
+		addCommentShown = 'addCommentShown';
+		addCommentHidden = 'addCommentHidden';
+		commentListHidden = 'commentListHidden';
+		commentListShown = 'commentListShown';
 
-		for(var i = 0; i < commentButton.length; i++)
-			commentButton[i].addEventListener('click', buttonClicked.bind(this, commentButton[i]));
+		button = document.querySelectorAll(obj.commentButton);
+		addComment = document.getElementsByClassName(obj.addCommentDiv);
+		commentList = document.getElementsByClassName(obj.commentList);
+
+		for(var i = 0; i < button.length; i++)
+		{
+			button[i].addEventListener('click', commentButtonClicked.bind(this, button[i], addComment[i], commentList[i]));
+		}
 	}
 
 	return {
