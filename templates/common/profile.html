@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/vestaSocialNavigationBar.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/profileSection.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/popup.css' %}">
 {% endblock %}
 
 {% block title %}
@@ -50,6 +51,7 @@ VESTA - Profile
 
 {% block scripts %}
 <script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
+<script type="text/javascript" src = "{% static 'common/js/profile.js' %}"></script>
 <script type="text/javascript">
 	var target = {
 		'navButton' : '#mainHeader > div > i',
@@ -58,6 +60,12 @@ VESTA - Profile
 		'inputField' : '#mainHeader > div > ul > li:first-child > input',
 	};
 	headerAndNavManager.init(target);
+
+	var obj = {
+		'allFriends' : 'allFriends',
+		'allPhotos' : 'allPhotos',
+	};
+	profile.init(obj);
 
 	/*
 	$(function() {

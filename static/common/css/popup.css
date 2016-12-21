@@ -1,0 +1,55 @@
+#allFriendsSection{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2500;
+	background-color: rgba(10, 10, 10, 0.8);
+}
+
+#allFriendsSection img{
+	width: 20px;
+}
+
+#allFriendsSection > div{
+	height: 80vh;
+	width: 250px;
+	overflow: auto;
+	margin: 10vh auto;
+	border: 1px solid rgb(180, 180, 180);
+	background-color: rgba(30, 30, 30, 0.8);
+}
+
+#allFriendsSection > div > header{
+	font-size: 30px;
+	color: white;
+	font-family: lato;
+	padding: 20px 0 0 30px;
+	margin-bottom: 40px;
+}
+
+#allFriendsSection > div > ul{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#allFriendsSection > div > ul > li{
+	flex: 0 0 50px;
+	margin-bottom: 15px;
+}
+
+#allFriendsSection > div > ul > li > img{
+	width: 40px;
+	margin-right: 10px;
+	border-radius: 20px;
+}
+
+#allFriendsSection > div > ul > li > span{
+	color: rgb(230, 230, 230);
+	font-family: lato;
+	font-size: 16px;
+}
