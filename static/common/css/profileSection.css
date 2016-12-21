@@ -27,7 +27,8 @@
 }
 
 #profileSection > header > img:first-child{
-	width: 100%;
+	width: 200%;
+	height: auto;
 }
 
 #friendsSection{
@@ -499,15 +500,44 @@
 		flex: 0 0 100%;
 	}
 
+	#friendsSection > section > ul{
+		width: 50%;
+	}
+
+	#friendsSection > div > ul > li{
+		margin-bottom: 10px;
+		padding-left: 35px;
+	}
+
+	#friendsSection > div > ul > li img{
+		width: 40px;
+	}
+
+	#friendsSection > div > ul > li a{
+		font-size: 14px;
+	}
+
+	#friendsSection > section > a{
+		margin-bottom: 20px;
+	}
+
 	#postsSection > ul{
 		width: 90%;
 	}
 
-	#friendsSection > section > ul{
-		width: 60%;
+	#postsSection > header{
+		margin: 20px 0 40px 0;
 	}
 
+	#friendsSection > div, #friendsSection > section{
+		border-bottom: 1px solid rgb(230, 230, 230);
+	}
 
+	#friendsSection, #friendsSection > div, #friendsSection > section{
+		border-top: none;
+		border-left: none;
+		border-right: none;
+	}
 
 /*	#friendsSection{
 		padding-top: 40px;
