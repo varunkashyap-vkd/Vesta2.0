@@ -491,7 +491,25 @@
 }
 
 @media screen and (max-width: 480px){
-	#friendsSection{
+	#profileSection{
+		flex: 0 0 98%;
+	}
+
+	#friendsSection, #postsSection{
+		flex: 0 0 100%;
+	}
+
+	#postsSection > ul{
+		width: 90%;
+	}
+
+	#friendsSection > section > ul{
+		width: 60%;
+	}
+
+
+
+/*	#friendsSection{
 		padding-top: 40px;
 	}
 
@@ -511,6 +529,10 @@
 
 	.header img{
 		width: 30px;
+	}
+
+	.header img{
+		margin-right: 5px;
 	}
 
 	.dots{
@@ -549,4 +571,11 @@
 	.stats > a:nth-child(2){
 		margin-right: 10px;
 	}
+
+	#postsSection > ul{
+		width: 90%;
+		margin: 0 auto;
+		list-style: none;
+	}
+	*/
 }
