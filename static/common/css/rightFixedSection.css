@@ -1,20 +1,27 @@
+#rightFixedSection{
+	position: fixed;
+	right: 0;
+	width: 16%;
+	height: 400px;
+	text-align: right;
+	z-index: 900;
+}
+
 #rightFixedSection > ul{
 	display: flex;
 	width: 97%;
 	flex-direction: column;
-	padding: 5px;
+	padding: 0 5px 5px 5px;
 	list-style: none;
 }
 
 #rightFixedSection > ul > li{
 	flex: 0 0 230px;
-	order: 1px solid rgb(200, 200, 200);
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	font-family: arial;
-	order-radius: 5px;
 	margin-bottom: 5px;
 }
 
@@ -25,7 +32,6 @@
 	font-size: 14px;
 	padding: 15px 0 0 15px;
 	text-decoration: none;
-	order-radius: 0 0 3px 3px;
 	background-color: rgba(10, 10, 10, 0.8);
 	box-sizing: border-box;
 	margin-top: 180px;
@@ -33,7 +39,13 @@
 }
 
 @media screen and (max-width: 768px){
-	#rightFixedSection > ul{
-		padding: 15px 10px 15px 0;
+	#rightFixedSection{
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 480px){
+	#rightFixedSection{
+		display: none;
 	}
 }

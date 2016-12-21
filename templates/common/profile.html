@@ -4,19 +4,20 @@
 {% block extra_css %}
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/socialHeader.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/socialSection.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/vestaSocialNavigationBar.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/profileSection.css' %}">
 {% endblock %}
 
 {% block title %}
-VESTA - My Space
+VESTA - Profile
 {% endblock %}
 
 {% block body %}
 {% include 'common/socialHeader.html' %}
 {% include 'common/sideNavigation.html' %}
-{% include 'common/socialSection.html' %}
+{% include 'common/profileSection.html' %}
+
 <style type="text/css">
 	#rightFixedSection{
 		top: 100px;
@@ -49,7 +50,6 @@ VESTA - My Space
 
 {% block scripts %}
 <script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
-<script type="text/javascript" src = "{% static 'common/js/commentHandler.js' %}"></script>
 <script type="text/javascript">
 	var target = {
 		'navButton' : '#mainHeader > div > i',
@@ -68,13 +68,6 @@ VESTA - My Space
 			'vertical' : true,
 			'visible' : 3,
 		});
-});*/ 
-
-var obj = {
-	'commentButton' : '.stats > a:nth-child(4)',
-	'addCommentDiv' : 'addComment',
-	'commentList' : 'commentListHidden',
-};
-commentHandler.init(obj);
+	}); */
 </script>
 {% endblock %}

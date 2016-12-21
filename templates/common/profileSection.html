@@ -1,0 +1,58 @@
+{% load staticfiles %} 
+<section id = "mainSection">
+	<section id = "profileSection">
+		<header>
+			<img src="{% static 'common/images/cover.jpg' %}">
+		</header>
+
+		<section id = "friendsSection">
+			<div>
+				<img src="{% static 'common/images/user.jpg' %}">
+				<header>
+					Friends
+				</header>
+
+				<ul>
+					{% for i in '12345' %}
+					<li>
+						<img src="{% static 'common/images/user.jpg' %}">
+						<a href="#"> Nishant Rana </a>
+					</li>
+					{% endfor %}
+				</ul>
+				<a href="#"> View All </a>
+			</div>
+
+			<section>
+				<header>
+					Photos
+				</header>
+
+				<ul>
+					{% for i in '123' %}
+					<li>
+						<img src="{% static 'common/images/gohan.jpg' %}">
+					</li>
+					{% endfor %}
+				</ul>
+				<a href="#"> View All </a>
+			</section>
+		</section>
+
+		<section id = "postsSection">
+			<header> Posts </header>			
+
+			<ul>
+				{% for i in '12' %}
+				<li>
+					{% include 'common/newsFeedSection.html' %}					
+				</li>
+				{% endfor %}	
+			</ul>
+			<!--			<a href="#"> View All </a>		-->
+		</section>
+		
+	</section>
+
+	{% include 'common/rightFixedSection.html' %}
+</section>

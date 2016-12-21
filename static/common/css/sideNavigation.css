@@ -3,12 +3,9 @@
 	left: 0;
 	ox-shadow: 3px 0 3px rgba(200, 200, 200, 0.8);
 	transition: 0.3s;
-	z-index: 800;
+	z-index: 1000;
 	overflow: auto;
 	padding-bottom: 100px;
-	background-color: rgba(60, 60, 60, 0.5);
-
-	order-right: 1px solid white;
 }
 
 .navigationShown, .navigationHidden{
@@ -16,15 +13,19 @@
 	overflow: auto;
 }
 
+.navigationHidden{
+	background-color: rgba(60, 60, 60, 0.5);
+}
+
+.navigationShown{
+	background-color: rgb(60, 60, 60);
+}
+
 #sideBar > li{
 	font-family: arial;
 	height: 45px;
-	order-bottom: 1px solid rgba(0, 0, 0, 0.4);
 	font-size: 12px;
 	letter-spacing: 0.5px;
-	ackground-color: white;
-
-	order-bottom: 1px solid rgba(200, 200, 200, 0.4);
 }
 
 #sideBar > li img{
@@ -41,7 +42,7 @@
 	text-decoration: none;
 	padding-left: 15px;
 }
- 
+
 #sideBar a:hover{
 	background-color: rgb(230, 230, 230);
 	background-color: white;
@@ -63,6 +64,5 @@
 		padding-bottom: 0px;
 		height: 90vh;
 		overflow: auto;
-		ackground-color: white;
 	}
 }

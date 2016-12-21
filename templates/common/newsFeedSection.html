@@ -5,64 +5,9 @@
 		<div class = "dots">
 			<img src="{% static 'common/images/threedots.png' %}">
 		</div>
-<!--		<div class = "leftExtra"></div>
-		<div class = "leftTriangle"></div>
-		<div class = "rightExtra"></div>
-		<div class = "rightTriangle"></div> 
-	-->
-	<img src="{% static 'common/images/user.jpg' %}">
-	<div>
-		<span> <a href="#"> Shubham Jain </a> </span>
-		<br>
-		<span> 7 hours, 48 minutes ago </span>
-	</div>
-</div>
-
-<p>
-	This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. 
-</p>
-
-<div class = "imageWrapper">
-	<img src="{% static 'common/images/testimage.jpg' %}">
-</div>
-
-<div class = "stats">
-	<a href="#"> <img src="{% static 'common/images/like.png' %}"> </a>		
-	<a href="#"> &nbsp&nbsp10 likes </a>
-	<a href="#" class = "comment" > <img src="{% static 'common/images/comment.png' %}"> </a>
-	<a href="#" open = "0"> &nbsp&nbsp5 comments </a>
-</div> 
-
-<div class = "addComment addCommentHidden">
-	<input type = "text">
-	<button> Comment </button>
-</div>
-
-<ul class = "commentListHidden">
-	{% for i in '12345' %}
-	<li>
-		<header>
-			<img src="{% static 'common/images/user.jpg' %}">
-			<span> Varun Kashyap </span>
-			&nbsp&nbsp&nbsp
-			<span> 5hours, 13minutes ago</span>
-		</header>
-
-		<p>
-			This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. 
-		</p>
-	</li>
-	{% endfor %}
-</ul>
-</section>
-
-
-<!--
-<section>
-	<div class = "header">
 		<img src="{% static 'common/images/user.jpg' %}">
 		<div>
-			<span> <a href="#"> Shubham jain </a> </span>
+			<span> <a href="#"> Shubham Jain </a> </span>
 			<br>
 			<span> 7 hours, 48 minutes ago </span>
 		</div>
@@ -73,17 +18,35 @@
 	</p>
 
 	<div class = "imageWrapper">
-		<img src="{% static 'common/images/xyz.jpg' %}">
+		<img src="{% static 'common/images/testimage.jpg' %}">
 	</div>
 
 	<div class = "stats">
-		<span> 10 likes </span>
-		<span> 5 comments </span>
+		<a href="#"> <img src="{% static 'common/images/like.png' %}"> </a>		
+		<a href="#"> 10 likes </a>
+		<a href="#" class = "comment" >  </a>
+		<a href="#" open = "0"> <img src="{% static 'common/images/comment.png' %}">&nbsp&nbsp5 comments </a>
+	</div> 
+
+	<div class = "addComment addCommentHidden">
+		<input type = "text">
+		<button> Comment </button>
 	</div>
 
-	<div class = "action">
-		<span> <a href="#"> <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> LIKE </a></span>
-		<span> <a href="{% url 'comment' %}"> COMMENT </a></span>
-	</div>
+	<ul class = "commentListHidden">
+		{% for i in '12345' %}
+		<li>
+			<header>
+				<img src="{% static 'common/images/user.jpg' %}">
+				<span> Varun Kashyap </span>
+				&nbsp&nbsp&nbsp
+				<span> 5hours, 13minutes ago</span>
+			</header>
+
+			<p>
+				This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. 
+			</p>
+		</li>
+		{% endfor %}
+	</ul>
 </section>
--->

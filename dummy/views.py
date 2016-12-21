@@ -27,3 +27,6 @@ def socialPatient(request):
 
 def comment(request):
 	return HttpResponse(render(request, 'common/comment.html'))
+
+def profile(request):
+	return HttpResponse(render(request, 'common/profile.html'))

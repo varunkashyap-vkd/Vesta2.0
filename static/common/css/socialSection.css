@@ -1,5 +1,4 @@
 #mainSection{
-	display: flex;
 	margin: 100px 0 0 200px;
 	font-family: arial;
 }
@@ -10,7 +9,7 @@
 
 #postSection{
 	position: relative;
-	flex: 1 0 75%;
+	width: 80%;
 	padding: 10px 10%;
 	box-sizing: border-box;
 	z-index: 100;
@@ -31,13 +30,6 @@
 	z-index: 100;
 }
 
-#rightFixedSection{
-	flex: 1 0 20%;
-	height: 400px;
-	text-align: right;
-	z-index: 999;
-}
-
 .header{
 	font-family: lato;
 	position: relative;
@@ -48,59 +40,6 @@
 
 	align-items: center;
 	order-radius: 10px 10px 0 0;
-}
-
-.xyz{
-	position: absolute;
-	width: 98%;
-	height: 3px;
-	background-color: red;
-	top: 0;
-	left: 0;
-}	
-
-.leftExtra, .rightExtra{
-	position: absolute;
-	top: 0;
-	height: 60px;
-	background-color: rgba(59, 89, 152, 0.9);
-	background-color: rgb(153, 35, 35);
-	background-color: rgb(60, 60, 60);
-}
-
-.leftExtra{
-	left: -15px;
-	width: 15px;
-	border-radius: 10px 0 0 0;
-}
-
-.rightExtra{
-	left: 100%;
-	width: 15px;
-	border-radius: 0 10px 0 0;
-}
-
-.leftTriangle, .rightTriangle{
-	position: absolute;
-	top: 60px;	
-	width: 0px;
-	height: 0px;
-}
-
-.rightTriangle{
-	left: 100%;
-	border-top: 7.5px solid black;
-	border-left: 7.5px solid black;
-	border-right: 8px solid transparent;
-	border-bottom: 8px solid transparent;
-}
-
-.leftTriangle{
-	left: -15px;
-	border-top: 7.5px solid black;
-	border-right: 7.5px solid black;
-	border-left: 8px solid transparent;
-	border-bottom: 8px solid transparent;
 }
 
 .dots{
@@ -150,10 +89,7 @@
 }
 
 .imageWrapper{
-	order-top: 1px solid rgb(200, 200, 200);
-	order-bottom: 1px solid rgb(200, 200, 200);
 	text-align: center;
-
 	display: flex;
 	align-items: center;
 }
@@ -163,10 +99,6 @@
 	margin: 0 auto;
 }
 
-.stats, .action{
-	background-color: rgba(30, 30, 30, 0.7);
-}
-
 .stats{
 	display: flex;
 	align-items: center;
@@ -174,6 +106,7 @@
 	height: 45px;
 	line-height: 40px;
 	color: white;
+	background-color: rgba(30, 30, 30, 0.7);
 }
 
 .stats img{
@@ -188,29 +121,6 @@
 
 .stats > a:nth-child(2){
 	margin-right: 30px;
-}
-
-
-.action{
-	idth: 98%;
-	margin: 0 auto;
-	padding: 0 25px;
-	height: 40px;
-	order-top: 1px solid rgb(200, 200, 200);
-	line-height: 40px;
-	border-radius: 0 0 10px 10px;
-}
-
-.action > span{
-	margin-right: 50px;
-}
-
-.action > span:nth-child(2) > a{
-	color: red;
-}
-
-.action > span:first-child > a{
-	color: black;
 }
 
 #commentClicked{
@@ -314,25 +224,16 @@
 	}
 
 	#postSection{
-		flex: 1 0 75%;
+		width: 75%;
 		padding: 10px 25px;
 		box-sizing: border-box;
-	}
-
-	#rightFixedSection{
-		flex: 1 0 25%;
-		height: 200px;
 	}
 }
 
 @media screen and (max-width: 480px){
 	#postSection{
-		flex: 1 0 100%;
+		width: 100%;
 		padding: 10px 15px;
 		box-sizing: border-box;
 	}
-
-	#rightFixedSection{
-		display: none;
-	}	
 }
