@@ -27,6 +27,7 @@
 
 #rightFixedSection > ul > li > a{
 	display: block;
+	font-family: lato;
 	height: 50px;
 	color: white;
 	font-size: 14px;
@@ -41,6 +42,11 @@
 @media screen and (max-width: 768px){
 	#rightFixedSection{
 		width: 25%;
+	}
+
+	#rightFixedSection > ul > li > a{
+		font-size: 13px;
+		padding: 15px 0 0 10px;
 	}
 }
 

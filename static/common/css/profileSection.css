@@ -358,6 +358,43 @@
 	#postsSection{
 		flex: 0 0 60%;
 	}
+
+	.header > img{
+		width: 35px;
+	}
+
+	.header a{
+		font-size: 15px;
+	}
+
+	.header > div > span:last-child{
+		font-size: 11px;
+	}
+
+	.dots{
+		top: 5px;
+		right: 5px;
+	}
+
+	.dots > img{
+		width: 17px;
+	}
+
+	.stats{
+		padding: 0 0 0 10px;
+	}
+
+	.stats img{
+		width: 15px;
+	}
+
+	.stats a{
+		font-size: 13px;
+	}
+
+	.stats > a:nth-child(2){
+		margin-right: 10px;
+	}
 }
 
 @media screen and (max-width: 768px){
@@ -398,6 +435,58 @@
 
 	.stats > a:nth-child(2){
 		margin-right: 10px;
+	}
+
+	.header > img{
+		width: 30px;
+	}
+}
+
+@media screen and (max-width: 680px){
+	#mainSection{
+		margin: 100px 0 0 10px;
+	}
+
+	#profileSection{
+		flex: 0 0 73%;
+	}
+
+	.stats{
+		padding: 0 15px;
+	}
+
+	.stats img{
+		width: 13px;
+	}
+
+	.stats a{
+		font-size: 12px;
+	}
+
+	.stats > a:nth-child(2){
+		margin-right: 5px;
+	}
+
+	.stats{
+		padding: 0 0 0 10px;
+	}
+
+	.header a{
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	.header > div > span:last-child{
+		font-size: 11px;
+	}	
+
+	.dots > img{
+		width: 15px;
+	}
+
+	.dots{
+		top: 5px;
+		right: 5px;
 	}
 }
 
