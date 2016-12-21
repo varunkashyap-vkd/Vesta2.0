@@ -51,13 +51,14 @@
 <div id = "colorBackground"></div>
 
 <style type="text/css">
-	#id_media{
+	#id_media, #id_content{
 		color: white;
 		font-size: 15px;
 	}
 
-	.mdl-textfield__input {
+	.mdl-textfield__input,  {
 		color: white !important;
+		font-family: lato !important;
 	}
 
 	#background{
@@ -83,9 +84,8 @@
 		background-color: rgba(40, 40, 40, 0.3);
 	}
 
-	@media screen and (max-width: 480px){
+	@media screen and (max-width: 768px){
 		#background{
-			ilter: blur(35px);
 			display: none;
 		}
 

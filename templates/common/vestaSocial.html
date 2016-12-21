@@ -49,7 +49,6 @@ VESTA - My Space
 
 {% block scripts %}
 <script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
-<script type="text/javascript" src = "{% static 'common/js/commentHandler.js' %}"></script>
 <script type="text/javascript">
 	var target = {
 		'navButton' : '#mainHeader > div > i',
@@ -69,12 +68,5 @@ VESTA - My Space
 			'visible' : 3,
 		});
 });*/ 
-
-var obj = {
-	'commentButton' : '.stats > a:nth-child(4)',
-	'addCommentDiv' : 'addComment',
-	'commentList' : 'commentListHidden',
-};
-commentHandler.init(obj);
 </script>
 {% endblock %}

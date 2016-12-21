@@ -1,4 +1,5 @@
-#allFriendsSection{
+#allFriendsSection, 
+#allPhotosSection{
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -12,16 +13,18 @@
 	width: 20px;
 }
 
-#allFriendsSection > div{
+#allFriendsSection > div,
+#allPhotosSection > div{
 	height: 80vh;
-	width: 250px;
+	width: 85vw;
 	overflow: auto;
 	margin: 10vh auto;
 	border: 1px solid rgb(180, 180, 180);
 	background-color: rgba(30, 30, 30, 0.8);
 }
 
-#allFriendsSection > div > header{
+#allFriendsSection > div > header, 
+#allPhotosSection > div > header{
 	font-size: 30px;
 	color: white;
 	font-family: lato;
@@ -31,14 +34,15 @@
 
 #allFriendsSection > div > ul{
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	list-style: none;
-	width: 80%;
+	width: 95%;
 	margin: 0 auto;
+	order: 1px solid blue;
 }
 
 #allFriendsSection > div > ul > li{
-	flex: 0 0 50px;
+	flex: 0 0 200px;
 	margin-bottom: 15px;
 }
 
@@ -52,4 +56,61 @@
 	color: rgb(230, 230, 230);
 	font-family: lato;
 	font-size: 16px;
+}
+
+
+#allPhotosSection > div > ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	list-style: none;
+	width: 95%;
+	margin: 0 auto;
+}
+
+#allPhotosSection > div > ul > li{
+	flex: 0 0 150px;
+	margin: 0 5px 5px 0;
+}
+
+#allPhotosSection > div > ul > li img{
+	width: 100%;
+}
+
+#allPhotosSection > div > ul > li div{
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	width: 150px;
+	height: 150px;
+	border: 1px solid rgba(250, 250, 250, 0.1);
+	transition: 0.4s;
+}
+
+#allPhotosSection > div > ul > li div:hover{
+	border: 1px solid rgba(250, 250, 250, 0.7);	
+}
+
+@media screen and (max-width: 480px){
+	#allFriendsSection > div, 
+	#allPhotosSection > div{
+		width: 250px;
+	}
+
+	#allFriendsSection > div > ul, 
+	#allPhotosSection > div > ul{
+		width: 80%;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
+	}
+
+	#allFriendsSection > div > ul > li{
+		flex: 0 0 50px;
+	}
+
+	#allPhotosSection > div > ul > li{
+		flex: 0 0 150px;
+		width: 150px;
+	}
 }

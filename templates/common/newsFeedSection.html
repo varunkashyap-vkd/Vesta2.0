@@ -25,28 +25,11 @@
 		<a href="#"> <img src="{% static 'common/images/like.png' %}"> </a>		
 		<a href="#"> 10 likes </a>
 		<a href="#" class = "comment" >  </a>
-		<a href="#" open = "0"> <img src="{% static 'common/images/comment.png' %}">&nbsp&nbsp5 comments </a>
+		<a href="{% url 'comment' %}" open = "0"> <img src="{% static 'common/images/comment.png' %}">&nbsp&nbsp5 comments </a>
 	</div> 
 
 	<div class = "addComment addCommentHidden">
 		<input type = "text">
 		<button> Comment </button>
 	</div>
-
-	<ul class = "commentListHidden">
-		{% for i in '12345' %}
-		<li>
-			<header>
-				<img src="{% static 'common/images/user.jpg' %}">
-				<span> Varun Kashyap </span>
-				&nbsp&nbsp&nbsp
-				<span> 5hours, 13minutes ago</span>
-			</header>
-
-			<p>
-				This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. This is some test comment. 
-			</p>
-		</li>
-		{% endfor %}
-	</ul>
 </section>

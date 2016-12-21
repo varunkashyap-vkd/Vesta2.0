@@ -7,7 +7,6 @@ var commentHandler = (function()
 
 	function commentButtonClicked(button, addComment, commentList, event)
 	{
-		event.preventDefault();
 		addComment.getElementsByTagName('input')[0].focus();
 		var current = button.getAttribute('open');
 

@@ -25,8 +25,6 @@
 #postSection > section{
 	border-radius: 10px;
 	margin-bottom: 15px;
-	ox-shadow: 3px 3px 3px rgb(200, 200, 200);
-	order-left: 1px solid rgb(220, 220, 200);
 	z-index: 100;
 }
 
@@ -37,9 +35,7 @@
 	padding: 10px 0 10px 15px;
 	height: 60px;
 	background-color: rgba(30, 30, 30, 0.7);
-
 	align-items: center;
-	order-radius: 10px 10px 0 0;
 }
 
 .dots{
@@ -130,7 +126,7 @@
 	z-index: 1000;
 }
 
-#postSection > section > ul{
+#postSection > ul{
 	display: flex;
 	flex-direction: column;
 	list-style: none;
@@ -185,23 +181,23 @@
 	font-family: lato;
 }
 
-#postSection > section > ul > li{
+#postSection > ul > li{
 	padding-top: 5px;
 	border-bottom: 1px dotted rgba(200, 200, 200, 0.2);
 }
 
-#postSection > section > ul > li:last-child{
+#postSection > ul > li:last-child{
 	border-bottom: none;
 }
 
-#postSection > section > ul img{
+#postSection > ul img{
 	width: 30px;
 	height: 30px;
 	border-radius: 15px;
 	margin-right: 10px;
 }
 
-#postSection > section > ul header{
+#postSection > ul header{
 	display: flex;
 	align-items: center;
 	font-weight: bold;
@@ -209,10 +205,9 @@
 	height: 40px;
 	padding-left: 15px;
 	line-height: 40px;
-	order: 1px solid black;
 }
 
-#postSection > section > ul p{
+#postSection > ul p{
 	text-indent: 25px;
 	padding: 0 15px;
 	font-size: 13px;

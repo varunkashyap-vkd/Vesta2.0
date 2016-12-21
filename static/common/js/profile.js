@@ -1,35 +1,91 @@
 var profile = (function()
 {
 	var friends, photos;
-	var allFriends;
+	var allFriends, allPhotos;
 
-	function displayFriends(event)
+	function displayPhotos(event)
 	{
-		event.preventDefault();
-		allFriendsSection.style.display = 'block';
+		if(event)
+			event.preventDefault();
+		document.body.style.overflow = 'hidden';
+		allPhotos.style.display = 'block';		
 	}
 
-	function hideFriends(event)
+	function hidePhotos(event)
 	{
-		if(event.target == allFriendsSection)
-			allFriendsSection.style.display = 'none';
+		if(event.target == allPhotos)
+		{
+			allPhotos.style.display = 'none';
+			document.body.style.overflow = 'auto';
+		}
 	}
 
-	function createAllFriends()
+	function createAllPhotos()
 	{
+		allPhotos = document.createElement('section');
+		allPhotos.setAttribute('id', 'allPhotosSection');
+		allPhotos.style.display = 'none';
+
+		var innerDiv = document.createElement('div');
+		var header = document.createElement('header');
+		header.innerHTML = 'Photos';
+		innerDiv.appendChild(header);
+
+		var list = document.createElement('ul');
+
+		for(var i = 0; i < 100; i++)
+		{
+			var item = document.createElement('li');
+
+			var anchor = document.createElement('a');
+			anchor.setAttribute('href', '/static/common/images/testimage.jpg');
+			anchor.setAttribute('target', 'new');
+
+			var wrapperDiv = document.createElement('div');
+
+			var image = document.createElement('img');
+			image.src = '/static/common/images/testimage.jpg';	//to be provided by database
+			console.log(image.getBoundingClientRect());
+
+			wrapperDiv.appendChild(image);
+			anchor.appendChild(wrapperDiv);
+			item.appendChild(anchor);
+			list.appendChild(item);
+		}
+		innerDiv.appendChild(list);
+		allPhotos.appendChild(innerDiv);
+		allPhotos.addEventListener('click', hidePhotos);
+	}
+
+
+	function displayFriends(event){
+		if(event)
+			event.preventDefault();
+		document.body.style.overflow = 'hidden';
+		allFriends.style.display = 'block';
+	}
+
+	function hideFriends(event){
+		if(event.target == allFriends)
+		{
+			allFriends.style.display = 'none';
+			document.body.style.overflow = 'auto';
+		}
+	}
+
+	function createAllFriends(){
 		allFriends = document.createElement('section');
 		allFriends.setAttribute('id', 'allFriendsSection');
 		allFriends.style.display = 'none';
 
 		var innerDiv = document.createElement('div');
-
 		var header = document.createElement('header');
 		header.innerHTML = 'Friends';
 		innerDiv.appendChild(header);
 
 		var list = document.createElement('ul');
 
-		for(var i = 0; i < 5; i++)
+		for(var i = 0; i < 100; i++)
 		{
 			var item = document.createElement('li');
 
@@ -52,8 +108,14 @@ var profile = (function()
 		for(var i = 0; i < friends.length; i++)
 			friends[i].addEventListener('click', displayFriends);
 
+		photos = document.getElementsByClassName(obj.allPhotos);
+		for(var i = 0; i < photos.length; i++)
+			photos[i].addEventListener('click', displayPhotos);
+
 		createAllFriends();
+		createAllPhotos();
 		document.body.appendChild(allFriends);
+		document.body.appendChild(allPhotos);
 	}
 
 	return {
