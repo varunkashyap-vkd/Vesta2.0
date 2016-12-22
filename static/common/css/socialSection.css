@@ -42,6 +42,8 @@
 	position: absolute;
 	top: 20px;
 	right: 10px;
+	width: auto;
+	overflow: hidden;
 }
 
 .dots > img{
@@ -211,6 +213,25 @@
 	text-indent: 25px;
 	padding: 0 15px;
 	font-size: 13px;
+}
+
+.header > div > a{
+	font-size: 13px;
+	font-weight: normal;
+	margin-left: 5px;
+	transition: 1s;
+}
+
+.header > div > a:hover{
+	color: grey;
+}
+
+.dots > a{
+	display: none;
+}
+		
+.dots:hover > a{
+	display: inline;
 }
 
 @media screen and (max-width: 768px){
