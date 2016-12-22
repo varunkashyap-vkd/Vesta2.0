@@ -42,8 +42,6 @@
 	position: absolute;
 	top: 20px;
 	right: 10px;
-	width: auto;
-	overflow: hidden;
 }
 
 .dots > img{
@@ -215,23 +213,22 @@
 	font-size: 13px;
 }
 
-.header > div > a{
+.dots > ul{
+	display: flex;
+	position: absolute;
+	top: -1px;
+	right: 45px;
+	list-style: none;
+	height: 40px;
+}
+
+.dots > ul > li{
+	flex: 0 0 50px;
+	background-color: red;
+}
+
+.dots > ul > li > a{
 	font-size: 13px;
-	font-weight: normal;
-	margin-left: 5px;
-	transition: 1s;
-}
-
-.header > div > a:hover{
-	color: grey;
-}
-
-.dots > a{
-	display: none;
-}
-		
-.dots:hover > a{
-	display: inline;
 }
 
 @media screen and (max-width: 768px){
