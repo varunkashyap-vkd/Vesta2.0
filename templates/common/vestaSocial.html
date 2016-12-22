@@ -30,11 +30,20 @@ VESTA - My Space
 	#mainHeader > ul > li:first-child{
 		border-bottom: 2px solid white;
 	}
+	#mainHeader > ul > li:nth-child(2),
+	#mainHeader > ul > li:last-child{
+		opacity: 0.7;
+	}
 	{% endif %}
+
 
 	{% if type == 'news' %}
 	#mainHeader > ul > li:nth-child(2){
 		border-bottom: 2px solid white;
+	}
+	#mainHeader > ul > li:first-child,
+	#mainHeader > ul > li:last-child{
+		opacity: 0.7;
 	}
 	{% endif %}
 
@@ -42,6 +51,10 @@ VESTA - My Space
 	{% if type == 'insight' %}
 	#mainHeader > ul > li:last-child{
 		border-bottom: 2px solid white;
+	}
+	#mainHeader > ul > li:nth-child(2),
+	#mainHeader > ul > li:first-child{
+		opacity: 0.7;
 	}
 	{% endif %}
 </style>

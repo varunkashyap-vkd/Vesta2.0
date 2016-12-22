@@ -61,6 +61,7 @@
 }
 
 #mainHeader > div > ul > li{
+	position: relative;
 	margin-left: 30px;
 	font-family: arial;
 	font-size: 18px;
@@ -88,6 +89,13 @@
 
 .inputShown{
 	width: 100px;
+}
+
+#mainHeader > div > ul > li span{
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	font-size: 12px;
 }
 
 @media screen and (max-width:768px){

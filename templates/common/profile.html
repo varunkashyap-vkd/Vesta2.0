@@ -21,31 +21,25 @@ VESTA - Profile
 
 <style type="text/css">
 	#rightFixedSection{
-		top: 100px;
+		top: 70px;
 	}
 
 	#sideBar{
-		top: 95px;
+		top: 60px;
 	}
 
-	{% if type == 'differential' %}
-	#mainHeader > ul > li:first-child{
-		border-bottom: 2px solid white;
+	#mainHeader > ul{
+		display: none;
 	}
-	{% endif %}
 
-	{% if type == 'news' %}
-	#mainHeader > ul > li:nth-child(2){
-		border-bottom: 2px solid white;
+	#mainHeader{
+		padding-bottom: 10px;
 	}
-	{% endif %}
 
-
-	{% if type == 'insight' %}
-	#mainHeader > ul > li:last-child{
-		border-bottom: 2px solid white;
+	#mainSection{
+		margin-top: 70px;
 	}
-	{% endif %}
+
 </style>
 {% endblock %}
 

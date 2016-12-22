@@ -116,6 +116,7 @@ var profile = (function()
 		createAllPhotos();
 		document.body.appendChild(allFriends);
 		document.body.appendChild(allPhotos);
+		displayFriends();
 	}
 
 	return {
