@@ -10,19 +10,17 @@
 #rightFixedSection > ul{
 	display: flex;
 	width: 97%;
+	position: relative;
 	flex-direction: column;
-	padding: 0 5px 5px 5px;
 	list-style: none;
+	overflow: hidden;
 }
 
 #rightFixedSection > ul > li{
+	position: absolute;
+	top: 0;
+	left: 0;
 	flex: 0 0 230px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	font-family: arial;
-	margin-bottom: 5px;
 }
 
 #rightFixedSection > ul > li > a{

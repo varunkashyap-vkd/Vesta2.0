@@ -26,94 +26,86 @@
 	<script type="text/javascript" src = "{% static 'common/plugins/slick/slick.min.js' %}"></script>
 	<script type="text/javascript" src = "{% static 'common/js/xyz.js' %}"></script>
 	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>	
+	<script type="text/javascript" src = "{% static 'common/js/rightSectionScroller.js' %}"></script>
+	<script type="text/javascript">
+		var obj = {
+			'list' : '#rightFixedSection > ul',
+			'length' : 3,
+			'time' : 8000,
+		};
+		rightSectionScroller.init(obj);
+	</script>
 
-<!--
-	/*
-  $(document).ready(function(){
-    $('#rightFixedSection').slick({
-      autoplay: true,
-      autoplaySpeed: 1000,
-      vertical: true,
-      infinite: true,
-      slidesToShow: 1,
-      useCSS: false,
-      pauseOnHover: true,
-      dots: false,
-    });
-});*/
+	<div id = "background">
+		<img src="{% static 'common/images/bg.jpg' %}">
+	</div>
 
--->
+	<div id = "colorBackground"></div>
 
-<div id = "background">
-	<img src="{% static 'common/images/bg.jpg' %}">
-</div>
+	<style type="text/css">
+		#id_media, #id_content{
+			color: white;
+			font-size: 15px;
+		}
 
-<div id = "colorBackground"></div>
+		.mdl-textfield__input,  {
+			color: white !important;
+			font-family: lato !important;
+		}
 
-<style type="text/css">
-	#id_media, #id_content{
-		color: white;
-		font-size: 15px;
-	}
-
-	.mdl-textfield__input,  {
-		color: white !important;
-		font-family: lato !important;
-	}
-
-	#background{
-		position: fixed;
-		top: -100px;
-		left: -100px;
-		width: 2000px;
-		height: auto;
-		filter: blur(5px);
-		transform: translate3d(0, 0, 0);
-	
-		width: 100vw;
-		height: 100vh;
-		top: 0;
-		left: 0;
-	}
-
-	#background > img{
-		width: 100%;
-	}
-
-	#colorBackground{
-		position: fixed;
-		top: -50vw;
-		left: -50vh;
-		width: 200vw;
-		height: 200vh;
-		background-color: rgba(40, 40, 40, 0.3);
-	}
-
-	body::-webkit-scrollbar {
-		width: 8px;
-	}
-
-	body::-webkit-scrollbar-track {
-		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
-	}
-
-	body::-webkit-scrollbar-thumb {
-		background-color: rgba(30, 30, 30, 0.8);
-		border-radius: 5px;
-		outline: 1px solid white;
-	}
-
-	@media screen and (max-width: 768px){
 		#background{
-			display: none;
+			position: fixed;
+			top: -100px;
+			left: -100px;
+			width: 2000px;
+			height: auto;
+			filter: blur(5px);
+			transform: translate3d(0, 0, 0);
+
+			width: 100vw;
+			height: 100vh;
+			top: 0;
+			left: 0;
+		}
+
+		#background > img{
+			width: 100%;
 		}
 
 		#colorBackground{
-			background-color: rgba(40, 40, 40, 0.8);
+			position: fixed;
+			top: -200px;
+			left: -200px;
+			width: 1500px;;
+			height: 1500px;
+			background-color: rgba(40, 40, 40, 0.3);
 		}
-	</style>
 
-	{% block scripts %}	{% endblock %}
-</body>
-{% block internalStyles %}	{% endblock %}
-</html>
+		body::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		body::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+		}
+
+		body::-webkit-scrollbar-thumb {
+			background-color: rgba(30, 30, 30, 0.8);
+			border-radius: 5px;
+			outline: 1px solid white;
+		}
+
+		@media screen and (max-width: 768px){
+			#background{
+				display: none;
+			}
+
+			#colorBackground{
+				background-color: rgba(40, 40, 40, 0.8);
+			}
+		</style>
+
+		{% block scripts %}	{% endblock %}
+	</body>
+	{% block internalStyles %}	{% endblock %}
+	</html>

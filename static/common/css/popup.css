@@ -91,6 +91,30 @@
 	border: 1px solid rgba(250, 250, 250, 0.7);	
 }
 
+
+
+#allPhotosSection > div::-webkit-scrollbar,
+#allFriendsSection > div::-webkit-scrollbar{
+	width: 10px;
+}
+
+#allPhotosSection > div::-webkit-scrollbar-track,
+#allFriendsSection > div::-webkit-scrollbar-track{
+	background-color: rgba(240, 240, 240, 0.8);
+	background-color: white;
+	box-shadow: inset 3px 3px 3px rgba(10, 10, 10, 0.3);
+}
+
+#allPhotosSection > div::-webkit-scrollbar-thumb,
+#allFriendsSection > div::-webkit-scrollbar-thumb{
+	background-color: rgb(30, 30, 30);
+	border-radius: 5px;
+	background-color: black;
+	height: 120px;
+}
+
+
+
 @media screen and (max-width: 480px){
 	#allFriendsSection > div, 
 	#allPhotosSection > div{
