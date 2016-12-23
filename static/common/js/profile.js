@@ -1,20 +1,17 @@
 var profile = (function()
 {
-	var friends, photos;
-	var allFriends, allPhotos;
+	var friends, photos, profile, cover;
+	var allFriends, allPhotos, formSection;
 
-	function displayPhotos(event)
-	{
+	function displayPhotos(event){
 		if(event)
 			event.preventDefault();
 		document.body.style.overflow = 'hidden';
 		allPhotos.style.display = 'block';		
 	}
 
-	function hidePhotos(event)
-	{
-		if(event.target == allPhotos)
-		{
+	function hidePhotos(event){
+		if(event.target == allPhotos){
 			allPhotos.style.display = 'none';
 			document.body.style.overflow = 'auto';
 		}
@@ -45,7 +42,6 @@ var profile = (function()
 
 			var image = document.createElement('img');
 			image.src = '/static/common/images/testimage.jpg';	//to be provided by database
-			console.log(image.getBoundingClientRect());
 
 			wrapperDiv.appendChild(image);
 			anchor.appendChild(wrapperDiv);
@@ -102,8 +98,52 @@ var profile = (function()
 		allFriends.addEventListener('click', hideFriends);
 	}
 
+	function createForm()
+	{
+		formSection = document.createElement('section');
+		formSection.setAttribute('id', 'formSection');
+		formSection.style.display = 'none';
+
+		var innerDiv = document.createElement('div');
+		var header = document.createElement('header');
+		header.innerHTML = 'Change photo';
+		innerDiv.appendChild(header);
+
+		var form = document.createElement('form');
+		var input = document.createElement('input');
+		input.setAttribute('type', 'file');
+		form.appendChild(input);
+		input = document.createElement('input');
+		input.setAttribute('type', 'submit');
+		form.appendChild(input);
+
+		innerDiv.appendChild(form);
+		formSection.appendChild(innerDiv);
+		formSection.addEventListener('click', hideForm);
+	}
+
+	function displayForm()
+	{
+		formSection.style.display = 'block';
+		document.body.style.overflow = 'hidden';
+	}
+
+	function hideForm()
+	{
+		if(event.target == formSection)
+		{
+			formSection.style.display = 'none';
+			document.body.style.overflow = 'auto';
+		}
+	}
+
 	function init(obj)
 	{
+		profile = document.getElementById(obj.changeProfile);
+		cover = document.getElementById(obj.changeCover);
+		profile.addEventListener('click', displayForm);
+		cover.addEventListener('click', displayForm);
+
 		friends = document.getElementsByClassName(obj.allFriends);
 		for(var i = 0; i < friends.length; i++)
 			friends[i].addEventListener('click', displayFriends);
@@ -114,9 +154,10 @@ var profile = (function()
 
 		createAllFriends();
 		createAllPhotos();
+		createForm();
 		document.body.appendChild(allFriends);
 		document.body.appendChild(allPhotos);
-		displayFriends();
+		document.body.appendChild(formSection);
 	}
 
 	return {

@@ -39,13 +39,13 @@ VESTA - Profile
 	#mainSection{
 		margin-top: 70px;
 	}
-
 </style>
 {% endblock %}
 
 {% block scripts %}
 <script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
 <script type="text/javascript" src = "{% static 'common/js/profile.js' %}"></script>
+<script type="text/javascript" src = "{% static 'common/js/postOptions.js' %}"></script>
 <script type="text/javascript">
 	var target = {
 		'navButton' : '#mainHeader > div > i',
@@ -58,18 +58,15 @@ VESTA - Profile
 	var obj = {
 		'allFriends' : 'allFriends',
 		'allPhotos' : 'allPhotos',
+		'changeProfile' : 'changeProfilePic',
+		'changeCover' : 'changeCoverPic',
 	};
 	profile.init(obj);
 
-	/*
-	$(function() {
-		$("#rightFixedSection").jCarouselLite({
-			'auto': 8000,
-			'speed' : 500,
-			'circular' : true,
-			'vertical' : true,
-			'visible' : 3,
-		});
-	}); */
+	var obj = {
+		'dots' : '.dots > img',
+		'list' : '.header > ul',
+	};
+	postOptions.init(obj);
 </script>
 {% endblock %}

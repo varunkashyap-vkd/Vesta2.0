@@ -29,8 +29,8 @@
 }
 
 .header{
-	font-family: lato;
 	position: relative;
+	font-family: lato;
 	display: flex;
 	padding: 10px 0 10px 15px;
 	height: 60px;
@@ -46,6 +46,7 @@
 
 .dots > img{
 	width: 20px;
+	cursor: pointer;
 }
 
 .header a{
@@ -57,7 +58,7 @@
 
 .header > div > span:last-child{
 	color: white;
-	font-size: 13px;
+	font-size: 11px;
 }
 
 .header > img{
@@ -213,21 +214,29 @@
 	font-size: 13px;
 }
 
-.dots > ul{
+.header > ul{
 	display: flex;
 	position: absolute;
-	top: -1px;
-	right: 45px;
+	top: 0px;
+	right: 0px;
 	list-style: none;
-	height: 40px;
+	width: auto;
+	background-color: black;
+	padding-right: 10px;
 }
 
-.dots > ul > li{
-	flex: 0 0 50px;
-	background-color: red;
+.header > ul > li{
+	margin-left: 10px;
+	line-height: 35px;
+	transition: 0.4s;
+
+	height: 0px;
+	overflow: hidden;
 }
 
-.dots > ul > li > a{
+.header > ul > li > a{
+	font-weight: normal;
+	font-family: lato;
 	font-size: 13px;
 }
 

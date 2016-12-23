@@ -1,5 +1,6 @@
 #allFriendsSection, 
-#allPhotosSection{
+#allPhotosSection,
+#formSection{
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -14,7 +15,8 @@
 }
 
 #allFriendsSection > div,
-#allPhotosSection > div{
+#allPhotosSection > div, 
+#formSection > div{
 	height: 80vh;
 	width: 85vw;
 	overflow: auto;
@@ -24,8 +26,35 @@
 	background-color: rgba(30, 30, 30, 0.8);
 }
 
+#formSection > div{
+	margin: 20vh auto;
+	width: 300px;
+	height: 200px;
+	border-right: 1px solid rgb(180, 180, 180);
+	padding: 0 20px;
+}
+
+#formSection form > input{
+	font-family: lato, arial;
+	color: white;
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+#formSection form label{
+	margin-left: 10px;
+}
+
+#formSection form > input[type = "submit"]{
+	width: 100%;
+	margin-bottom: 0;
+	color: black;
+}
+
+
 #allFriendsSection > div > header, 
-#allPhotosSection > div > header{
+#allPhotosSection > div > header,
+#formSection > div > header{
 	font-size: 30px;
 	color: white;
 	font-family: lato;
@@ -110,7 +139,6 @@
 	border-radius: 5px;
 	background-color: black;
 }
-
 
 
 @media screen and (max-width: 480px){
