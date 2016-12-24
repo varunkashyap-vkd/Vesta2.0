@@ -416,7 +416,7 @@
 	font-size: 13px;
 }
 
-#profileSection > div, #postsSection > img{
+#profileSection > div, #postsSection > img, #postsSection > div{
 	display: none;
 }
 
@@ -504,7 +504,7 @@
 		display: none;
 	}
 
-	#profileSection > div, #postsSection > img{
+	#profileSection > div, #postsSection > img, #postsSection > div{
 		display: none;
 	}
 }
@@ -553,7 +553,7 @@
 		width: 30px;
 	}
 
-	#profileSection > div, #postsSection > img{
+	#profileSection > div, #postsSection > img, #postsSection > div{
 		display: none;
 	}
 }
@@ -605,7 +605,7 @@
 		right: 5px;
 	}
 
-	#profileSection > div, #postsSection > img{
+	#profileSection > div, #postsSection > img, #postsSection > div{
 		display: none;
 	}
 }
@@ -719,5 +719,9 @@
 		width: 70px;
 		border-radius: 50px;
 		border: 1px solid rgba(100, 100, 100, 0.4);
+	}
+
+	#postsSection > div{
+		display: block;
 	}
 }
