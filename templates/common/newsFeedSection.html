@@ -1,6 +1,6 @@
 {% load staticfiles %}
 
-<section>
+<section class = "section">
 	<div class = "header">
 		<div class = "dots">
 			<img src="{% static 'common/images/threedots.png' %}">
@@ -28,7 +28,18 @@
 	</p>
 
 	<div class = "imageWrapper">
-		<img src="{% static 'common/images/testimage.jpg' %}">
+						<img src="{% static 'common/images/testimage.jpg' %}">								
+<!--		<ul>
+			{% for i in '123' %}
+			<li>
+				<div>	
+					<a href="#">
+						<img src="{% static 'common/images/testimage.jpg' %}">								
+					</a>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>-->
 	</div>
 
 	<div class = "stats">
@@ -37,9 +48,4 @@
 		<a href="#" class = "comment" >  </a>
 		<a href="{% url 'comment' %}" open = "0"> <img src="{% static 'common/images/comment.png' %}">&nbsp&nbsp5 comments </a>
 	</div> 
-
-	<div class = "addComment addCommentHidden">
-		<input type = "text">
-		<button> Comment </button>
-	</div>
 </section>

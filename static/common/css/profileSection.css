@@ -78,11 +78,13 @@
 	border: 1px solid rgba(100, 100, 100, 0.4);
 }
 
-#friendsSection > div > img:hover+div{
+#friendsSection > div > img:hover+div, 
+#postsSection > img:hover+div{
 	height: 40px;
 }
 
-#friendsSection > div > div{
+#friendsSection > div > div, 
+#postsSection > div{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -95,20 +97,28 @@
 	transition: 0.5s;
 }
 
-#friendsSection > div > div:hover{
+#postsSection > div{
+	top: -31px;
+}
+
+#friendsSection > div > div:hover, 
+#postsSection > div:hover{
 	height: 40px;
 	background-color: white;
 }
 
-#friendsSection > div > div:hover > a{
+#friendsSection > div > div:hover > a, 
+#postsSection > div:hover > a{
 	color: black;
 }
 
-#friendsSection > div > div > a{
+#friendsSection > div > div > a,
+#postsSection > div > a{
 	display: block;
 	width: 100%;
 	text-decoration: none;
 	color: white;
+	z-index: 5000;
 }
 
 
