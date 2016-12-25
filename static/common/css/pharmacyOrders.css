@@ -1,0 +1,105 @@
+#clinicSlipsSection,
+#pharmacyOrders{
+	margin: 10px 0 30px 0;
+	width: 100%;
+	height: 500px;
+}
+
+#clinicSlipsSection > ul,
+#pharmacyOrders > ul{
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+
+#clinicSlipsSection > ul > li,
+#pharmacyOrders > ul > li{
+	background-color: rgba(30, 30, 30, 0.7);
+	padding: 15px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#clinicSlipsSection > ul > li > header,
+#pharmacyOrders > ul > li > header{
+	flex: 0 0 100%;
+	font-size: 20px;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	text-align: center;
+	border-bottom: 1px solid rgba(200, 200, 200, 0.6);
+}
+
+#clinicSlipsSection > ul > li > img,
+#pharmacyOrders > ul > li > img{
+	flex: 0 0 80px;
+	height: 80px;
+	border-radius: 65px;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#clinicSlipsSection > ul > li > div,
+#pharmacyOrders > ul > li > div{
+	flex: 1 0 1px;
+	font-size: 16px;
+	line-height: 35px;
+}
+
+#clinicSlipsSection > ul > li > a,
+#pharmacyOrders > ul > li > a{
+	flex: 0 0 130px;
+	height: 130px;
+	overflow: hidden;
+}
+
+#clinicSlipsSection > ul > li > a > img,
+#pharmacyOrders > ul > li > a > img{
+	width: 100%;
+	height: auto;
+}
+
+#clinicSlipsSection > ul > li > div > a{
+	text-decoration: none;
+}
+
+@media screen and (max-width: 768px){
+	#clinicSlipsSection > ul > li > img,
+	#pharmacyOrders > ul > li > img{
+		flex: 0 0 100px;
+		height: 100px;
+	}	
+
+	#clinicSlipsSection > ul > li > div{
+		flex: 0 0 100%;
+		font-size: 14px;
+	}
+
+	#clinicSlipsSection > ul > li{
+		text-align: center;
+		justify-content: space-around;
+	}
+}
+
+@media screen and (max-width: 480px){
+	#clinicSlipsSection > ul > li > img,
+	#pharmacyOrders > ul > li > img{
+		flex: 0 0 80px;
+		height: 80px;
+	}	
+
+	#pharmacyOrders > ul > li > div{
+		flex: 0 0 100%;
+		font-size: 14px;
+		margin: 15px 0;
+	}
+
+	#clinicSlipsSection > ul > li,
+	#pharmacyOrders > ul > li{
+		text-align: center;
+		justify-content: space-around;
+	}
+
+}

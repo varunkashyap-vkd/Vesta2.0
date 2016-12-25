@@ -19,11 +19,14 @@ from dummy import views as dummyViews
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', dummyViews.homepage, name = 'home'),
+    url(r'^$', dummyViews.root, name = 'home'),
     url(r'^social$', dummyViews.social, name = "newsFeed"),
     url(r'^social/doctorDiscussion$', dummyViews.socialDoctor, name = "socialDoctor"),
     url(r'^social/patientDiscussion$', dummyViews.socialPatient, name = "socialPatient"),
     url(r'^comment$', dummyViews.comment, name = "comment"),
     url(r'^profile$', dummyViews.profile, name = "profile"),
-    url(r'^thumbnail$', dummyViews.thumbnail, name = "thumbnail")
+    url(r'^thumbnail$', dummyViews.thumbnail, name = "thumbnail"),
+
+    url(r'^homepage/(?P<category>[\w\-]+)/(?P<subcategory>[\w\-]+)$', dummyViews.homepage, name = "homepage"),
+    url(r'^homepage/futureAppointments/$', dummyViews.homepage2, name = "homepage2"),
 ]

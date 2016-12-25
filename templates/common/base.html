@@ -2,17 +2,19 @@
 
 <!DOCTYPE html>
 <html>
-<meta name = "viewport" content = "width = device-width, initial-scale = 1">
-
 <link rel="shortcut icon" type="image/png" href="{% static 'common/favicon.ico' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'common/plugins/slick/slick.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'common/plugins/slick/slick-theme.css' %}"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.amber-blue.min.css">
 <link rel="stylesheet" type="text/css" href="{% static 'common/plugins/font-awesome/css/font-awesome.css' %}">
 {% block extra_css %}	{% endblock %}
 
 <head>
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<meta property = "og:title" content = "This is the title for my website">
+	<meta property = "og:url" content = "139.59.29.124:8000">
+	<meta property = "og:type" content = "website">
+	<meta property = "og:description" content = "This is some badass decsription for my website">
+	<meta property = "og:image" content = "http://139.59.29.124:8000/static/common/testimage.jpg">>
 	{% block head %}	{% endblock %}
 </head>
 
@@ -36,10 +38,7 @@
 		rightSectionScroller.init(obj);
 	</script>
 
-	<div id = "background">
-		<img src="{% static 'common/images/bg.jpg' %}">
-	</div>
-
+	<div id = "background"><img src="{% static 'common/images/bg.jpg' %}"></div>
 	<div id = "colorBackground"></div>
 
 	<style type="text/css">
@@ -62,12 +61,14 @@
 			left: -600px;
 			width: 2500px;
 			height: auto;
-			filter: blur(5px);
+			filter: blur(10px);
+			z-index: -1;
 			transform: translate3d(0, 0, 0);
 		}
 
 		#background > img{
 			width: 100%;
+			z-index: -1;
 		}
 
 		#colorBackground{
@@ -77,6 +78,7 @@
 			width: 1500px;;
 			height: 1500px;
 			background-color: rgba(40, 40, 40, 0.3);
+			z-index: -1;
 		}
 
 		body::-webkit-scrollbar, 

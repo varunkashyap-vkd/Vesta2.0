@@ -1,0 +1,101 @@
+#mainSection{
+	width: 65%;
+	margin: 70px 0 0 220px;
+	z-index: 1000;
+	color: white;
+}
+
+#mainSection > header{
+	display: flex;
+	align-items: center;
+	height: 200px;
+	z-index: 220;
+	background-image: url('https://s3.ap-south-1.amazonaws.com/vesta-media/static/img/sunset.jpg');
+	background-repeat: no-repeat;
+	background-size: auto 250%;
+	background-position: 0 -170px;
+}
+
+#mainSection > ul{
+	z-index: 200;
+}
+
+#mainSection > header > img{
+	margin: 0 auto;
+	width: 180px;
+	border-radius: 100px;
+}
+
+#mainSection > ul{
+	display: flex;
+	width: 100%;
+	list-style: none;
+	background-color: rgba(10, 10, 10, 0.8);
+	border-top: 1px solid rgba(230, 230, 230, 0.4);
+}
+
+#mainSection > ul > li{
+	height: 50px;
+	line-height: 45px;
+	flex: 1 0 1px;
+	text-align: center;
+	border-bottom: 2px solid white;
+}
+
+#mainSection > ul > li img{
+	width: 20px;
+}
+
+#mainSection > ul > li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: white;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+@media screen and (max-width: 1100px){
+	#mainSection{
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 900px){
+	#mainSection{
+		width: 55%;
+	}
+
+	#mainSection > ul > li a{
+		font-size: 11px;
+	}
+
+	#mainSection > ul > li img{
+		width: 17px;
+	}
+}
+
+@media screen and (max-width: 768px){
+	#mainSection{
+		width: 70%;
+		margin-left: 2.5%;
+	}
+
+	#mainSection > ul span{
+		display: none;
+	}
+
+	#mainSection > ul > li img{
+		width: 22px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	#mainSection{
+		width: 95%;
+	}
+
+	#mainSection > ul > li img{
+		width: 17px;
+	}
+}

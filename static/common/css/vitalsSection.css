@@ -1,0 +1,73 @@
+#vitalsSection{
+	margin: 10px 0 50px 0;
+	width: 100%;
+	background-color: rgba(30, 30, 30, 0.7);
+}
+
+#vitalsSection > ul{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	border: 1px solid rgba(20, 20, 20, 0.6);
+}
+
+#vitalsSection > ul > li{
+	flex: 0 0 90px;
+	width: 100%;
+	border-bottom: 1px solid rgba(20, 20, 20, 0.6);
+	display: flex;
+	align-items: center;
+	padding: 0 25px;
+}
+
+#vitalsSection > ul > li > header{
+	flex: 0 0 20%;
+}
+
+#vitalsSection > ul > li > div{
+	flex: 0 0 50%;
+	text-align: right;
+	padding-right: 10%;
+}
+
+#vitalsSection > ul > li > div > input{
+	width: 35%;
+}
+
+#vitalsSection > ul > li > div > input[type="submit"]{
+	width: 20%;
+}
+
+#vitalsSection > ul > li > button{
+	flex: 0 0 25%;
+	height: 35px;
+}
+
+#vitalsSection > ul > li > div > input{
+	padding: 0 10px;
+	height: 25px;
+}
+
+@media screen and (max-width: 900px){
+	#vitalsSection > ul > li{
+		padding: 0 10px;
+	}
+
+	#vitalsSection button{
+		font-size: 10px;
+	}
+
+	#vitalsSection > ul > li > div{
+		padding-right: 3%;
+	}
+
+	#vitalsSection > ul > li > div > input{
+		padding: 0;
+		width: 25%;
+	}
+
+	#vitalsSection > ul > li > div > input[type="submit"]{
+		font-size: 11px;
+		width: 25%;
+	}
+}

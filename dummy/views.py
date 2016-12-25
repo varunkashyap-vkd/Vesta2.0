@@ -16,11 +16,36 @@ from dummy import PyOpenGraph as InfoExtractor
 import validators
 import urllib.request
 
-def homepage(request):
-	return HttpResponse(render(request, 'common/homepage.html'))
+def root(request):
+	return redirect(reverse('homepage', kwargs = {'category' : 'profile', 'subcategory' : 'current'}))
+
+def homepage(request, category, subcategory):
+	return HttpResponse(render(request, 'common/homepage.html', {'category' : category, 'subcategory' : subcategory}))
+
+def homepage2(request):
+	return HttpResponse(render(request, 'common/homepage.html', {'category' : 'futureAppointments'}))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def social(request):
 	return HttpResponse(render(request, 'common/vestaSocial.html', {'type' : 'news'}))
+
+def futureAppointments(request):
+	return HttpResponse(render(request, 'common/futureAppointments.html'))
+
 
 def socialDoctor(request):
 	return HttpResponse(render(request, 'common/vestaSocial.html', {'type' : 'differential'}))

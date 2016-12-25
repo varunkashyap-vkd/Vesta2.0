@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<section id = "clinicSlipsSection">
+	<ul>
+		{% for i in '123' %}
+		<li>
+			<header>	Undecided Title		</header>
+			<img src="{% static 'common/images/normalvesta/doctor.jpg' %}">
+			<div>
+				<b>Clinic</b> : Kashyap Clinic 
+				<br>
+				<b>Doctor</b> : Dr. Varun Kashyap
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+			</div>
+
+			<div>
+				<b>Re-appointment</b> : Obviously 
+				<br>
+				<b>Remarks</b> : Cigratte peena chod de bhai
+				<br>
+				<a href="#"> View Report </a>
+			</div>
+
+			<a href="{% static 'common/images/normalvesta/prescription.jpg' %}" target = "new">
+				<img src="{% static 'common/images/normalvesta/prescription.jpg' %}">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

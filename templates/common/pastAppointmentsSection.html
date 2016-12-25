@@ -1,0 +1,18 @@
+{% load staticfiles	 %}
+<section id = "appointments">
+	<ul>
+		{% for i in '123' %}
+		<li>
+			<header>	Srivastav's Clinic		</header>
+			<img src="{% static 'common/images/normalvesta/doctor.jpg' %}">
+			<div>
+				<b>Doctor</b> : Dr.Rajesh Srivastav 
+				<br>
+				<b>Address</b> : Srivastav's Clinic, Delhi Technological University, New Delhi - 110042
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
