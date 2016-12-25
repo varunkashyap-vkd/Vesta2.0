@@ -5,9 +5,12 @@
 }
 
 #mainHeader{
+	position: fixed;
+	width: 100%;
 	background-color: red;
 	height: 90px;
 	box-shadow: 0 2px 2px grey;
+	z-index: 1000;
 }
 
 #mainHeader > div{
@@ -61,6 +64,10 @@
 	line-height: 45px;
 	text-align: center;
 	font-size: 15px;
+}
+
+#mainHeader > ul > li img{
+	width: 20px;
 }
 
 #mainHeader > div > ul > li > input{

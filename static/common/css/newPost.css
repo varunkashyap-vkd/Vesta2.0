@@ -1,0 +1,29 @@
+#thumbnail{
+	width: 100%;
+	margin-bottom: 15px;
+	background-color: rgba(10, 10, 10, 0.3);
+	border: 1px solid rgba(230, 230, 230, 0.2);
+	padding: 10px;
+}
+
+#thumbnail > img{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#thumbnail > div{
+	color: white;
+	padding-left: 20px;
+	height: 30px;
+	line-height: 25px;
+	font-size: 15px;
+	overflow: hidden;
+}
+
+#thumbnail > p{
+	color: grey;
+	text-indent: 20px;
+	height: 100px;
+	font-size: 13px;
+	overflow: hidden;
+}

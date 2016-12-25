@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^social/patientDiscussion$', dummyViews.socialPatient, name = "socialPatient"),
     url(r'^comment$', dummyViews.comment, name = "comment"),
     url(r'^profile$', dummyViews.profile, name = "profile"),
+    url(r'^thumbnail$', dummyViews.thumbnail, name = "thumbnail")
 ]

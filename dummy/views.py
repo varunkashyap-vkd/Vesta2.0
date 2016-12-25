@@ -12,6 +12,9 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django.http import JsonResponse
 from django.template import Context, Template
+from dummy import PyOpenGraph as InfoExtractor
+import validators
+import urllib.request
 
 def homepage(request):
 	return HttpResponse(render(request, 'common/homepage.html'))
@@ -30,3 +33,33 @@ def comment(request):
 
 def profile(request):
 	return HttpResponse(render(request, 'common/profile.html'))
+
+@csrf_exempt
+def thumbnail(request):
+	text = request.POST.get('text')
+	text = text.split('http')
+	result = ''
+
+	if len(text) == 1:
+		return JsonResponse({'match' : 'false'})
+
+	else:
+		text = text[1]
+		text = text.split(" ")
+		url = "http" + str(text[0])
+
+		if validators.url(url):
+			try:
+				data = InfoExtractor.PyOpenGraph(url)
+				return JsonResponse({'data' : data.metadata, 'match' : 'true'})
+
+			except urllib.error.HTTPError:
+				return JsonResponse({'match' : 'false'})
+
+		else:
+			return JsonResponse({'match' : 'false'})
+
+
+
+
+

@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/socialSection.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/newsFeedSection.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/newPost.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/vestaSocialNavigationBar.css' %}">
 {% endblock %}
@@ -64,6 +65,7 @@ VESTA - My Space
 {% block scripts %}
 <script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
 <script type="text/javascript" src = "{% static 'common/js/postOptions.js' %}"></script>
+<script type="text/javascript" src = "{% static 'common/js/thumbnail.js' %}"></script>
 <script type="text/javascript">
 	var target = {
 		'navButton' : '#mainHeader > div > i',
@@ -78,5 +80,11 @@ VESTA - My Space
 		'list' : '.header > ul',
 	};
 	postOptions.init(obj);
+
+	var x = {
+		'textField' : 'newPostTextArea',
+		'thumbnail' : 'thumbnail'
+	};
+	thumbnail.init(x);
 </script>
 {% endblock %}

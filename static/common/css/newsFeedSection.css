@@ -86,6 +86,10 @@
 	margin: 0;
 }
 
+.imageWrapper > img{
+	width: 100%;
+}
+
 .mageWrapper{
 	height: 250px;
 	background-color: rgba(30, 30, 30, 0.3);

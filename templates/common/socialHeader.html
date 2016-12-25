@@ -18,8 +18,20 @@
 
 			<li>
 				<img src="{% static 'common/images/userplus.png' %}">
-				<span> 10 </span>
+				<ul id = "notification">
+					{% for i in '123' %}
+					<li>
+						<a href="#">
+							<img src="{% static 'common/images/user.jpg' %}"><span> 7Hours, 52 minutes ago</span>
+							<p>
+								Some dummy notification Some dummy notification Some dummy notification 
+							</p>
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
 			</li>
+
 			<li>
 				<a href="{% url 'profile' %}">
 					<img src="{% static 'common/images/user.png' %}">

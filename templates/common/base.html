@@ -4,6 +4,7 @@
 <html>
 <meta name = "viewport" content = "width = device-width, initial-scale = 1">
 
+<link rel="shortcut icon" type="image/png" href="{% static 'common/favicon.ico' %}"/>
 <link rel="stylesheet" type="text/css" href="{% static 'common/plugins/slick/slick.css' %}"/>
 <link rel="stylesheet" type="text/css" href="{% static 'common/plugins/slick/slick-theme.css' %}"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -24,7 +25,6 @@
 	{% block body %}	{% endblock %}
 	<script type="text/javascript" src = "{% static 'common/js/jquery.js' %}"></script>
 	<script type="text/javascript" src = "{% static 'common/plugins/slick/slick.min.js' %}"></script>
-	<script type="text/javascript" src = "{% static 'common/js/xyz.js' %}"></script>
 	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>	
 	<script type="text/javascript" src = "{% static 'common/js/rightSectionScroller.js' %}"></script>
 	<script type="text/javascript">
@@ -58,17 +58,12 @@
 
 		#background{
 			position: fixed;
-			top: -100px;
-			left: -100px;
-			width: 2000px;
+			top: -400px;
+			left: -600px;
+			width: 2500px;
 			height: auto;
 			filter: blur(5px);
 			transform: translate3d(0, 0, 0);
-
-			width: 100vw;
-			height: 100vh;
-			top: 0;
-			left: 0;
 		}
 
 		#background > img{
@@ -84,15 +79,18 @@
 			background-color: rgba(40, 40, 40, 0.3);
 		}
 
-		body::-webkit-scrollbar {
+		body::-webkit-scrollbar, 
+		#notification::-webkit-scrollbar {
 			width: 8px;
 		}
 
-		body::-webkit-scrollbar-track {
+		body::-webkit-scrollbar-track,
+		#notificiation::-webkit-scrollbar-track {
 			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
 		}
 
-		body::-webkit-scrollbar-thumb {
+		body::-webkit-scrollbar-thumb,
+		#notification::-webkit-scrollbar-thumb {
 			background-color: rgba(30, 30, 30, 0.8);
 			border-radius: 5px;
 			outline: 1px solid white;
