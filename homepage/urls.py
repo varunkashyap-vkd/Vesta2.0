@@ -16,9 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from homepage import views
-from dummy import views as dummyViews
 
 urlpatterns = [
     url(r'^(?P<category>[\w\-]+)/(?P<subcategory>[\w\-]+)$', views.homepage, name = 'homepage'),
-    url(r'^futureAppointments/$', views.homepage2, name = 'homepage2'),
+    url(r'^(?P<category>[\w\-]+)$', views.homepage2, name = 'homepage2'),
 ]

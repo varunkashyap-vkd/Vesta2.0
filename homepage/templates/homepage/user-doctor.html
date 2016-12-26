@@ -1,0 +1,49 @@
+{% load staticfiles %}
+
+{% if category == 'profile' %}
+<ul>
+	<li>
+		<a href="{% url 'homepage' 'profile' 'reports' %}">
+			<img src="{% static 'common/images/normalvesta/plus.png' %}">
+			<span>&nbsp&nbsp&nbspREPORTS</span>
+		</a>
+	</li>
+
+	<li>
+		<a href="{% url 'homepage' 'profile' 'appointments' %}">
+			<img src="{% static 'common/images/normalvesta/poweroff.png' %}">
+			<span>&nbsp&nbsp&nbspAPPOINTMENTS</span>
+		</a>
+	</li>
+</ul>
+{% endif %}
+
+{% if category == 'patientHistory' %}
+<section id = "doctor-patientHistory">
+	<ul>
+		{% for i in '1234' %}
+		<li>
+			<header>	Mr. Maninder Singh		</header>
+			<div>
+				<b>Clinic</b> : Freecare Clinic 
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+				<br>
+				<b>ID</b> : 2
+			</div>	
+			<a href="{% static 'homepage/pdf/sample.pdf' %}" target = "new">
+				<img src="{% static 'common/images/normalvesta/pdficon.ico' %}">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endif %}
+
+
+{% if subcategory == 'appointments' %}
+{% include 'homepage/doctor-profile-appointments.html' %}	
+{% endif %}
+
+
+

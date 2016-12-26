@@ -2,81 +2,24 @@
 {% load staticfiles %}
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/header.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/commonHeader.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
-
 <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/homePageSection.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/vitalsSection.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/pastAppointments.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/pharmacyOrders.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/patient-profile-vitals.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/patient-profile-pastAppointments.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/patient-medicalHistory-pharmacyOrders.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/doctor-patientHistory.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/doctor-profile-appointments.css' %}">
 {% endblock %}
 
 {% block body %}
-{% include 'homepage/header.html' %}
+{% include 'common/commonHeader.html' %}
 {% include 'common/sideNavigation.html' %}
 {% include 'common/rightFixedSection.html' %}
-
 {% include 'homepage/homePageSection.html' %}
-
-<style type="text/css">
-	{% if category == 'medicalHistory' %}
-	#mainHeader > ul > li:nth-child(2),
-	#mainHeader > ul > li:nth-child(3){
-		opacity: 0.5;
-		border-bottom: none;
-	}
-	{% endif %}
-
-	{% if category == 'profile' %}
-	#mainHeader > ul > li:nth-child(1),
-	#mainHeader > ul > li:nth-child(3){
-		opacity: 0.5;
-		border-bottom: none;
-	}
-	{% endif %}
-
-	{% if category == 'futureAppointments' %}
-	#mainHeader > ul > li:nth-child(1),
-	#mainHeader > ul > li:nth-child(2){
-		opacity: 0.5;
-		border-bottom: none;
-	}
-	{% endif %}
-
-
-	{% if subcategory == 'clinicSlips' or subcategory == 'vitals' %}
-	#mainSection > ul > li:nth-child(2), 
-	#mainSection > ul > li:nth-child(3){
-		opacity: 0.5;
-		border-bottom: none;		
-	}
-	{% endif %}
-
-	{% if subcategory == 'labReports' or subcategory == 'current' %}
-	#mainSection > ul > li:nth-child(1), 
-	#mainSection > ul > li:nth-child(3){
-		opacity: 0.5;
-		border-bottom: none;		
-	}
-	{% endif %}
-
-	{% if subcategory == 'pharmacyOrders' or subcategory == 'pastAppointments' %}
-	#mainSection > ul > li:nth-child(1), 
-	#mainSection > ul > li:nth-child(2){
-		opacity: 0.5;
-		border-bottom: none;		
-	}
-	{% endif %}
-
-	#sideBar{
-		top: 90px;
-	}
-
-	#rightFixedSection{
-		top: 95px;
-	}
-</style>
+{% include 'homepage/bottomBorderManager.html' %}
 {% endblock %}
 
 

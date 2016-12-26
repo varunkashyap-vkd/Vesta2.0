@@ -7,104 +7,19 @@
 	</header>
 	{% endif %}
 
-	{% if category == 'profile' %}
-	<ul>
-		<li>
-			<a href="{% url 'homepage' 'profile' 'vitals' %}">
-				<img src="{% static 'common/images/normalvesta/plus.png' %}">
-				<span>&nbsp&nbsp&nbspVITALS</span>
-			</a>
-		</li>
-
-		<li>
-			<a href="{% url 'homepage' 'profile' 'current' %}">
-				<img src="{% static 'common/images/normalvesta/poweroff.png' %}">
-				<span>&nbsp&nbsp&nbspCURRENT</span>
-			</a>
-		</li>
-
-		<li>
-			<a href="{% url 'homepage' 'profile' 'pastAppointments' %}">
-				<img src="{% static 'common/images/normalvesta/tick.png' %}">
-				<span>&nbsp&nbsp&nbspPAST APPOINTMENTS</span>
-			</a>
-		</li>
-	</ul>
+	{% if userType == 'patient' %}
+	{% include 'homepage/user-patient.html' %}
 	{% endif %}
 
-
-	{% if category == 'medicalHistory' %}
-	<ul>
-		<li>
-			<a href="{% url 'homepage' 'medicalHistory' 'clinicSlips' %}">
-				<img src="{% static 'common/images/normalvesta/plus.png' %}">
-				<span>&nbsp&nbsp&nbspCLINIC SLIPS</span>
-			</a>
-		</li>
-
-		<li>
-			<a href="{% url 'homepage' 'medicalHistory' 'labReports' %}">
-				<img src="{% static 'common/images/normalvesta/poweroff.png' %}">
-				<span>&nbsp&nbsp&nbspLAB REPORTS</span>
-			</a>
-		</li>
-
-		<li>
-			<a href="{% url 'homepage' 'medicalHistory' 'pharmacyOrders' %}">
-				<img src="{% static 'common/images/normalvesta/tick.png' %}">
-				<span>&nbsp&nbsp&nbspPHARMACY ORDERS</span>
-			</a>
-		</li>
-	</ul>
+	{% if userType == 'pharmacy' %}
+	{% include 'homepage/user-pharmacy.html' %}
 	{% endif %}
 
-
-	<!-- 		Three consitions for three subcategories of the profile category -->
-
-	{% if subcategory == 'vitals' %}
-	{% include 'homepage/vitalsSection.html' %}
+	{% if userType == 'doctor' %}
+	{% include 'homepage/user-doctor.html' %}
 	{% endif %}
 
-	{% if subcategory == 'pastAppointments' %}
-	{% include 'homepage/pastAppointmentsSection.html' %}
-	{% endif %}
-
-	<!--			End of profile category 		-->
-
-
-
-
-
-	<!--			Three conditions for three subcategories of the medicalHistory category		-->
-
-	{% if subcategory == 'pharmacyOrders' %}
-	{% include 'homepage/pharmacyOrders.html' %}
-	{% endif %}
-
-	{% if subcategory == 'clinicSlips' %}
-	{% include 'homepage/clinicSlips.html' %}
-	{% endif %}
-
-
-	{% if category == 'futureAppointments' %}
-	<section id = "futureAppointments">
-		<ul>
-			{% for i in '123' %}
-			<li>
-				<header>	Srivastav's Clinic		</header>
-				<img src="{% static 'common/images/normalvesta/doctor.jpg' %}">
-				<div>
-					<b>Doctor</b> : Dr.Rajesh Srivastav 
-					<br>
-					<b>Address</b> : Srivastav's Clinic, Delhi Technological University, New Delhi - 110042
-					<br>
-					<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
-					<br>
-					<a href="#" style = "text-decoration: none;"> Cancel Appointment </a>
-				</div>
-			</li>
-			{% endfor %}
-		</ul>
-	</section>
+	{% if userType == 'lab' %}
+	{% include 'homepage/user-lab.html' %}
 	{% endif %}
 </section>

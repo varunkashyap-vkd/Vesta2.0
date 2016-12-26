@@ -12,7 +12,6 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django.http import JsonResponse
 from django.template import Context, Template
-from dummy import PyOpenGraph as InfoExtractor
 import validators
 import urllib.request
 
@@ -22,10 +21,16 @@ def socialRoot(request):
 
 
 def vestaSocial(request, category):
+	dictionary = {
+		'type' : 'social',
+		'category' : category,
+		'userType' : 'patient',
+	}
+
 	if category == 'profile':
-		return HttpResponse(render(request, 'social/profile.html'))
+		return HttpResponse(render(request, 'social/profile.html', dictionary))
 
 	if category == 'comment':
-		return HttpResponse(render(request, 'social/comment.html'))
+		return HttpResponse(render(request, 'social/comment.html', dictionary))
 
-	return HttpResponse(render(request, 'social/vestaSocial.html', {'category' : category}))
+	return HttpResponse(render(request, 'social/vestaSocial.html', dictionary))

@@ -1,0 +1,24 @@
+{% load staticfiles	 %}
+<section id = "doctor-profile-appointments">
+	<ul>
+		{% for i in '123' %}
+		<li>
+			<header>	Srivastav's Clinic		</header>
+			<div>
+				<b>Clinic</b> : Freecare Clinic 
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+				<br>
+				<b>ID</b> : 512
+				<form method="POST" action=""><input type='hidden' name='csrfmiddlewaretoken' value='G5V2jGqIFTqBXO0J2x47gpM6cSSq1JFVQ6ZNr2NlMGvKa354Z7HES9VY0TKyaz7N' />
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style = "margin-right: 20px;">
+						<input class="mdl-textfield__input" id="id_disease_name" name="disease_name" type="text" required style = "margin-right: 10px;"/>
+						<label class="mdl-textfield__label" for="id_disease_name" style = "color: white;">Disease name</label>
+					</div>
+					<input type="submit" style = "width: 75px;">
+				</form>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

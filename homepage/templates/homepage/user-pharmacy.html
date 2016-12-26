@@ -1,0 +1,19 @@
+{% load staticfiles %}
+
+{% if category == 'profile' %}
+<ul>
+	<li>
+		<a href="{% url 'homepage' 'profile' 'confirmedOrders' %}">
+			<img src="{% static 'common/images/normalvesta/plus.png' %}">
+			<span>&nbsp&nbsp&nbspCONFIRMED ORDERS</span>
+		</a>
+	</li>
+
+	<li>
+		<a href="{% url 'homepage' 'profile' 'orders' %}">
+			<img src="{% static 'common/images/normalvesta/poweroff.png' %}">
+			<span>&nbsp&nbsp&nbspORDERS</span>
+		</a>
+	</li>
+</ul>
+{% endif %}

@@ -2,13 +2,14 @@
 
 <!DOCTYPE html>
 <html>
-<link rel="shortcut icon" type="image/png" href="{% static 'common/favicon.ico' %}"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.amber-blue.min.css">
-<link rel="stylesheet" type="text/css" href="{% static 'common/plugins/font-awesome/css/font-awesome.css' %}">
-{% block extra_css %}	{% endblock %}
 
 <head>
+	<link rel="shortcut icon" type="image/png" href="{% static 'common/favicon.ico' %}"/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.amber-blue.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'common/plugins/font-awesome/css/font-awesome.css' %}">
+	{% block extra_css %}	{% endblock %}
+
 	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
 	<meta property = "og:title" content = "This is the title for my website">
 	<meta property = "og:url" content = "139.59.29.124:8000">
@@ -18,17 +19,18 @@
 	{% block head %}	{% endblock %}
 </head>
 
-<title>
-	{% block title %}	{% endblock %}
-</title>
+<title>{% block title %}{% endblock %}</title>
 
 <body>
 
+	<div id = "background"><img src="{% static 'common/images/bg.jpg' %}"></div>
+	<div id = "colorBackground"></div>
 	{% block body %}	{% endblock %}
+
 	<script type="text/javascript" src = "{% static 'common/js/jquery.js' %}"></script>
-	<script type="text/javascript" src = "{% static 'common/plugins/slick/slick.min.js' %}"></script>
 	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>	
 	<script type="text/javascript" src = "{% static 'common/js/rightSectionScroller.js' %}"></script>
+	{% block scripts %}	{% endblock %}
 	<script type="text/javascript">
 		var obj = {
 			'list' : '#rightFixedSection > ul',
@@ -38,19 +40,18 @@
 		rightSectionScroller.init(obj);
 	</script>
 
-	<div id = "background"><img src="{% static 'common/images/bg.jpg' %}"></div>
-	<div id = "colorBackground"></div>
 
 	<style type="text/css">
 		*{
 			font-family: "lato", "arial";
 		}
+
 		#id_media, #id_content{
 			color: white;
 			font-size: 15px;
 		}
 
-		.mdl-textfield__input,  {
+		.mdl-textfield__input{
 			color: white !important;
 			font-family: lato !important;
 		}
@@ -81,6 +82,12 @@
 			z-index: -1;
 		}
 
+		{% if type == 'social' %}
+		#mainHeader > ul > li img{
+			width: 35px;
+		}
+		{% endif %}
+
 		body::-webkit-scrollbar, 
 		#notification::-webkit-scrollbar {
 			width: 8px;
@@ -105,10 +112,9 @@
 
 			#colorBackground{
 				background-color: rgba(40, 40, 40, 0.8);
-			}
-		</style>
 
-		{% block scripts %}	{% endblock %}
-	</body>
-	{% block internalStyles %}	{% endblock %}
-	</html>
+			}
+		}
+	</style>
+</body>
+</html>

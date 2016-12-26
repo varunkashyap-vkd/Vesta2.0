@@ -1,0 +1,64 @@
+{% load staticfiles %}
+
+<style type="text/css">
+	#sideBar{
+		top: 100px;
+	}
+
+	#rightFixedSection{
+		top: 95px;
+	}
+
+	/*Conditions for the category list start*/
+	{% if category == 'medicalHistory' or category == 'patientHistory' or category == 'orderHistory' %}
+	#mainHeader > ul > li:nth-child(2),
+	#mainHeader > ul > li:nth-child(3){
+		opacity: 0.5;
+		border-bottom: none;
+	}
+	{% endif %}
+
+	{% if category == 'profile' %}
+	#mainHeader > ul > li:nth-child(1),
+	#mainHeader > ul > li:nth-child(3){
+		opacity: 0.5;
+		border-bottom: none;
+	}
+	{% endif %}
+
+	{% if category == 'futureAppointments' %}
+	#mainHeader > ul > li:nth-child(1),
+	#mainHeader > ul > li:nth-child(2){
+		opacity: 0.5;
+		border-bottom: none;
+	}
+	{% endif %}
+	/*Conditions for the category list finish*/
+
+
+	/*Conditions for the subcategory list start*/
+	{% if subcategory == 'clinicSlips' or subcategory == 'vitals' or subcategory == 'reports' or subcategory == 'confirmedOrders' %}
+	#mainSection > ul > li:nth-child(2),
+	#mainSection > ul > li:nth-child(3){
+		opacity: 0.5;
+		border-bottom: none;
+	}
+	{% endif %}
+
+	{% if subcategory == 'labReports' or subcategory == 'current' or subcategory == 'appointments' or subcategory == 'orders' %}
+	#mainSection > ul > li:nth-child(1),
+	#mainSection > ul > li:nth-child(3){
+		opacity: 0.5;
+		border-bottom: none;
+	}
+	{% endif %}
+
+	{% if subcategory == 'pharmacyOrders' or subcategory == 'pastAppointments' %}
+	#mainSection > ul > li:nth-child(1),
+	#mainSection > ul > li:nth-child(2){
+		opacity: 0.5;
+		border-bottom: none;
+	}
+	{% endif %}
+	/*Conditions for the subcategory list finish*/
+</style>

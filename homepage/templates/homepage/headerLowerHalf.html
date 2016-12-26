@@ -1,0 +1,57 @@
+{% load staticfiles %}
+
+<ul>
+	{% if userType == 'patient' %}
+	<li>
+		<a href="{% url 'homepage' 'medicalHistory' 'labReports' %}">
+			<img src="{% static 'common/images/normalvesta/clock.png' %}">&nbsp&nbsp<span> MEDICAL HISTORY </span>
+		</a>
+	</li>
+	{% endif %}
+
+	{% if userType == 'doctor' %}
+	<li>
+		<a href="{% url 'homepage2' 'patientHistory' %}">
+			<img src="{% static 'common/images/normalvesta/clock.png' %}">&nbsp&nbsp<span> PATIENT HISTORY </span>
+		</a>
+	</li>
+	{% endif %}
+
+	{% if userType == 'lab' %}
+	<li>
+		<a href="#">
+			<img src="{% static 'common/images/normalvesta/clock.png' %}">&nbsp&nbsp<span> LAB HISTORY </span>
+		</a>
+	</li>
+	{% endif %}
+
+	{% if userType == 'pharmacy' %}
+	<li>
+		<a href="{% url 'homepage2' 'orderHistory' %}">
+			<img src="{% static 'common/images/normalvesta/clock.png' %}">&nbsp&nbsp<span> ORDER HISTORY </span>
+		</a>
+	</li>
+	{% endif %}
+
+	<li>
+		<a href="{% url 'root' %}">
+			<img src="{% static 'common/images/normalvesta/user.png' %}"></i>&nbsp&nbsp<span> PROFILE </span>
+		</a>
+	</li>
+
+	{% if userType == 'patient' %}
+	<li>
+		<a href="{% url 'homepage2' 'futureAppointments' %}">
+			<img src="{% static 'common/images/normalvesta/calendar.png' %}">&nbsp&nbsp<span> FUTURE APPOINTMENTS </span>
+		</a>
+	</li>
+	{% endif %}
+
+	{% if userType == 'doctor' or userType == 'lab' or userType == 'pharmacy' %}
+	<li>
+		<a href="{% url 'socialRoot' %}">
+			<img src="{% static 'common/images/normalvesta/calendar.png' %}">&nbsp&nbsp<span> VESTA SOCIAL </span>
+		</a>
+	</li>
+	{% endif %}
+</ul>

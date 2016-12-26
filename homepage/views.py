@@ -12,21 +12,40 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django.http import JsonResponse
 from django.template import Context, Template
-from dummy import PyOpenGraph as InfoExtractor
 import validators
 import urllib.request
 
+sample = 'patient'
 
 def root(request):
-	return redirect(reverse('homepage', kwargs = {'category' : 'profile', 'subcategory' : 'current'}))
+	subcategory = 'current'
+
+	if sample == 'doctor':
+		subcategory = 'reports'
+
+	elif sample == 'pharmacy':
+		subcategory = 'confirmedOrders'
+
+	return redirect(reverse('homepage', kwargs = {'category' : 'profile', 'subcategory' : subcategory}))
 
 
 def homepage(request, category, subcategory):
-	return HttpResponse(render(request, 'homepage/homepage.html', {'category' : category, 'subcategory' : subcategory}))
+	dictionary = {
+		'category' : category,
+		'subcategory' : subcategory,
+		'type' : 'normal',
+		'userType' : sample,
+	}
+	return HttpResponse(render(request, 'homepage/homepage.html', dictionary))
 
 
-def homepage2(request):
-	return HttpResponse(render(request, 'homepage/homepage.html', {'category' : 'futureAppointments'}))
+def homepage2(request, category):
+	dictionary = {
+		'category' : category,
+		'type' : 'normal',
+		'userType' : sample,
+	}
+	return HttpResponse(render(request, 'homepage/homepage.html', dictionary))
 
 
 @csrf_exempt

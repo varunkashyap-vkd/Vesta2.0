@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+<header id = "mainHeader">
+	{% if type == 'social' %}
+	{% include 'social/headerUpperHalf.html' %}
+	{% endif %}
+
+	{% if type == 'normal' %}
+	{% include 'homepage/headerUpperHalf.html' %}
+	{% endif %}
+
+
+	{% if type == 'social' %}
+	{% include 'social/headerLowerHalf.html' %}
+	{% endif %}
+
+	{% if type == 'normal' %}
+	{% include 'homepage/headerLowerHalf.html' %}
+	{% endif %}
+</header>

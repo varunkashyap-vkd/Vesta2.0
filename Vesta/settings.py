@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'material.admin',
     'homepage',
     'social',
-    'dummy',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
