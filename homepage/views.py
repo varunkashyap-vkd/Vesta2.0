@@ -12,6 +12,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django.http import JsonResponse
 from django.template import Context, Template
+from homepage import PyOpenGraph as InfoExtractor
 import validators
 import urllib.request
 
