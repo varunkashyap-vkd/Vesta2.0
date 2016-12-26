@@ -3,14 +3,14 @@
 	<section id = "postSection">
 
 		<!--add a condition so that option for new post is visible only if the news-feed tab is open, or a user is trying to access his corresponding discussion panel-->
-		{% include 'common/newPost.html' %}			
+		{% include 'social/newPost.html' %}			
 		<!-- end -->
 
 
 		<!--the display for posts on various sections will be same, so use this for all the three-->
 		<!-- this section can be put in a loop if there are multiple posts-->
 		{% for i in '123' %}
-		{% include 'common/newsFeedSection.html' %}
+		{% include 'social/newsFeedSection.html' %}
 		{% endfor %}
 		<!-- end -->
 		

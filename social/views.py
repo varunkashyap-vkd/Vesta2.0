@@ -17,38 +17,15 @@ import validators
 import urllib.request
 
 
-def comment(request):
-	return HttpResponse(render(request, 'common/comment.html'))
-
-def profile(request):
-	return HttpResponse(render(request, 'common/profile.html'))
-
-@csrf_exempt
-def thumbnail(request):
-	text = request.POST.get('text')
-	text = text.split('http')
-	result = ''
-
-	if len(text) == 1:
-		return JsonResponse({'match' : 'false'})
-
-	else:
-		text = text[1]
-		text = text.split(" ")
-		url = "http" + str(text[0])
-
-		if validators.url(url):
-			try:
-				data = InfoExtractor.PyOpenGraph(url)
-				return JsonResponse({'data' : data.metadata, 'match' : 'true'})
-
-			except urllib.error.HTTPError:
-				return JsonResponse({'match' : 'false'})
-
-		else:
-			return JsonResponse({'match' : 'false'})
+def socialRoot(request):
+	return redirect(reverse('vestaSocial', kwargs = {'category' : 'mySpace'}))
 
 
+def vestaSocial(request, category):
+	if category == 'profile':
+		return HttpResponse(render(request, 'social/profile.html'))
 
+	if category == 'comment':
+		return HttpResponse(render(request, 'social/comment.html'))
 
-
+	return HttpResponse(render(request, 'social/vestaSocial.html', {'category' : category}))

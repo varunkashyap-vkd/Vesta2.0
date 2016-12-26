@@ -3,7 +3,7 @@
 <header id = "mainHeader">
 	<div>
 		<i class="fa fa-bars" aria-hidden="true"></i>
-		<span> <a href="{% url 'home' %}"> VESTA </a></span>
+		<span> <a href="{% url 'root' %}"> VESTA </a></span>
 
 		<ul>
 			<li>
@@ -11,13 +11,25 @@
 			</li>
 
 			<li>
-				<a href="{% url 'newsFeed' %}">
+				<a href="{% url 'socialRoot' %}" title = "Vesta Social - Home">
 					<img src="{% static 'common/images/home.png' %}">
 				</a>
 			</li>
 
 			<li>
-				<img src="{% static 'common/images/userplus.png' %}">
+				<a href="{% url 'vestaSocial' 'profile' %}" title = "Profile">
+					<img src="{% static 'common/images/user.png' %}">
+				</a>
+			</li>
+
+			<li>
+				<a href="#" title = "Add Friend">
+					<img src="{% static 'common/images/userplus.png' %}">
+				</a>
+			</li>
+
+			<li>
+				<img src="{% static 'common/images/notification.png' %}" title = "Notifications">
 				<ul id = "notification">
 					{% for i in '123' %}
 					<li>
@@ -33,16 +45,11 @@
 			</li>
 
 			<li>
-				<a href="{% url 'profile' %}">
-					<img src="{% static 'common/images/user.png' %}">
-				</a>
-			</li>
-			<li>
 				<img src="{% static 'common/images/logout.png' %}">
 			</li>
 		</ul>
 	</div>
 
-	{% include 'common/vestaSocialNavigationBar.html' %}
+	{% include 'social/vestaSocialNavigationBar.html' %}
 </header>
 

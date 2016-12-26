@@ -15,12 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from homepage import views as homepageViews
+from social import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', homepageViews.root, name = 'root'),    
-    url(r'^social/', include('social.urls')),
-    url(r'^homepage/', include('homepage.urls')),
-    url(r'^thumbnail', homepageViews.thumbnail, name = 'thumbnail'),
+    url(r'^$', views.socialRoot, name = 'socialRoot'),
+    url(r'^(?P<category>[\w\-]+)$', views.vestaSocial, name = 'vestaSocial'),
 ]

@@ -2,13 +2,13 @@
 {% load staticfiles %}
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/socialHeader.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'social/css/socialHeader.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/socialSection.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/newsFeedSection.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/newPost.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'social/css/socialSection.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'social/css/newsFeedSection.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'social/css/newPost.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/vestaSocialNavigationBar.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'social/css/vestaSocialNavigationBar.css' %}">
 {% endblock %}
 
 {% block title %}
@@ -16,9 +16,9 @@ VESTA - My Space
 {% endblock %}
 
 {% block body %}
-{% include 'common/socialHeader.html' %}
+{% include 'social/socialHeader.html' %}
 {% include 'common/sideNavigation.html' %}
-{% include 'common/socialSection.html' %}
+{% include 'social/socialSection.html' %}
 <style type="text/css">
 	#rightFixedSection{
 		top: 100px;
@@ -28,7 +28,7 @@ VESTA - My Space
 		top: 95px;
 	}
 
-	{% if type == 'differential' %}
+	{% if category == 'differential' %}
 	#mainHeader > ul > li:first-child{
 		border-bottom: 2px solid white;
 	}
@@ -39,7 +39,7 @@ VESTA - My Space
 	{% endif %}
 
 
-	{% if type == 'news' %}
+	{% if category == 'mySpace' %}
 	#mainHeader > ul > li:nth-child(2){
 		border-bottom: 2px solid white;
 	}
@@ -50,7 +50,7 @@ VESTA - My Space
 	{% endif %}
 
 
-	{% if type == 'insight' %}
+	{% if category == 'insights' %}
 	#mainHeader > ul > li:last-child{
 		border-bottom: 2px solid white;
 	}
@@ -64,8 +64,8 @@ VESTA - My Space
 
 {% block scripts %}
 <script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
-<script type="text/javascript" src = "{% static 'common/js/postOptions.js' %}"></script>
-<script type="text/javascript" src = "{% static 'common/js/thumbnail.js' %}"></script>
+<script type="text/javascript" src = "{% static 'social/js/postOptions.js' %}"></script>
+<script type="text/javascript" src = "{% static 'social/js/thumbnail.js' %}"></script>
 <script type="text/javascript">
 	var target = {
 		'navButton' : '#mainHeader > div > i',

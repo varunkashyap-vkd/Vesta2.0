@@ -2,20 +2,22 @@
 {% load staticfiles %}
 
 {% block extra_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/header.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/header.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/homePageSection.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/vitalsSection.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/pastAppointments.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'common/css/pharmacyOrders.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/homePageSection.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/vitalsSection.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/pastAppointments.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/pharmacyOrders.css' %}">
 {% endblock %}
 
 {% block body %}
-{% include 'common/header.html' %}
+{% include 'homepage/header.html' %}
 {% include 'common/sideNavigation.html' %}
-{% include 'common/homePageSection.html' %}
 {% include 'common/rightFixedSection.html' %}
+
+{% include 'homepage/homePageSection.html' %}
 
 <style type="text/css">
 	{% if category == 'medicalHistory' %}

@@ -28,24 +28,13 @@
 	</p>
 
 	<div class = "imageWrapper">
-						<img src="{% static 'common/images/testimage.jpg' %}">								
-<!--		<ul>
-			{% for i in '123' %}
-			<li>
-				<div>	
-					<a href="#">
-						<img src="{% static 'common/images/testimage.jpg' %}">								
-					</a>
-				</div>
-			</li>
-			{% endfor %}
-		</ul>-->
+		<img src="{% static 'common/images/testimage.jpg' %}">								
 	</div>
 
 	<div class = "stats">
 		<a href="#"> <img src="{% static 'common/images/like.png' %}"> </a>		
 		<a href="#"> 10 likes </a>
-		<a href="#" class = "comment" >  </a>
-		<a href="{% url 'comment' %}" open = "0"> <img src="{% static 'common/images/comment.png' %}">&nbsp&nbsp5 comments </a>
+		<a href="" class = "comment" >  </a>
+		<a href="{% url 'vestaSocial' 'comment' %}" open = "0"> <img src="{% static 'common/images/comment.png' %}">&nbsp&nbsp5 comments </a>
 	</div> 
 </section>
