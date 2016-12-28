@@ -16,15 +16,15 @@
 	margin-bottom: 20px;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-start;
 }
 
 #doctor-profile-appointments > ul > li img{
-	flex: 0 0 120px;
-	height: 120px;
-	border-radius: 65px;
+	flex: 0 0 150px;
+	height: 150px;
+	order-radius: 65px;
 	display: inline-block;
-	margin-right: 20px;
+	argin-right: 20px;
 }
 
 #doctor-profile-appointments > ul > li > div{
@@ -44,15 +44,22 @@
 }
 
 @media screen and (max-width: 768px){
-#doctor-profile-appointments > ul > li img{
+	#doctor-profile-appointments > ul > li img{
 		flex: 0 0 100px;
 		height: 100px;
 	}	
 }
 
 @media screen and (max-width: 480px){
-#doctor-profile-appointments > ul > li img{
+	#doctor-profile-appointments > ul > li img{
 		flex: 0 0 80px;
 		height: 80px;
+		margin: 0 auto;
+		margin-bottom: 20px;
 	}	
+
+	#doctor-profile-appointments > ul > li > div{
+		flex: 0 0 100%;
+		text-align: center;
+	}
 }

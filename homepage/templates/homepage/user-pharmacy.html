@@ -17,3 +17,38 @@
 	</li>
 </ul>
 {% endif %}
+
+{% if category == 'orderHistory' %}
+<section id = "pharmacy-orderHistory">
+	<ul>
+		{% for i in '123' %}
+		<li>
+			<header>	Varun Kashyap	</header>
+			<img src="{% static 'common/images/normalvesta/gohan.jpg' %}">
+
+			<div>
+				<b>Address</b> : None 
+				<br>
+				<b>Phone</b> : None
+				<br>
+				<b>Remarks</b> : None
+				<br>
+				<b>Bill</b> : Rs. 150
+			</div>
+
+			<a href="{% static 'common/images/normalvesta/prescription.jpg' %}" target = "new">
+				<img src="{% static 'common/images/normalvesta/prescription.jpg' %}">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endif %}
+
+{% if subcategory == 'confirmedOrders' %}
+{% include 'homepage/pharmacy-profile-confirmedOrders.html' %}
+{% endif %}
+
+{% if subcategory == 'orders' %}
+{% include 'homepage/pharmacy-profile-orders.html' %}
+{% endif %}

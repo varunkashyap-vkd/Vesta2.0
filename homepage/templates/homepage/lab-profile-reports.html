@@ -1,0 +1,29 @@
+{% load staticfiles	 %}
+
+<section id = "lab-profile-reports">
+	<ul>
+		{% for i in '123' %}
+		<li>
+			<header>	Varun Kashyap	</header>
+			<img src="{% static 'common/images/normalvesta/gohan.jpg' %}">
+			<div>
+				<b>Test Type</b> : Blood Test 
+				<br>
+				<b>Phone</b> : None
+				<br>
+				<b>Date</b> : Aug 15, 2016
+				<br>
+				<b>Application No.</b> : 1024
+				<br>
+				<b>ID</b> : 256
+				<br>
+				<form>
+					<input type = "file">
+					<br>
+					<input type = "submit" value = "Upload Report">
+				</form>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

@@ -22,4 +22,39 @@
 	{% if userType == 'lab' %}
 	{% include 'homepage/user-lab.html' %}
 	{% endif %}
+
+	<div id = "floatingOptions">
+		<ul>
+			<li>
+				<div>	Search Pharmacies	</div>		
+				<img src="{% static 'homepage/images/pharmacyicon.png' %}">
+			</li>
+			<li>
+				<div>	Search Labs	</div>		
+				<img src="{% static 'homepage/images/labicon.png' %}">
+			</li>
+			<li>
+				<div>	Search Clinics	</div>		
+				<img src="{% static 'homepage/images/clinicicon.png' %}">
+			</li>
+			<li>
+				<div>	Search Doctors	</div>		
+				<img src="{% static 'homepage/images/doctoricon.png' %}">
+			</li>
+		</ul>
+		<img src="{% static 'homepage/images/plus.png' %}">
+	</div>
+
+	<section id = "popupSection">
+		<div>
+			<header>	Search Doctors	</header>
+			<form method="GET" action="/doctors/">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
+					<input class="mdl-textfield__input" type="text" id="sample1" name="q">
+					<label class="mdl-textfield__label" for="sample1">Type your symptoms</label>
+				</div>
+					<input type="submit" class="mdl-button mdl-js-button">
+			</form>
+		</div>
+	</section>
 </section>

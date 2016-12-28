@@ -1,0 +1,101 @@
+#floatingOptions{
+	position: fixed;
+	right: 20%;
+	bottom: 50px;
+	z-index: 5000;
+	text-align: right;
+}
+
+#floatingOptions > ul{
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	list-style: none;
+}
+
+#floatingOptions > ul > li{
+	flex: 0 0 0;
+	width: 50px;
+	margin-bottom: 0px;
+	position: relative;
+	text-align: right;
+	cursor: pointer;
+	overflow: hidden;
+	transition: 0.5s;
+	padding-right: 10px;
+}
+
+#floatingOptions:hover > ul > li{
+	flex: 0 0 50px;
+	margin-bottom: 20px;
+}
+
+#floatingOptions > ul > li > div{
+	position: absolute;
+	right: 60px;
+	top: 0;
+	width: 150px;
+	height: 50px;
+	line-height: 45px;
+	text-align: center;
+	background-color: black;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+#floatingOptions > ul > li:hover{
+	width: 250px;
+}
+
+#floatingOptions > ul > li > img{
+	display: inline-block;
+	width: 30px;
+	margin-top: 10px;
+}
+
+#floatingOptions img{
+	width: 50px;
+}
+
+#popupSection{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10000;
+	background-color: rgba(20, 20, 20, 0.5);
+}
+
+#popupSection > div{
+	width: 50vw;
+	margin: 20vh auto;
+	background-color: white;
+	padding: 50px;
+	border-radius: 5px;
+}
+
+#popupSection > div > header{
+	color: black;
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px){
+	#floatingOptions{
+		right: 27%;
+		bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	#popupSection > div{
+		width: 90vw;
+	}
+
+	#floatingOptions{
+		right: 20px;
+		bottom: 20px;
+	}
+}

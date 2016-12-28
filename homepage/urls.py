@@ -20,4 +20,5 @@ from homepage import views
 urlpatterns = [
     url(r'^(?P<category>[\w\-]+)/(?P<subcategory>[\w\-]+)$', views.homepage, name = 'homepage'),
     url(r'^(?P<category>[\w\-]+)$', views.homepage2, name = 'homepage2'),
+    url(r'^search/item/results$', views.search, name = 'search'),
 ]

@@ -1,0 +1,25 @@
+{% load staticfiles %}
+
+<section id = "patient-medicalHistory-labReports">
+	<ul>
+		{% for i in '123' %}
+		<li>
+			<header>	Kashyap Pathology		</header>
+			<img src="{% static 'common/images/normalvesta/labpic.jpg' %}">
+			<div>
+				<b>Test Type</b> : Blood Test 
+				<br>
+				<b>Address</b> : C-123, Hari Nagar, New Delhi 
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+				<br>
+				<b>Remarks</b> : See your doctor at the earliest
+				<br>
+				<a href="{% static 'homepage/pdf/sample.pdf' %}" target = "new">
+					View Report
+				</a>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

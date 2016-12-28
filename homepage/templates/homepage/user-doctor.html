@@ -23,13 +23,23 @@
 	<ul>
 		{% for i in '1234' %}
 		<li>
-			<header>	Mr. Maninder Singh		</header>
+			<header>	Gohan Kun		</header>
+			<img src="{% static 'common/images/normalvesta/gohan.jpg' %}">
 			<div>
 				<b>Clinic</b> : Freecare Clinic 
 				<br>
 				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
 				<br>
-				<b>ID</b> : 2
+				<b>Phone</b> : 9876543210
+				<br>
+				<b>Disease</b> : Cold
+				<br>
+				<b>Remarks on report</b> : none
+				<br>
+				<b>Re-appointment</b> : No
+				<br>
+				<b>ID</b> : 512
+				<br>
 			</div>	
 			<a href="{% static 'homepage/pdf/sample.pdf' %}" target = "new">
 				<img src="{% static 'common/images/normalvesta/pdficon.ico' %}">
@@ -45,5 +55,8 @@
 {% include 'homepage/doctor-profile-appointments.html' %}	
 {% endif %}
 
+{% if subcategory == 'reports' %}
+{% include 'homepage/doctor-profile-reports.html' %}	
+{% endif %}
 
 

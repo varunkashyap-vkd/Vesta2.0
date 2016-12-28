@@ -1,4 +1,51 @@
 {% load staticfiles %}
 
 {% if category == 'profile' %}
+<ul>
+	<li>
+		<a href="{% url 'homepage' 'profile' 'reports' %}">
+			<img src="{% static 'common/images/normalvesta/poweroff.png' %}">
+			<span>&nbsp&nbsp&nbspREPORTS</span>
+		</a>
+	</li>
+
+	<li>
+		<a href="{% url 'homepage' 'profile' 'appointments' %}">
+			<img src="{% static 'common/images/normalvesta/plus.png' %}">
+			<span>&nbsp&nbsp&nbspAPPOINTMENTS</span>
+		</a>
+	</li>
+</ul>
+{% endif %}
+
+{% if category == 'history' %}
+<section id = "lab-history">
+	<ul>
+		{% for i in '123' %}
+		<li>
+			<header>	Varun Kashyap	</header>
+			<img src="{% static 'common/images/normalvesta/gohan.jpg' %}">
+			<div>
+				<b>Test Type</b> : Blood Test 
+				<br>
+				<b>Phone</b> : None
+				<br>
+				<b>Date</b> : Aug 15, 2016
+				<br>
+				<b>Application No.</b> : 1024
+				<br>
+				<b>ID</b> : 256
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endif %}
+
+{% if subcategory == 'appointments' %}
+{% include 'homepage/lab-profile-appointments.html' %}
+{% endif %}
+
+{% if subcategory == 'reports' %}
+{% include 'homepage/lab-profile-reports.html' %}
 {% endif %}

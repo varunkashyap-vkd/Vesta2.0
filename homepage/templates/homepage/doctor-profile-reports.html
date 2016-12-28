@@ -1,0 +1,37 @@
+{% load staticfiles	 %}
+<section id = "doctor-profile-reports">
+	<ul>
+		{% for i in '123' %}
+		<li>
+			<header>	Gohan Kun		</header>
+			<img src="{% static 'common/images/normalvesta/gohan.jpg' %}">
+			<div>
+				<b>Clinic</b> : Carefree Clinic 
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+				<br>
+				<b>Phone</b> : 9876543210
+				<br>
+				<b>ID</b> : 512
+				<br>
+			</div>
+
+			<a href="#">
+				<img src="{% static 'common/images/normalvesta/pdficon.ico' %}">
+			</a>
+
+			<form method="POST" action="">
+				<label> Re-appointment </label>
+				<select id = "dropdown">
+					<option value = "yes"> YES </option>
+					<option value = "no"> NO </option>
+				</select>
+				<br>
+				<textarea placeholder = "Remarks"></textarea>
+				<br>
+				<input type="submit" style = "width: 75px;">
+			</form>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

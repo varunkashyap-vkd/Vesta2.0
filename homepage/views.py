@@ -27,6 +27,9 @@ def root(request):
 	elif sample == 'pharmacy':
 		subcategory = 'confirmedOrders'
 
+	elif sample == 'lab':
+		subcategory = 'reports'
+
 	return redirect(reverse('homepage', kwargs = {'category' : 'profile', 'subcategory' : subcategory}))
 
 
@@ -48,6 +51,9 @@ def homepage2(request, category):
 	}
 	return HttpResponse(render(request, 'homepage/homepage.html', dictionary))
 
+
+def search(request):
+	return HttpResponse(render(request, 'homepage/searchResults.html'))
 
 @csrf_exempt
 def thumbnail(request):

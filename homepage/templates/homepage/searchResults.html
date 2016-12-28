@@ -1,0 +1,40 @@
+{% extends 'common/base.html' %}
+{% load staticfiles %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/commonHeader.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
+{% endblock %}
+
+{% block body %}
+<header id = "mainHeader">
+	{% include 'homepage/headerUpperHalf.html' %}
+</header>
+{% include 'common/sideNavigation.html' %}
+{% include 'common/rightFixedSection.html' %}
+
+<style type="text/css">
+	#mainHeader{
+		padding-bottom: 10px;
+	}
+
+	#sideBar, #rightFixedSection{
+		top: 60px;
+	}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
+<script type="text/javascript">
+	var target = {
+		'navButton' : '#mainHeader > div > i',
+		'navBar' : 'sideBar',
+		'leftArrow' : '#sideBar > li:first-child',
+		'search' : '#mainHeader > div > ul > li:first-child > i',
+		'inputField' : '#mainHeader > div > ul > li:first-child > input',
+	};
+	headerAndNavManager.init(target);
+</script>
+{% endblock %}

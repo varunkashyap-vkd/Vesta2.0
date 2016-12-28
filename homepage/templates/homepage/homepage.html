@@ -10,8 +10,21 @@
 <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/patient-profile-vitals.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/patient-profile-pastAppointments.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/patient-medicalHistory-pharmacyOrders.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/patient-medicalHistory-labReports.css' %}">
+
 <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/doctor-patientHistory.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/doctor-profile-appointments.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/doctor-profile-reports.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/pharmacy-profile-confirmedOrders.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/pharmacy-profile-orders.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/pharmacy-orderHistory.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/lab-profile-appointments.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/lab-profile-reports.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/lab-history.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/floatingOptions.css' %}">
 {% endblock %}
 
 {% block body %}
@@ -25,6 +38,7 @@
 
 {% block scripts %}
 <script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
+<script type="text/javascript" src = "{% static 'homepage/js/floatingOptions.js' %}"></script>
 <script type="text/javascript">
 	var target = {
 		'navButton' : '#mainHeader > div > i',
@@ -34,5 +48,11 @@
 		'inputField' : '#mainHeader > div > ul > li:first-child > input',
 	};
 	headerAndNavManager.init(target);
+
+	var obj = {
+		'li' : '#floatingOptions > ul > li',
+		'section' : 'popupSection',
+	};
+	floatingOptions.init(obj);
 </script>
 {% endblock %}

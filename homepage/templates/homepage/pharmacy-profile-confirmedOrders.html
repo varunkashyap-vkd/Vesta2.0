@@ -1,0 +1,25 @@
+{% load staticfiles	 %}
+<section id = "pharmacy-profile-confirmedOrders">
+	<ul>
+		{% for i in '123' %}
+		<li>
+			<img src="{% static 'common/images/normalvesta/gohan.jpg' %}">
+			<div>
+				<h1> Gohan Kun </h1>
+				<b>Address</b> : None 
+				<br>
+				<b>Phone</b> : None
+				<br>
+				<b>Remarks</b> : None
+				<br>
+				<b>Date</b> : Aug 15, 2016
+				<br>
+				<a href="#"> Confirm Order </a>
+			</div>
+			<a href="{% static 'common/images/normalvesta/prescription.jpg' %}" target = "new">
+				<img src="{% static 'common/images/normalvesta/prescription.jpg' %}">
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

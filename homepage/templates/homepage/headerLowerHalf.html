@@ -19,8 +19,8 @@
 
 	{% if userType == 'lab' %}
 	<li>
-		<a href="#">
-			<img src="{% static 'common/images/normalvesta/clock.png' %}">&nbsp&nbsp<span> LAB HISTORY </span>
+		<a href="{% url 'homepage2' 'history' %}">
+			<img src="{% static 'common/images/normalvesta/clock.png' %}">&nbsp&nbsp<span> HISTORY </span>
 		</a>
 	</li>
 	{% endif %}
