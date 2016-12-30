@@ -5,6 +5,10 @@
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/commonHeader.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/searchResults.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/search-doctor.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/search-lab.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/search-pharmacy.css' %}">
 {% endblock %}
 
 {% block body %}
@@ -13,6 +17,12 @@
 </header>
 {% include 'common/sideNavigation.html' %}
 {% include 'common/rightFixedSection.html' %}
+
+<section id = "mainSection">
+	{% include 'homepage/doctorCard.html' %}		
+<!--	{% include 'homepage/searchLabCard.html' %}
+	{% include 'homepage/searchPharmacyCard.html' %}-->
+</section>
 
 <style type="text/css">
 	#mainHeader{

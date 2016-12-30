@@ -106,7 +106,8 @@
 	width: 100px;
 }
 
-#notification{
+#notification,
+#friendRequestList{
 	display: none;
 	position: absolute;
 	right: 0;
@@ -117,9 +118,11 @@
 	flex-direction: column;
 	top: 22px;
 	padding-top: 0px;
+	cursor: auto;
 }
 
-#notification > li{
+#notification > li,
+#friendRequestList > li{
 	flex: 0 0 70px;
 	padding: 10px 10px;
 	box-sizing: border-box;
@@ -128,29 +131,47 @@
 	z-index: 1100;
 }
 
-#notification > li:hover{
+#notification > li:hover,
+#friendRequestList > li:hover{
 	background-color: rgb(40, 40, 40);
 }
 
-#notification a{
+#notification > li > a,
+#friendRequestList > li > a{
 	display: block;
 	width: 100%;
 	height: 100%;
 }
 
-#notification img{
+#notification img,
+#friendRequestList img{
 	width: 30px;
 	border-radius: 15px;
 }
 
-#notification span{
+#notification span,
+#friendRequestList span{
 	font-size: 11px;
 	margin-left: 10px;
 }
 
-#notification p{
+#notification p,
+#friendRequestList p{
 	font-size: 12px;
 	margin: 0;
+}
+
+#notification p > a,
+#friendRequestList p > a{
+	display: inline-block;
+	width: 45%;
+	text-align: center;
+	font-size: 14px;
+	margin: 0px 0 0 2.5%;
+}
+
+#friendRequestList p > a:hover{
+	background-color: black;
 }
 
 

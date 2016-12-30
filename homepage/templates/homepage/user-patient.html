@@ -65,9 +65,10 @@
 				<b>Address</b> : Srivastav's Clinic, Delhi Technological University, New Delhi - 110042
 				<br>
 				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
-				<br>
+<!--				<br>
 				<a href="#" style = "text-decoration: none;"> Cancel Appointment </a>
-			</div>
+			</div>	-->
+			<a href="#"><img src="{% static 'common/images/cancel.png' %}"></a>
 		</li>
 		{% endfor %}
 	</ul>
@@ -93,4 +94,8 @@
 
 {% if subcategory == 'labReports' %}
 {% include 'homepage/patient-medicalHistory-labReports.html' %}
+{% endif %}
+
+{% if subcategory == 'current' %}
+{% include 'homepage/patient-profile-current.html' %}
 {% endif %}

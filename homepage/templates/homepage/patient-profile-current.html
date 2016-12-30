@@ -1,0 +1,106 @@
+{% load staticfiles %}
+
+<section id = "patient-profile-current">
+	<ul>
+		{% for i in '3' %}
+		<li>
+			<header>	Srivastav Clinic		</header>
+			<img src="{% static 'common/images/normalvesta/doctor.jpg' %}">
+			<div>
+				<b>Clinic</b> : Kashyap Clinic 
+				<br>
+				<b>Doctor</b> : Dr. Varun Kashyap
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+			</div>
+
+			<div>
+				<form>
+					<input type = "file" id = "pres">
+					<label for = "pres">- Upload Prescription</label>
+					<input type = "file" id = "report">
+					<label for = "report">- Upload Report</label>
+					<input type = "submit">
+				</form>
+			</div>
+		</li>
+
+		<li>
+			<header>	Srivastav Clinic		</header>
+			<img src="{% static 'common/images/normalvesta/doctor.jpg' %}">
+			<div>
+				<b>Clinic</b> : Kashyap Clinic 
+				<br>
+				<b>Doctor</b> : Dr. Varun Kashyap
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+			</div>
+
+			<div>
+				<a target = "new" href="{% static 'common/images/normalvesta/prescription.jpg' %}">
+					<img src="{% static 'common/images/normalvesta/prescription.jpg' %}">
+				</a>
+				<form>
+					<input type = "file" id = "report">
+					<label for = "report">- Upload Report</label>
+					<input type = "submit">
+				</form>
+			</div>
+		</li>
+
+		<li>
+			<header>	Srivastav Clinic		</header>
+			<img src="{% static 'common/images/normalvesta/doctor.jpg' %}">
+			<div>
+				<b>Clinic</b> : Kashyap Clinic 
+				<br>
+				<b>Doctor</b> : Dr. Varun Kashyap
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+			</div>
+
+			<div>
+				<b>Re-appointment</b> : Obviously 
+				<br>
+				<b>Remarks</b> : Cigratte peena chod de bhai
+				<br>
+				<br>
+				<a target = "new" href="{% static 'homepage/pdf/sample.pdf' %}">
+					<img src="{% static 'common/images/normalvesta/pdficon.ico' %}">
+				</a>
+				<form>
+					<input type = "file" id = "pres">
+					<label for = "pres">- Upload Prescription</label>
+					<input type = "submit">
+				</form>
+			</div>
+		</li>
+
+		<li>
+			<header>	Srivastav Clinic		</header>
+			<img src="{% static 'common/images/normalvesta/doctor.jpg' %}">
+			<div>
+				<b>Clinic</b> : Kashyap Clinic 
+				<br>
+				<b>Doctor</b> : Dr. Varun Kashyap
+				<br>
+				<b>Date</b> : Dec. 5, 2016, 9:03 a.m.
+			</div>
+
+			<div>
+				<b>Re-appointment</b> : Obviously 
+				<br>
+				<b>Remarks</b> : Cigratte peena chod de bhai
+				<br>
+				<br>
+				<a target = "new" href="{% static 'common/images/normalvesta/prescription.jpg' %}">
+					<img src="{% static 'common/images/normalvesta/prescription.jpg' %}">
+				</a>
+				<a target = "new" href="{% static 'homepage/pdf/sample.pdf' %}">
+					<img src="{% static 'common/images/normalvesta/pdficon.ico' %}">
+				</a>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

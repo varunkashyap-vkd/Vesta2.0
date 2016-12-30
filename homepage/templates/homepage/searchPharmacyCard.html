@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<ul id = "pharmacy-list">
+	{% for i in '123' %}
+	<li>
+		<section>
+			<img src="{% static 'common/images/normalvesta/heisenberg.png' %}">
+
+			<div>
+				<span>Name</span> : Heisenberg's Pharmacy
+				<br>
+				<span>Phone No.</span> : None
+			</div>
+
+			<div>
+				<span>Address</span> : Srivastav's Lab, Delhi Technological University, New Delhi - 110042
+			</div>
+
+			<form>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
+					<input class="mdl-textfield__input" id="id_remarks" name="remarks" type="text" />
+					<label class="mdl-textfield__label" for="id_remarks">write some remarks</label>
+				</div>
+				<input id="id_prescription" name="prescription" type="file" required />
+				<input type="hidden" name="id" value="1">
+				<button type="submit" class="mdl-button mdl-js-button mdl-button--raised 
+				mdl-js-ripple-effect" style = "float: right;">Submit</button>
+			</form>
+		</section>
+	</li>
+	{% endfor %}
+</ul>

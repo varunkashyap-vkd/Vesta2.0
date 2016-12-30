@@ -1,0 +1,143 @@
+#doctor-list{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	width: 100%;
+}
+
+#doctor-list > li{
+	width: 100%;
+	background-color: rgba(40, 40, 40, 0.8);
+	margin-bottom: 20px;
+	padding: 15px;
+}
+
+#doctor-list > li > section{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#doctor-list > li > section > div{
+	flex: 1 0 1px;
+	padding: 0 10px;
+	line-height: 30px;
+	font-size: 17px;
+}
+
+#doctor-list > li > section > div span{
+	color: red;
+}
+
+#doctor-list > li > section > div > a{
+	text-decoration: none;
+	font-size: 15px;
+}
+
+#doctor-list > li > section > img{
+	flex: 0 0 80px;
+	height: 80px;
+}	
+.internal-list{
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+	margin-top: 15px;
+
+	overflow: hidden;
+	height: auto;
+	margin-top:15px;
+}
+
+.internal-list > li{
+	flex: 0 0 25%;
+	margin-bottom: 20px;
+	border-right: 1px solid rgba(230, 230, 230, 0.7);
+	padding: 0 10px;
+}
+
+.internal-list > li:nth-child(4n){
+	border-right: none;
+}
+
+.internal-list > li > header{
+	font-size: 15px;
+	color: red;
+}
+
+.internal-list > li > p{
+	font-size: 13px;
+}
+
+.lowerLink{
+	display: none;
+}
+
+.upperLink{
+	display: inline;
+}
+
+@media screen and (max-width: 768px){
+	#doctor-list > li > section > img{
+		flex: 0 0 80px;
+		height: 80px;
+	}	
+
+	#doctor-list > li > section > div{
+		font-size: 15px;
+	}
+
+	.internal-list > li{
+		flex: 0 0 33%;
+	}
+
+	.internal-list > li:nth-child(4n){
+		border-right: 1px solid rgba(230, 230, 230, 0.7);
+	}
+
+	.internal-list > li:nth-child(3n){
+		border-right: none;
+	}
+
+
+	.lowerLink{
+		display: none;
+	}
+
+	.upperLink{
+		display: inline;
+	}
+}
+
+@media screen and (max-width: 480px){
+	#doctor-list > li > section > img{
+		flex: 0 0 100px;
+		height: 100px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}	
+
+	#doctor-list > li > section > div{
+		flex: 0 0 100%;
+		text-align: center;
+	}
+
+	.internal-list > li{
+		flex: 0 0 33%;
+	}
+
+	.internal-list > li:nth-child(3n){
+		border-right: 1px solid rgba(230, 230, 230, 0.7);
+	}
+
+	.internal-list > li:nth-child(2n){
+		border-right: none;
+	}
+
+	.lowerLink{
+		display: inline;
+	}
+
+	.upperLink{
+		display: none;
+	}
+}

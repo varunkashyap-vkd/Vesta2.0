@@ -22,9 +22,20 @@
 		</li>
 
 		<li>
-			<a href="#" title = "Add Friend">
-				<img src="{% static 'common/images/userplus.png' %}">
-			</a>
+			<img src="{% static 'common/images/userplus.png' %}" title = "Friend Requests">
+			<ul id = "friendRequestList">
+				{% for i in '123' %}
+				<li>
+					<img src="{% static 'common/images/user.jpg' %}"><span> 7Hours, 52 minutes ago</span>
+					<p>
+						Maninder Singh Sent you a friend request.
+						<br>
+						<a href="#"> Accept </a>
+						<a href="#"> Reject </a>
+					</p>
+				</li>
+				{% endfor %}
+			</ul>
 		</li>
 
 		<li>

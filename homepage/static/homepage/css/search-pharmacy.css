@@ -1,0 +1,61 @@
+#pharmacy-list{
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	width: 100%;
+}
+
+#pharmacy-list > li{
+	width: 100%;
+	background-color: rgba(40, 40, 40, 0.8);
+	margin-bottom: 20px;
+	padding: 15px;
+}
+
+#pharmacy-list > li > section{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#pharmacy-list > li > section > img{
+	flex: 0 0 100px;
+	height: 100px;
+}
+
+#pharmacy-list > li > section > div{
+	flex: 1 0 1px;
+	padding: 0 20px;
+	line-height: 30px;
+	font-size: 16px;
+}
+
+#pharmacy-list > li > section > form{
+	flex: 0 0 90%;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+#pharmacy-list > li > section > div span{
+	color: red;
+}
+
+#pharmacy-list > li > section > div > a{
+	text-decoration: none;
+	font-size: 15px;
+}
+
+
+@media screen and (max-width: 480px){
+	#pharmacy-list > li > section > div{
+		flex: 0 0 100%;
+	}
+
+	#pharmacy-list > li > section > form{
+		margin-top: 0;
+	}
+
+	#pharmacy-list > li > section > img{
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+}

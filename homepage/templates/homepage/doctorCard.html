@@ -1,0 +1,42 @@
+{% load staticfiles %}
+
+<ul id = "doctor-list">
+	{% for i in '123' %}
+	<li>
+		<section>
+			<img src="{% static 'common/images/normalvesta/heisenberg.png' %}">
+			<div>
+				<span>Name</span> : Heisenberg
+				<br>
+				<a href="#" class = "upperLink">	View Clinics	</a>
+			</div>
+			<div>
+				<span>Speciality</span> : Crystal Meth
+				<br>
+				<span>Experience</span> : 5 Years
+				<br>
+				<span>Qualification</span> : MBBS, BDS				
+				<br>
+				<a href="#" class = "lowerLink">	View Clinics	</a>
+			</div>
+		</section>
+
+		<ul class = "internal-list">
+			{% for i in '123456' %}
+			<li>
+				<header>
+					Srivastav's Clinic
+				</header>
+				<p>
+					Srivastav's Clinic, Delhi Technological University, New Delhi - 110042
+					<br>
+					Fees : Rs.250
+					<br>
+					Mon-Fri : 2pm-5pm
+				</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</li>
+	{% endfor %}
+</ul>

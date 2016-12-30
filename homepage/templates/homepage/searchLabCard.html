@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<ul id = "lab-list">
+	{% for i in '123' %}
+	<li>
+		<section>
+			<img src="{% static 'common/images/normalvesta/heisenberg.png' %}">
+			<div>
+				<span>Heisenberg's Lab</span>
+				<br>
+				<span>Phone No.</span> : None
+			</div>
+			<div>
+				<span>Address</span> : Srivastav's Lab, Delhi Technological University, New Delhi - 110042
+			</div>
+		</section>
+
+		<ul class = "internal-list">
+			{% for i in '12345' %}
+			<li>
+				<a href="#">X-Ray</a>&nbsp&nbsp:&nbsp&nbspRs.500
+			</li>
+			{% endfor %}
+		</ul>
+	</li>
+	{% endfor %}
+</ul>
