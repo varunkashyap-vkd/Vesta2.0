@@ -31,26 +31,22 @@
 #doctor-profile-reports > ul > li > img{
 	flex: 0 0 150px;
 	height: 150px;
-	order-radius: 65px;
-	display: inline-block;
-	argin-right: 20px;
 }
 
 #doctor-profile-reports > ul > li > div{
 	flex: 1 0 1px;
 	font-size: 16px;
 	line-height: 35px;
-	padding-left: 5%;
+	padding-left: 15px;
 }
 
 #doctor-profile-reports a > img{
-	flex: 0 0 80px;
-	height: 80px;
+	flex: 0 0 50px;
+	height: 50px;
 }
 
 #doctor-profile-reports form{
-	flex: 0 0 100%;
-	margin: 15px 0 0 180px;
+	flex: 1 0 1px;
 }
 
 #doctor-profile-reports form label{
@@ -66,31 +62,20 @@
 
 @media screen and (max-width: 768px){
 	#doctor-profile-reports > ul > li > img{
-		flex: 0 0 100px;
-		height: 100px;
+		flex: 0 0 80px;
+		height: 80px;
+		margin: 0 auto;
 	}	
 
 	#doctor-profile-reports form{
-		margin: 15px 0 0 120px;
+		flex: 0 0 100%;
+		text-align: center;
+		margin-top: 10px;
 	}
 
-	#doctor-profile-reports a > img{
-		flex: 0 0 60px;
-		height: 60px;
-	}
-}
-
-
-@media screen and (max-width: 480px){
-	#doctor-profile-reports > ul > li > img{
-		flex: 0 0 120px;
-		height: 120px;
-		margin: 0 auto;
-		margin-bottom: 0px;
-	}	
-
-	#doctor-profile-reports a{
-		margin: 0 auto;
+	#doctor-profile-reports > ul > li > div{
+		flex: 0 0 100%;
+		text-align: center;
 	}
 
 	#doctor-profile-reports a > img{
@@ -98,14 +83,8 @@
 		height: 50px;
 	}
 
-	#doctor-profile-reports > ul > li > div{
-		flex: 0 0 100%;
-		text-align: center;
-		margin: 15px 0;
-	}
-
-	#doctor-profile-reports form{
-		margin: 25px 0 0 0;
-		text-align: center;
+	#doctor-profile-reports a{
+		margin: 0 auto;
+		margin-top: 20px;		
 	}
 }

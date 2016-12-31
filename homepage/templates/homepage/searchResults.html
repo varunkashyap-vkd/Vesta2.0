@@ -6,10 +6,13 @@
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/searchResults.css' %}">
+
+
 <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/search-doctor.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/search-lab.css' %}">
+<!--<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/search-lab.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/search-pharmacy.css' %}">
-{% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/search-clinic.css' %}">
+-->{% endblock %}
 
 {% block body %}
 <header id = "mainHeader">
@@ -21,7 +24,8 @@
 <section id = "mainSection">
 	{% include 'homepage/doctorCard.html' %}		
 <!--	{% include 'homepage/searchLabCard.html' %}
-	{% include 'homepage/searchPharmacyCard.html' %}-->
+	{% include 'homepage/searchPharmacyCard.html' %}
+	{% include 'homepage/searchClinicCard.html' %}	-->
 </section>
 
 <style type="text/css">
@@ -37,6 +41,7 @@
 
 {% block scripts %}
 <script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
+<script type="text/javascript" src = "{% static 'homepage/js/searchResults-doctor.js' %}"></script>
 <script type="text/javascript">
 	var target = {
 		'navButton' : '#mainHeader > div > i',
@@ -46,5 +51,13 @@
 		'inputField' : '#mainHeader > div > ul > li:first-child > input',
 	};
 	headerAndNavManager.init(target);
+
+	var obj = {
+		'lowerLink' : 'lowerLink',
+		'upperLink' : 'upperLink',
+		'internalList' : '#doctor-list > li > ul',
+		'internalList2' : '#clinic-list > li > ul',
+	};
+	searchResultsDoctor.init(obj);
 </script>
 {% endblock %}

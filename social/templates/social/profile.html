@@ -20,9 +20,19 @@ VESTA - Profile
 {% include 'common/commonHeader.html' %}
 {% include 'social/profileSection.html' %}
 
+<section id = "formSection" style = "display: none;"> 
+	<div>
+		<header>	Change Photo	</header>
+		<form>
+			<input type = "file">
+			<input type = "submit">
+		</form>
+	</div>
+</section>
+
 <style type="text/css">
 	#rightFixedSection{
-		top: 70px;
+		top: 60px;
 	}
 
 	#sideBar{
@@ -61,6 +71,7 @@ VESTA - Profile
 		'allPhotos' : 'allPhotos',
 		'changeProfile' : 'changeProfilePic',
 		'changeCover' : 'changeCoverPic',
+		'formSection' : 'formSection',
 	};
 	profile.init(obj);
 

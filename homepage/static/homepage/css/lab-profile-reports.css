@@ -22,13 +22,13 @@
 	flex: 0 0 150px;
 	height: 150px;
 	display: inline-block;
-	margin-right: 50px;
 }
 
 #lab-profile-reports > ul > li > div{
 	flex: 1 0 1px;
 	font-size: 16px;
 	line-height: 35px;
+	padding: 0 15px;
 }
 
 #lab-profile-reports > ul > li > header{
@@ -45,9 +45,8 @@
 }
 
 #lab-profile-reports form{
-	width: 100%;
+	width: 100px;
 	text-align: left;
-	margin-top: 15px;
 }
 
 @media screen and (max-width: 768px){
@@ -62,11 +61,15 @@
 		flex: 0 0 100px;
 		height: 100px;
 		margin: 0 auto;
+		margin-bottom: 10px;
 	}	
 
 	#lab-profile-reports > ul > li > div{
 		flex: 0 0 100%;
 		text-align: center;
-		margin-top: 20px;
+	}
+
+	#lab-profile-reports form{
+		margin-top: 15px;
 	}
 }

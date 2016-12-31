@@ -20,17 +20,17 @@
 }
 
 #doctor-patientHistory > ul > li > img{
-	flex: 0 0 150px;
-	height: 150px;
+	flex: 0 0 120px;
+	height: 120px;
 	order-radius: 65px;
 	display: inline-block;
-	margin-right: 20px;
 }
 
 #doctor-patientHistory > ul > li > div{
 	flex: 1 0 1px;
 	font-size: 16px;
 	line-height: 35px;
+	padding: 0 20px;
 }
 
 #doctor-patientHistory > ul > li > header{
@@ -43,36 +43,30 @@
 }
 
 #doctor-patientHistory a > img{
-	flex: 0 0 80px;
-	height: 80px;
+	flex: 0 0 60px;
+	height: 60px;
 }
 
 @media screen and (max-width: 768px){
 	#doctor-patientHistory > ul > li > img{
 		flex: 0 0 100px;
 		height: 100px;
-	}	
-}
-
-@media screen and (max-width: 480px){
-	#doctor-patientHistory > ul > li > img{
-		flex: 0 0 120px;
-		height: 120px;
 		margin: 0 auto;
+		margin-bottom: 10px;
 	}	
 
-	#doctor-patientHistory a{
-		margin: 0 auto;
-	}
-
-	#doctor-patientHistory a > img{
-		flex: 0 0 70px;
-		height: 70px;
-
-	}
 	#doctor-patientHistory > ul > li > div{
 		flex: 0 0 100%;
 		text-align: center;
-		margin: 20px auto;
+	}
+
+	#doctor-patientHistory a{
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+
+	#doctor-patientHistory a > img{
+		flex: 0 0 50px;
+		height: 50px;
 	}
 }

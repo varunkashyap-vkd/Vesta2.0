@@ -31,13 +31,13 @@
 	flex: 0 0 120px;
 	height: 120px;
 	display: inline-block;
-	margin-right: 20px;
 }
 
 #patient-medicalHistory-labReports > ul > li > div{
 	flex: 1 0 1px;
 	font-size: 16px;
 	line-height: 35px;
+	padding: 0 20px;
 }
 
 #patient-medicalHistory-labReports > ul > li > a{
@@ -59,6 +59,8 @@
 	#patient-medicalHistory-labReports > ul > li > img{
 		flex: 0 0 100px;
 		height: 100px;
+		margin: 0 auto;
+		margin-bottom: 10px;
 	}	
 
 	#patient-medicalHistory-labReports > ul > li > div{
@@ -81,7 +83,6 @@
 	#patient-medicalHistory-labReports > ul > li > div{
 		flex: 0 0 100%;
 		font-size: 14px;
-		margin: 15px 0;
 	}
 
 	#patient-medicalHistory-labReports > ul > li{

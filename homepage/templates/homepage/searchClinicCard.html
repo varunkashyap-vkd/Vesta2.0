@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<ul id = "clinic-list">
+	{% for i in '123' %}
+	<li>
+		<section>
+			<img src="{% static 'common/images/normalvesta/heisenberg.png' %}">
+			<div>
+				<span>Heisenberg's Clinic</span>
+				<br>
+				<span>Phone No.</span> : None
+				<br>
+				<a href="#" class = "upperLink"> View Doctors </a>
+			</div>
+			<div>
+				<span>Address</span> : Albuquerque, New Mexico
+				<br>
+				<a href="#" class = "lowerLink"> View Doctors </a>
+			</div>
+		</section>
+
+		<ul class = "internal-list" displayed = "false">
+			{% for i in '123456' %}
+			<li>
+				<img src="{% static 'common/images/normalvesta/heisenberg.png' %}">
+				<header>
+					Dr. Walter White
+				</header>
+				<p>
+					<span>Speciality</span> : Crystal Meth
+					<br>
+					<span>Experience</span> : 5 years
+					<br>
+					<span>Qualification</span> : MBBS, MD
+					<br>
+					<a href="#">	Book	</a>
+				</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</li>
+	{% endfor %}
+</ul>
