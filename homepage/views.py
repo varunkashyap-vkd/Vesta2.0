@@ -16,7 +16,7 @@ from homepage import PyOpenGraph as InfoExtractor
 import validators
 import urllib.request
 
-sample = 'pharmacy'
+sample = 'patient'
 
 def root(request):
 	subcategory = 'current'
