@@ -52,23 +52,24 @@
 					{% endfor %}
 				</ul>
 				<a href="#" class =  "allPhotos"> View All </a>
-			</section> -->
-		</section>
-
-		<section id = "postsSection">
-			<img src="{% static 'common/images/user.jpg' %}">
-			<div> <a href="#" id = "changeProfilePic"> Change Profile Pic </a></div>
-			<header> Posts </header>			
-
-			<ul>
-				{% for i in '12' %}
-				<li>
-					{% include 'social/newsFeedSection.html' %}					
-				</li>
-				{% endfor %}	
-			</ul>
-		</section>		
+			</section> 		
+		-->
 	</section>
 
-	{% include 'common/rightFixedSection.html' %}
+	<section id = "postsSection">
+		<img src="{% static 'common/images/user.jpg' %}">
+		<div> <a href="#" id = "changeProfilePic"> Change Profile Pic </a></div>
+		<header> Posts </header>			
+
+		<ul>
+			{% for i in '12' %}
+			<li>
+				{% include 'social/newsFeedSection.html' %}					
+			</li>
+			{% endfor %}	
+		</ul>
+	</section>		
+</section>
+
+{% include 'common/rightFixedSection.html' %}
 </section>

@@ -57,13 +57,25 @@
 
 @media screen and (max-width: 1100px){
 	#mainSection{
+		width: 61%;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	#mainSection{
 		width: 60%;
+	}
+}
+
+@media screen and (max-width: 970px){
+	#mainSection{
+		width: 59%;
 	}
 }
 
 @media screen and (max-width: 900px){
 	#mainSection{
-		width: 55%;
+		width: 58%;
 	}
 
 	#mainSection > ul > li a{
@@ -72,6 +84,18 @@
 
 	#mainSection > ul > li img{
 		width: 17px;
+	}
+}
+
+@media screen and (max-width: 850px){
+	#mainSection{
+		width: 56%;
+	}
+}
+
+@media screen and (max-width: 800px){
+	#mainSection{
+		width: 55%;
 	}
 }
 
