@@ -1,0 +1,82 @@
+{% extends 'common/base.html' %}
+{% load staticfiles %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/commonHeader.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/sideNavigation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'common/css/rightFixedSection.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/css/time-slots.css' %}">
+{% endblock %}
+
+{% block body %}
+<header id = "mainHeader">
+	{% include 'homepage/headerUpperHalf.html' %}
+</header>
+{% include 'common/sideNavigation.html' %}
+{% include 'common/rightFixedSection.html' %}
+
+<section id = "mainSection">
+	<section>
+		<header>
+			<div id = "leftDiv">	Date		</div><div id = "rightDiv">	Time Slots	</div>
+		</header>
+
+		<ul id = "date-list">
+			{% for j in '12345' %}
+			<li>
+				<div>	Jan 2, 2017		</div>
+
+				<ul class = "time-list">
+					{% for i in '12' %}
+					<li>
+						<a href="#">	1 P.M. - 5 P.M.	</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
+
+	<div>
+		Your appointment is successfully fixed with Dr.Rajesh Srivastav at Srivastav's Clinic on Jan. 2, 2017, 7:26 p.m.
+		<br>
+		Your token no. is 3
+		<br>
+		If you won't reach there by noon, appointment may be cancelled.
+	</div>
+</section>
+
+<style type="text/css">
+	#mainHeader{
+		padding-bottom: 10px;
+	}
+
+	#sideBar, #rightFixedSection{
+		top: 60px;
+	}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
+<script type="text/javascript" src = "{% static 'homepage/js/searchResults-doctor.js' %}"></script>
+<script type="text/javascript">
+	var target = {
+		'navButton' : '#mainHeader > div > i',
+		'navBar' : 'sideBar',
+		'leftArrow' : '#sideBar > li:first-child',
+		'search' : '#mainHeader > div > ul > li:first-child > i',
+		'inputField' : '#mainHeader > div > ul > li:first-child > input',
+	};
+	headerAndNavManager.init(target);
+
+	var obj = {
+		'lowerLink' : 'lowerLink',
+		'upperLink' : 'upperLink',
+		'internalList' : '#doctor-list > li > ul',
+		'internalList2' : '#clinic-list > li > ul',
+	};
+	searchResultsDoctor.init(obj);
+</script>
+{% endblock %}

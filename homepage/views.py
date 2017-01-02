@@ -55,6 +55,10 @@ def homepage2(request, category):
 def search(request):
 	return HttpResponse(render(request, 'homepage/searchResults.html'))
 
+def timeSlots(request):
+	return HttpResponse(render(request, 'homepage/time-slots.html'))
+
+
 @csrf_exempt
 def thumbnail(request):
 	text = request.POST.get('text')
