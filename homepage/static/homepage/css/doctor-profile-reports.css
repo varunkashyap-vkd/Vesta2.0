@@ -46,7 +46,8 @@
 }
 
 #doctor-profile-reports form{
-	flex: 1 0 1px;
+	flex: 0 0 40%;
+	width: 40%;
 }
 
 #doctor-profile-reports form label{

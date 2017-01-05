@@ -5,7 +5,7 @@
 		{% for i in '3' %}
 		<li>
 			<header>	Srivastav Clinic		</header>
-			<img src="{% static 'common/images/normalvesta/doctor.jpg' %}">
+			<img src="{% static 'common/images/normalvesta/doctor.jpg' %}" class = "poppable-image">
 			<div>
 				<b>Clinic</b> : Kashyap Clinic 
 				<br>
@@ -18,12 +18,16 @@
 				<form>
 					<input type = "file" id = "pres">
 					<label for = "pres">- Upload Prescription</label>
-					<input type = "submit">
+					<div>
+					<input type = "submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" value = "Upload" style = "color: grey;">
+					</div>
 				</form>
 				<form>
 					<input type = "file" id = "report">
 					<label for = "report">- Upload Report</label>
-					<input type = "submit">
+				<div>
+					<input type = "submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" value = "Upload" style = "color: grey;">
+				</div>
 				</form>
 			</div>
 		</li>
@@ -46,7 +50,9 @@
 				<form>
 					<input type = "file" id = "report">
 					<label for = "report">- Upload Report</label>
-					<input type = "submit">
+				<div>
+					<input type = "submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" value = "Upload" style = "color: grey;">
+				</div>
 				</form>
 			</div>
 		</li>
@@ -74,7 +80,9 @@
 				<form>
 					<input type = "file" id = "pres">
 					<label for = "pres">- Upload Prescription</label>
-					<input type = "submit">
+				<div>
+					<input type = "submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised" value = "Upload" style = "color: grey;">
+				</div>
 				</form>
 			</div>
 		</li>
@@ -95,8 +103,8 @@
 			</div>
 
 			<div>
-				<a target = "new" href="{% static 'common/images/normalvesta/prescription.jpg' %}">
-					<img src="{% static 'common/images/normalvesta/prescription.jpg' %}">
+				<a href="" class = "stop-this-anchor">
+					<img src="{% static 'common/images/normalvesta/prescription.jpg' %}"  class = "poppable-image">
 				</a>
 				<a target = "new" href="{% static 'homepage/pdf/sample.pdf' %}">
 					<img src="{% static 'common/images/normalvesta/pdficon.ico' %}">

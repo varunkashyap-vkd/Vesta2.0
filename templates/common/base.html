@@ -30,6 +30,7 @@
 	<script type="text/javascript" src = "{% static 'common/js/jquery.js' %}"></script>
 	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>	
 	<script type="text/javascript" src = "{% static 'common/js/rightSectionScroller.js' %}"></script>
+	<script type="text/javascript" src = "{% static 'homepage/js/imagePopout.js' %}"></script>
 	{% block scripts %}	{% endblock %}
 	<script type="text/javascript">
 		var obj = {
@@ -38,6 +39,12 @@
 			'time' : 8000,
 		};
 		rightSectionScroller.init(obj);
+
+		var xyz = {
+			'images' : 'poppable-image',
+			'anchors' : 'stop-this-anchor',
+		};
+		imagePopout.init(xyz);
 	</script>
 
 

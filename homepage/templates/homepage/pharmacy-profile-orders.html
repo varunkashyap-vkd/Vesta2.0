@@ -15,13 +15,19 @@
 				<br>
 				<b>Date</b> : Aug 15, 2016
 			</div>
+			
 			<form>
-				<textarea placeholder = "Reply"></textarea>
-				<br>
-				<input type = "submit">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="reply" style = "border-bottom: 1px solid rgba(200, 200, 200, 0.6);">
+					<label class="mdl-textfield__label" for="reply" style = "color: grey; font-size: 14px;">	Reply	</label>
+				</div>
+
+				<div>
+					<input type = "submit" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">
+				</div>
 			</form>
 
-			<a href="{% static 'common/images/normalvesta/prescription.jpg' %}" target = "new">
+			<a href="{% static 'common/images/normalvesta/prescription.jpg' %}" target = "new" class = "poppable-anchor">
 				<img src="{% static 'common/images/normalvesta/prescription.jpg' %}">
 			</a>
 		</li>

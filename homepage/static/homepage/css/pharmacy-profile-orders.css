@@ -17,6 +17,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-start;
+	justify-content: space-between;
 }
 
 #pharmacy-profile-orders > ul > li > header{
@@ -41,12 +42,9 @@
 }
 
 #pharmacy-profile-orders > ul > li > form{
-	flex: 1 0 1px;
-}
-
-#pharmacy-profile-orders > ul > li > form > input,
-#pharmacy-profile-orders > ul > li > form > textarea{
-	width: 50%;
+	flex: 0 0 35%;
+	width: 35%;
+	margin-right: 20px;
 }
 
 #pharmacy-profile-orders > ul > li > a{
@@ -55,16 +53,9 @@
 	overflow: hidden;
 }
 
-
 #pharmacy-profile-orders a > img{
 	width: 100%;
 	height: auto;
-}
-
-#pharmacy-profile-orders h1{
-	margin: 0;
-	font-size: 35px;
-	font-weight: normal;
 }
 
 #pharmacy-profile-orders > ul > li > div > a{

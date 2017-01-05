@@ -18,56 +18,82 @@
 	display: flex;
 	align-items: center;
 	padding: 0 25px;
+	justify-content: space-between;
 }
 
 #vitalsSection > ul > li > header{
 	flex: 0 0 20%;
+	font-size: 15px;
 }
 
-#vitalsSection > ul > li > div{
-	flex: 0 0 50%;
-	text-align: right;
-	padding-right: 10%;
-}
-
-#vitalsSection > ul > li > div > input{
-	width: 35%;
-}
-
-#vitalsSection > ul > li > div > input[type="submit"]{
-	width: 20%;
+#vitalsSection > ul > li > form{
+	flex: 0 0 60%;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	order: 1px solid white;
 }
 
 #vitalsSection > ul > li > button{
+	flex: 0 0 20%;
+	font-size: 15px;
+	color: rgb(200, 200, 200);
+}
+
+#vitalsSection > ul > li > form > div{
+	flex: 1 0 0;
+}
+
+#vitalsSection > ul > li > form > div:last-child{
 	flex: 0 0 25%;
-	height: 35px;
 }
 
-#vitalsSection > ul > li > div > input{
-	padding: 0 10px;
-	height: 25px;
+#vitalsSection > ul > li input{
+	border-bottom: 1px solid rgba(150, 150, 150, 0.4);
 }
 
-@media screen and (max-width: 900px){
+#vitalsSection > ul > li input[type="submit"]{
+	margin-left: 10px;
+	border-bottom: none;
+	color: rgb(200, 200, 200);
+}
+
+#vitalsSection > ul > li label{
+	color: grey;
+	font-size: 13px;
+}
+
+@media screen and (max-width: 768px){
 	#vitalsSection > ul > li{
-		padding: 0 10px;
+		padding: 0 5px;
+	}	
+
+	#vitalsSection > ul > li > header{
+		font-size: 12px;
+		margin-right: 5px;
 	}
 
-	#vitalsSection button{
-		font-size: 10px;
+	#vitalsSection > ul > li > button{
+		font-size: 13px;
+		text-transform: none;
+		flex: 0 0 25%;
 	}
 
-	#vitalsSection > ul > li > div{
-		padding-right: 3%;
+	#vitalsSection > ul > li input{
+		font-size: 13px;
+		text-transform: none;
 	}
 
-	#vitalsSection > ul > li > div > input{
-		padding: 0;
-		width: 25%;
+	#vitalsSection > ul > li input[type="submit"]{
+		margin-left: 5px;
 	}
 
-	#vitalsSection > ul > li > div > input[type="submit"]{
-		font-size: 11px;
-		width: 25%;
+	#vitalsSection > ul > li label{
+		font-size: 12px;
+	}
+
+	#vitalsSection > ul > li > form{
+		flex: 0 0 50%;
+		width: 50%;
 	}
 }
