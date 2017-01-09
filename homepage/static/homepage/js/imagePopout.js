@@ -49,23 +49,22 @@ var imagePopout = (function()
 		imageElement.setAttribute('src', image.getAttribute('src'));
 	}
 
-	function preventDefaults(event){
-		event.preventDefault();
+	function preventDefaults(element, event)
+	{
+		if(element.nodeName == 'A')
+			event.preventDefault();
 	}
 
 	function init(obj)
 	{
-		var anchors = document.getElementsByClassName(obj.anchors);
 		images = document.getElementsByClassName(obj.images);
 		createElements();
-
-		for(var i = 0; i < anchors.length; i++)
-			anchors[i].addEventListener('click', preventDefaults);
 		
 		for(var i = 0; i < images.length; i++)
 		{
 			images[i].style.cursor = 'pointer';
 			images[i].addEventListener('click', displayLightBox.bind(this, images[i]));
+			images[i].parentNode.addEventListener('click', preventDefaults.bind(this, images[i].parentNode));
 		}
 	}
 

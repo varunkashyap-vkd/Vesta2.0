@@ -39,21 +39,34 @@
 
 
 {% block scripts %}
-<script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
 <script type="text/javascript" src = "{% static 'homepage/js/floatingOptions.js' %}"></script>
 <script type="text/javascript">
-	var target = {
-		'navButton' : '#mainHeader > div > i',
-		'navBar' : 'sideBar',
-		'leftArrow' : '#sideBar > li:first-child',
-		'search' : '#mainHeader > div > ul > li:first-child > i',
-		'inputField' : '#mainHeader > div > ul > li:first-child > input',
-	};
-	headerAndNavManager.init(target);
-
 	var obj = {
 		'li' : '#floatingOptions > ul > li',
 		'section' : 'popupSection',
+		'header' : 'formHeader',
+		'form' : 'form',
+		'label' : 'label',
+		'lab' : {
+			'header' : 'Search Labs',
+			'label' : 'Type the kind of test',
+			'action' : '/lab/',
+		},
+		'doctor' : {
+			'header' : 'Search Doctors',
+			'label' : 'Type your symptoms',
+			'action' : '/doctors/',
+		},
+		'pharmacy' : {
+			'header' : 'Search Pharmacies',
+			'label' : 'Type the medicines you are looking for',
+			'action' : '/pharmacy/',
+		},
+		'clinic' : {
+			'header' : 'Search Clinics',
+			'label' : 'Type your location',
+			'action' : '/clinic/',
+		}
 	};
 	floatingOptions.init(obj);
 </script>

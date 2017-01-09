@@ -40,14 +40,22 @@
 	padding-left: 15px;
 }
 
-#doctor-profile-reports a > img{
+#doctor-profile-reports a{
 	flex: 0 0 50px;
 	height: 50px;
+	overflow: hidden;
+	margin-left: 10px;
+}
+
+#doctor-profile-reports a > img{
+	width: 50px;
+	height: auto;
 }
 
 #doctor-profile-reports form{
 	flex: 0 0 40%;
 	width: 40%;
+	padding: 0 30px;
 }
 
 #doctor-profile-reports form label{
@@ -79,13 +87,8 @@
 		text-align: center;
 	}
 
-	#doctor-profile-reports a > img{
-		flex: 0 0 50px;
-		height: 50px;
-	}
-
 	#doctor-profile-reports a{
 		margin: 0 auto;
-		margin-top: 20px;		
+		margin-top: 30px;		
 	}
 }

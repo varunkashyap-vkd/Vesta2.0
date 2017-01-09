@@ -65,7 +65,7 @@ def thumbnail(request):
 	text = text.split('http')
 	result = ''
 
-	if len(text) == 1:
+	if len(text) == 1 or (len(text) > 1 and text[1] == ''):
 		return JsonResponse({'match' : 'false'})
 
 	else:

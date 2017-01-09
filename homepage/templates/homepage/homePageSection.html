@@ -23,38 +23,56 @@
 	{% include 'homepage/user-lab.html' %}
 	{% endif %}
 
+	<!--********************************************************************************************-->
+	<!--**************************		Fixed Floating Button 		********************************-->
+	<!--********************************************************************************************-->
 	<div id = "floatingOptions">
 		<ul>
-			<li>
+			<li search = "pharmacy">
 				<div>	Search Pharmacies	</div>		
 				<img src="{% static 'homepage/images/pharmacyicon.png' %}">
 			</li>
-			<li>
+			<li search = "lab">
 				<div>	Search Labs	</div>		
 				<img src="{% static 'homepage/images/labicon.png' %}">
 			</li>
-			<li>
+			<li search = "clinic">
 				<div>	Search Clinics	</div>		
 				<img src="{% static 'homepage/images/clinicicon.png' %}">
 			</li>
-			<li>
+			<li search = "doctor">
 				<div>	Search Doctors	</div>		
 				<img src="{% static 'homepage/images/doctoricon.png' %}">
 			</li>
 		</ul>
 		<img src="{% static 'homepage/images/plus.png' %}">
 	</div>
+	<!--********************************************************************************************-->
+	<!--********************************************************************************************-->
 
+
+
+
+
+
+
+
+
+	<!--********************************************************************************************-->
+	<!--**************************		Search Card Popup 		************************************-->
+	<!--********************************************************************************************-->
 	<section id = "popupSection">
 		<div>
-			<header>	Search Doctors	</header>
-			<form method="GET" action="/doctors/">
+			<header id = "formHeader"></header>
+			<form method="GET" id = "form">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%">
 					<input class="mdl-textfield__input" type="text" id="sample1" name="q">
-					<label class="mdl-textfield__label" for="sample1">Type your symptoms</label>
+					<label class="mdl-textfield__label" for="sample1" id = "label"></label>
 				</div>
-					<input type="submit" class="mdl-button mdl-js-button">
+				<input type="submit" class="mdl-button mdl-js-button">
 			</form>
 		</div>
 	</section>
+	<!--********************************************************************************************-->
+	<!--********************************************************************************************-->
 </section>

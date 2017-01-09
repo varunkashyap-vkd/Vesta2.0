@@ -93,10 +93,6 @@
 	width: 100px;
 }
 
-#mainHeader > div > ul > li:hover > ul,
-#mainHeader > div > ul > li > div:hover+ul{
-	display: flex;
-}
 
 #mainHeader > div > ul > li > div{
 	position: absolute;

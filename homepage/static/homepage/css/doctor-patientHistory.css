@@ -42,9 +42,16 @@
 	border-bottom: 1px solid rgba(200, 200, 200, 0.6);
 }
 
-#doctor-patientHistory a > img{
+#doctor-patientHistory a{
 	flex: 0 0 60px;
 	height: 60px;
+	margin-left: 25px;
+	overflow: hidden;
+}
+
+#doctor-patientHistory a > img{
+	width: 60px;
+	height: auto;
 }
 
 @media screen and (max-width: 768px){
@@ -61,12 +68,14 @@
 	}
 
 	#doctor-patientHistory a{
+		flex: 0 0 50px;
+		height: 50px;
 		margin: 0 auto;
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 
 	#doctor-patientHistory a > img{
-		flex: 0 0 50px;
-		height: 50px;
+		width: 50px;
+		height: auto;
 	}
 }

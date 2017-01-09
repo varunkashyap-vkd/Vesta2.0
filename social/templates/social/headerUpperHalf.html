@@ -6,10 +6,6 @@
 
 	<ul>
 		<li>
-			<img src="{% static 'common/images/search.png' %}">&nbsp&nbsp<input type = "text" class = "inputHidden">
-		</li>
-
-		<li>
 			<a href="{% url 'socialRoot' %}" title = "Vesta Social - Home">
 				<img src="{% static 'common/images/home.png' %}">
 			</a>
@@ -22,7 +18,7 @@
 		</li>
 
 		<li>
-			<img src="{% static 'common/images/userplus.png' %}" title = "Friend Requests">
+			<img src="{% static 'common/images/userplus.png' %}" title = "Friend Requests" id = "friend-requests-icon">
 			<ul id = "friendRequestList">
 				{% for i in '123' %}
 				<li>
@@ -39,7 +35,7 @@
 		</li>
 
 		<li>
-			<img src="{% static 'common/images/notification.png' %}" title = "Notifications">
+			<img src="{% static 'common/images/notification.png' %}" title = "Notifications" id = "notifications-icon">
 			<ul id = "notification">
 				{% for i in '123' %}
 				<li>

@@ -23,18 +23,32 @@
 		</div>
 	</div>
 
-	<p>
-		This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. This is some test text. 
-	</p>
+	<p class = "post-text">Hello there, https://www.youtube.com/watch?v=1-xGerv5FOk</p>
 
-	<div class = "imageWrapper">
-		<img src="{% static 'common/images/testimage.jpg' %}">								
+	<a href="https://www.youtube.com/watch?v=1G4isv_Fylg" target = "new" style = "display: inline;">
+		<section class ="thumbnail-section">
+			<div>
+				<div><img src=""></div>	
+				<header></header>
+				<p></p>
+			</div>
+		</section>
+	</a>
+
+	<div class = "imageWrapper" style = "display: none;">
+	<!--			<img src="{% static 'common/images/testimage.jpg' %}" class = "post-image">
+-->		<img src="" class = "post-image">
 	</div>
 
 	<div class = "stats">
 		<a href="#"> <img src="{% static 'common/images/like.png' %}"> </a>		
 		<a href="#"> 10 likes </a>
 		<a href="" class = "comment" >  </a>
-		<a href="{% url 'vestaSocial' 'comment' %}" open = "0"> <img src="{% static 'common/images/comment.png' %}">&nbsp&nbsp5 comments </a>
+		<a href="{% url 'vestaSocial' 'comment' %}" open = "0"> <img src="{% static 'common/images/comment.png' %}">&nbsp&nbsp comments </a>
 	</div> 
 </section>
+
+<!--
+https://www.youtube.com/watch?v=1G4isv_Fylg
+https://www.youtube.com/watch?v=OLO0j783Zgs
+-->

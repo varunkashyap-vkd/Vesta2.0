@@ -31,6 +31,12 @@
 	padding: 0 20px;
 }
 
+#lab-history > ul > li > div > a > img{
+	width: 50px;
+	height: 50px;
+	margin-top: 15px;
+}
+
 #lab-history > ul > li > header{
 	flex: 0 0 100%;
 	font-size: 20px;

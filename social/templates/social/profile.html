@@ -54,18 +54,10 @@ VESTA - Profile
 {% endblock %}
 
 {% block scripts %}
-<script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
 <script type="text/javascript" src = "{% static 'social/js/profile.js' %}"></script>
 <script type="text/javascript" src = "{% static 'social/js/postOptions.js' %}"></script>
+<script type="text/javascript" src = "{% static 'social/js/url-to-thumbnail-loader.js' %}"></script>
 <script type="text/javascript">
-	var target = {
-		'navButton' : '#mainHeader > div > i',
-		'navBar' : 'sideBar',
-		'search' : '#mainHeader > div > ul > li:first-child > img',
-		'inputField' : '#mainHeader > div > ul > li:first-child > input',
-	};
-	headerAndNavManager.init(target);
-
 	var obj = {
 		'allFriends' : 'allFriends',
 		'allPhotos' : 'allPhotos',
@@ -80,5 +72,12 @@ VESTA - Profile
 		'list' : '.header > ul',
 	};
 	postOptions.init(obj);
+
+	var y = {
+		'postText' : 'post-text',
+		'postImage' : 'post-image',
+		'thumbnailSection' : 'thumbnail-section',
+	};
+	urlToThumbnailLoader.init(y);
 </script>
 {% endblock %}

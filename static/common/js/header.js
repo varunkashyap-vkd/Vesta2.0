@@ -1,42 +1,62 @@
 var headerAndNavManager = (function()
 {
-	var navButton, navBar, search, inputField, requested;
+	var navButton, navBar;
+	var notificationList, notificationsIcon;
+	var friendRequestsList, friendRequestsIcon;
 
-	function resize(){
+	function resize()
+	{
 		if(window.innerWidth > 768)
 			navBar.setAttribute('class', 'navigationHidden');
 	}
 
-	function toggleNavigationVisibility(event){
-		if(event.target == navButton)
+	function toggleVisibility(event)
+	{
+		if(event.target == navButton){
 			navBar.setAttribute('class', 'navigationShown');
+			
+			if(notificationList)
+				notificationList.style.display = 'none';
 
-		else
+			if(friendRequestsList)
+				friendRequestsList.style.display = 'none';
+		}
+
+		else if(event.target == notificationsIcon){
+			notificationList.style.display = 'flex';
 			navBar.setAttribute('class', 'navigationHidden');
-	}
+			friendRequestsList.style.display = 'none';
+		}
 
-	function makeInputVisible(){
-		requested = true;
-		inputField.setAttribute('class', 'inputShown');
-		inputField.focus();
-	}
+		else if(event.target == friendRequestsIcon){
+			friendRequestsList.style.display = 'flex';
+			navBar.setAttribute('class', 'navigationHidden');
+			notificationList.style.display = 'none';
+		}
 
-	function makeInputHidden(){
-		if(inputField.value.length == 0)
-			inputField.setAttribute('class', 'inputHidden');
+		else{ 
+			navBar.setAttribute('class', 'navigationHidden');
+
+			if(notificationList)
+				notificationList.style.display = 'none';
+
+			if(friendRequestsList)
+				friendRequestsList.style.display = 'none';
+		}
 	}
 
 	function init(obj)
 	{
-		requested = false;
 		navButton = document.querySelector(obj.navButton);
 		navBar = document.getElementById(obj.navBar);
-		search = document.querySelector(obj.search);
-		inputField = document.querySelector(obj.inputField);
 
-		document.addEventListener('click', toggleNavigationVisibility);
-		search.addEventListener('click', makeInputVisible);
-		inputField.addEventListener('blur', makeInputHidden);
+		friendRequestsList = document.getElementById(obj.friendRequestsList);
+		friendRequestsIcon = document.getElementById(obj.friendRequestsIcon);
+
+		notificationList = document.getElementById(obj.notificationList);
+		notificationsIcon = document.getElementById(obj.notificationsIcon);
+
+		document.addEventListener('click', toggleVisibility);
 		window.addEventListener('resize', resize);
 	}
 

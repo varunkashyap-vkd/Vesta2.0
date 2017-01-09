@@ -4,18 +4,39 @@
 <html>
 
 <head>
-	<link rel="shortcut icon" type="image/png" href="{% static 'common/favicon.ico' %}"/>
+	<!--*****************************************************************************************-->
+	<!--****************************	OpenGraph Tags For Thumbnail Sharing	*****************-->
+	<!--*****************************************************************************************-->
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<meta property = "og:title" content = "Vesta">
+	<meta property = "og:url" content = "139.59.29.124:8000">
+	<meta property = "og:type" content = "website">
+	<meta property = "og:description" content = "Vesta - Your digital healthcare ecosystem.">
+	<meta property = "og:image" content = "http://139.59.29.124:8000/static/common/goku.png">
+	<!--*****************************************************************************************-->
+	<!--*****************************************************************************************-->
+
+
+
+
+	<!--*****************************************************************************************-->
+	<!--**************************		Stylesheets common to all the pages		*****************-->
+	<!--*****************************************************************************************-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.amber-blue.min.css">
 	<link rel="stylesheet" type="text/css" href="{% static 'common/plugins/font-awesome/css/font-awesome.css' %}">
-	{% block extra_css %}	{% endblock %}
+	<!--*****************************************************************************************-->
+	<!--*****************************************************************************************-->
 
-	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
-	<meta property = "og:title" content = "This is the title for my website">
-	<meta property = "og:url" content = "139.59.29.124:8000">
-	<meta property = "og:type" content = "website">
-	<meta property = "og:description" content = "This is some badass decsription for my website">
-	<meta property = "og:image" content = "http://139.59.29.124:8000/static/common/goku.png">
+
+
+
+	<!--********************************************************************************************-->
+	<!--*************************		Page Specific Stylesheets		****************************-->
+	<!--********************************************************************************************-->
+	{% block extra_css %}	{% endblock %}
+	<!--********************************************************************************************-->
+	<!--********************************************************************************************-->
 	{% block head %}	{% endblock %}
 </head>
 
@@ -23,29 +44,63 @@
 
 <body>
 
+	<!--********************************************************************************************-->
+	<!--*************		Elements For Background Image And Transparent Effect	****************-->
+	<!--********************************************************************************************-->
 	<div id = "background"><img src="{% static 'common/images/bg.jpg' %}"></div>
 	<div id = "colorBackground"></div>
+	<!--********************************************************************************************-->
+	<!--********************************************************************************************-->
+
+
+
 	{% block body %}	{% endblock %}
 
+
+
+	<!--********************************************************************************************-->
+	<!--**************************		Scripts common to all the pages		************************-->
+	<!--********************************************************************************************-->
 	<script type="text/javascript" src = "{% static 'common/js/jquery.js' %}"></script>
 	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>	
 	<script type="text/javascript" src = "{% static 'common/js/rightSectionScroller.js' %}"></script>
 	<script type="text/javascript" src = "{% static 'homepage/js/imagePopout.js' %}"></script>
-	{% block scripts %}	{% endblock %}
+	<script type="text/javascript" src = "{% static 'common/js/header.js' %}"></script>
 	<script type="text/javascript">
 		var obj = {
 			'list' : '#rightFixedSection > ul',
-			'length' : 3,
+			'length' : 5,
 			'time' : 8000,
 		};
 		rightSectionScroller.init(obj);
 
 		var xyz = {
 			'images' : 'poppable-image',
-			'anchors' : 'stop-this-anchor',
 		};
 		imagePopout.init(xyz);
+
+		var target = {
+			'navButton' : '#mainHeader > div > i',
+			'navBar' : 'sideBar',
+			'friendRequestsList' : 'friendRequestList',
+			'friendRequestsIcon' : 'friend-requests-icon',
+			'notificationList' : 'notification',
+			'notificationsIcon' : 'notifications-icon',
+		};
+		headerAndNavManager.init(target);
 	</script>
+	<!--********************************************************************************************-->
+	<!--********************************************************************************************-->
+
+
+
+
+	<!--********************************************************************************************-->
+	<!--*************************		Page Specific Scripts		********************************-->
+	<!--********************************************************************************************-->
+	{% block scripts %}	{% endblock %}
+	<!--********************************************************************************************-->
+	<!--********************************************************************************************-->
 
 
 	<style type="text/css">
